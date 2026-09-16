@@ -31,6 +31,9 @@ class VolumeControl extends StatefulWidget {
   /// Called on any keyboard activity (to reset hide timer).
   final VoidCallback? onFocusActivity;
 
+  /// Optional action placed directly before mute/unmute.
+  final Widget? beforeMute;
+
   const VolumeControl({
     super.key,
     required this.volumeController,
@@ -38,6 +41,7 @@ class VolumeControl extends StatefulWidget {
     this.onKeyEvent,
     this.onFocusChange,
     this.onFocusActivity,
+    this.beforeMute,
   });
 
   @override
@@ -144,6 +148,7 @@ class _VolumeControlState extends State<VolumeControl> {
             return Row(
               mainAxisSize: .min,
               children: [
+                if (widget.beforeMute != null) ...[widget.beforeMute!, const SizedBox(width: 8)],
                 if (widget.focusNode != null)
                   FocusableWrapper(
                     focusNode: widget.focusNode,

@@ -55,6 +55,7 @@ import 'add_connection_screen.dart';
 import 'account_preferences_screen.dart';
 import 'appearance_settings_screen.dart';
 import 'general_settings_screen.dart';
+import 'funscript_sync_settings_screen.dart';
 import 'keyboard_shortcuts_screen.dart';
 import 'logs_screen.dart';
 import 'playback_settings_screen.dart';
@@ -349,6 +350,12 @@ class _SettingsScreenState extends State<SettingsScreen> with FocusableTab, Moun
             final active = context.read<ActiveProfileProvider>().active;
             Navigator.push(context, MaterialPageRoute(builder: (_) => AddConnectionScreen(targetProfile: active)));
           },
+        ),
+        SettingNavigationTile(
+          icon: Symbols.sync_rounded,
+          title: t.funscriptSync.title,
+          subtitle: t.funscriptSync.connectionSubtitle,
+          destinationBuilder: (_) => const FunScriptSyncSettingsScreen(),
         ),
         _buildProfilesTile(context),
         if (context.select<AccountPreferencesController, bool>((c) => c.accounts.isNotEmpty))

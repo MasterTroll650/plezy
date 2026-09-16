@@ -14,9 +14,12 @@ import '../../media/media_source_info.dart';
 import '../../services/fullscreen_state_manager.dart';
 import '../../services/scrub_preview_source.dart';
 import '../../services/video_volume_controller.dart';
+import '../../services/funscript_sync_service.dart';
 import '../../utils/desktop_window_padding.dart';
+import '../../utils/dialogs.dart';
 import '../../utils/platform_detector.dart';
 import '../../utils/formatters.dart';
+import '../../utils/snackbar_helper.dart';
 import '../../i18n/strings.g.dart';
 import '../../focus/focusable_wrapper.dart';
 import '../../models/livetv_capture_buffer.dart';
@@ -182,6 +185,7 @@ class DesktopVideoControlsState extends State<DesktopVideoControls> {
   late final FocusNode _timelineFocusNode;
 
   late final FocusNode _volumeFocusNode;
+  late final FocusNode _deleteStashSceneFocusNode;
 
   late final List<FocusNode> _trackControlFocusNodes;
 
@@ -220,6 +224,7 @@ class DesktopVideoControlsState extends State<DesktopVideoControls> {
     _goToLiveFocusNode = FocusNode(debugLabel: 'GoToLive');
     _timelineFocusNode = FocusNode(debugLabel: 'Timeline');
     _volumeFocusNode = FocusNode(debugLabel: 'Volume');
+    _deleteStashSceneFocusNode = FocusNode(debugLabel: 'DeleteStashScene');
 
     // Create focus nodes for track controls (up to 8 buttons)
     _trackControlFocusNodes = List.generate(8, (i) => FocusNode(debugLabel: 'TrackControl$i'));
@@ -292,6 +297,7 @@ class DesktopVideoControlsState extends State<DesktopVideoControls> {
     _goToLiveFocusNode.dispose();
     _timelineFocusNode.dispose();
     _volumeFocusNode.dispose();
+    _deleteStashSceneFocusNode.dispose();
     for (final node in _trackControlFocusNodes) {
       node.dispose();
     }
@@ -325,6 +331,16 @@ class DesktopVideoControlsState extends State<DesktopVideoControls> {
     }
   }
 
+  void _selectQueueItem(MediaItem item) {
+    hideContentStrip();
+    widget.onQueueItemSelected?.call(item);
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      if (!mounted || _timelineFocusNode.context == null) return;
+      _timelineFocusNode.requestFocus();
+      widget.onFocusActivity?.call();
+    });
+  }
+
   /// Dismiss content strip and restore focus (called by parent on BACK key)
   void dismissContentStrip() {
     if (!_contentStripVisible) return;
@@ -334,6 +350,11 @@ class DesktopVideoControlsState extends State<DesktopVideoControls> {
   /// Handle left navigation from first track control - go to volume (or last button on TV)
   void navigateFromTrackToVolume() {
     if (PlatformDetector.isTV()) {
+      if (_deleteStashSceneFocusNode.context != null) {
+        _deleteStashSceneFocusNode.requestFocus();
+        widget.onFocusActivity?.call();
+        return;
+      }
       // On TV (no volume), go to last mounted button
       for (int i = _buttonFocusNodes.length - 1; i >= 0; i--) {
         if (_buttonFocusNodes[i].context != null) {
@@ -378,6 +399,8 @@ class DesktopVideoControlsState extends State<DesktopVideoControls> {
       }
       if (_volumeFocusNode.hasFocus) {
         _lastFocusedButtonNode = _volumeFocusNode;
+      } else if (_deleteStashSceneFocusNode.hasFocus) {
+        _lastFocusedButtonNode = _deleteStashSceneFocusNode;
       }
     }
   }
@@ -482,7 +505,9 @@ class DesktopVideoControlsState extends State<DesktopVideoControls> {
       }
     }
     rightTarget ??= PlatformDetector.isTV()
-        ? (_trackControlFocusNodes.isNotEmpty ? _trackControlFocusNodes.first : null)
+        ? (_deleteStashSceneFocusNode.context != null
+              ? _deleteStashSceneFocusNode
+              : (_trackControlFocusNodes.isNotEmpty ? _trackControlFocusNodes.first : null))
         : _volumeFocusNode;
 
     return _handleDirectionalNavigation(event, leftTarget: leftTarget, rightTarget: rightTarget);
@@ -492,9 +517,97 @@ class DesktopVideoControlsState extends State<DesktopVideoControls> {
   KeyEventResult _handleVolumeKeyEvent(FocusNode _, KeyEvent event) {
     return _handleDirectionalNavigation(
       event,
-      leftTarget: _nextItemFocusNode,
+      leftTarget: _deleteStashSceneFocusNode,
       rightTarget: _trackControlFocusNodes.isNotEmpty ? _trackControlFocusNodes.first : null,
     );
+  }
+
+  KeyEventResult _handleDeleteStashSceneKeyEvent(FocusNode _, KeyEvent event) {
+    FocusNode? leftTarget;
+    for (int i = _buttonFocusNodes.length - 1; i >= 0; i--) {
+      if (_buttonFocusNodes[i].context != null) {
+        leftTarget = _buttonFocusNodes[i];
+        break;
+      }
+    }
+    return _handleDirectionalNavigation(
+      event,
+      leftTarget: leftTarget,
+      rightTarget: PlatformDetector.isTV()
+          ? (_trackControlFocusNodes.isNotEmpty ? _trackControlFocusNodes.first : null)
+          : _volumeFocusNode,
+    );
+  }
+
+  Future<void> _deleteActiveStashScene() async {
+    final player = widget.player;
+    final onNext = widget.onNext;
+    final onBack = widget.onBack;
+    final navigator = Navigator.of(context);
+    final deleteTitle = t.funscriptSync.deleteActiveScene;
+    final deleteConfirmation = t.funscriptSync.deleteConfirmation;
+    final cancelLabel = t.funscriptSync.cancel;
+    final deleteLabel = t.funscriptSync.delete;
+    final sceneDeletedMessage = t.funscriptSync.sceneDeleted;
+    final wasPlaying = player.state.playing;
+    debugPrint('[FunScriptSync] Delete button pressed; wasPlaying=$wasPlaying');
+    if (wasPlaying) {
+      await player.pause();
+      debugPrint('[FunScriptSync] Player paused for delete confirmation');
+      if (!mounted) {
+        debugPrint('[FunScriptSync] Delete cancelled because player context was unmounted after pause');
+        return;
+      }
+    }
+
+    debugPrint('[FunScriptSync] Opening delete confirmation dialog');
+    final confirmed = await showConfirmDialog(
+      context,
+      title: deleteTitle,
+      message: deleteConfirmation,
+      confirmText: deleteLabel,
+      cancelText: cancelLabel,
+      isDestructive: true,
+    );
+    debugPrint('[FunScriptSync] Delete confirmation result: $confirmed');
+    if (!confirmed) {
+      if (wasPlaying) await player.play();
+      debugPrint('[FunScriptSync] Delete cancelled; playback resumed=$wasPlaying');
+      return;
+    }
+
+    try {
+      debugPrint('[FunScriptSync] Sending active scene delete request');
+      await FunScriptSyncService.instance.deleteActiveScene();
+      debugPrint('[FunScriptSync] Active scene delete request succeeded');
+      showGlobalSuccessSnackBar(sceneDeletedMessage);
+      if (onNext != null) {
+        onNext();
+        WidgetsBinding.instance.addPostFrameCallback((_) {
+          if (!mounted || _timelineFocusNode.context == null) return;
+          _timelineFocusNode.requestFocus();
+          widget.onFocusActivity?.call();
+        });
+      } else {
+        if (onBack != null) {
+          onBack();
+        } else if (navigator.mounted) {
+          navigator.pop(true);
+        }
+      }
+    } on FunScriptSyncConfigurationException catch (error) {
+      debugPrint('[FunScriptSync] Delete configuration error: ${error.message}');
+      showGlobalErrorSnackBar(error.message);
+      if (wasPlaying) await player.play();
+    } on FunScriptSyncRequestException catch (error) {
+      debugPrint('[FunScriptSync] Delete request error: ${error.message}');
+      showGlobalErrorSnackBar(error.message);
+      if (wasPlaying) await player.play();
+    } catch (error) {
+      debugPrint('[FunScriptSync] Unexpected delete error: $error');
+      showGlobalErrorSnackBar(error.toString());
+      if (wasPlaying) await player.play();
+    }
   }
 
   /// Reset progressive seek state
@@ -646,7 +759,7 @@ class DesktopVideoControlsState extends State<DesktopVideoControls> {
                       serverId: widget.serverId,
                       canControl: _canControl,
                       showQueueTab: widget.showQueueTab,
-                      onQueueItemSelected: widget.onQueueItemSelected,
+                      onQueueItemSelected: widget.onQueueItemSelected == null ? null : _selectQueueItem,
                       onSeekRequested: widget.onSeekRequested,
                       onSeekCompleted: widget.onSeekCompleted,
                       useFocusNavigation: true,
@@ -929,6 +1042,23 @@ class DesktopVideoControlsState extends State<DesktopVideoControls> {
                     ),
                   ),
                 // Volume control (hidden on TV — hardware handles volume)
+                if (PlatformDetector.isTV()) ...[
+                  FocusableWrapper(
+                    focusNode: _deleteStashSceneFocusNode,
+                    onSelect: _deleteActiveStashScene,
+                    onKeyEvent: _handleDeleteStashSceneKeyEvent,
+                    onFocusChange: _onFocusChange,
+                    borderRadius: 20,
+                    autoScroll: false,
+                    useBackgroundFocus: true,
+                    semanticLabel: t.funscriptSync.deleteActiveScene,
+                    child: IconButton(
+                      onPressed: _deleteActiveStashScene,
+                      icon: const AppIcon(Symbols.delete_rounded, fill: 1, color: Colors.red),
+                    ),
+                  ),
+                  const SizedBox(width: 16),
+                ],
                 if (!PlatformDetector.isTV()) ...[
                   VolumeControl(
                     volumeController: widget.volumeController,
@@ -936,6 +1066,20 @@ class DesktopVideoControlsState extends State<DesktopVideoControls> {
                     onKeyEvent: _handleVolumeKeyEvent,
                     onFocusChange: _onFocusChange,
                     onFocusActivity: widget.onFocusActivity,
+                    beforeMute: FocusableWrapper(
+                      focusNode: _deleteStashSceneFocusNode,
+                      onSelect: _deleteActiveStashScene,
+                      onKeyEvent: _handleDeleteStashSceneKeyEvent,
+                      onFocusChange: _onFocusChange,
+                      borderRadius: 20,
+                      autoScroll: false,
+                      useBackgroundFocus: true,
+                      semanticLabel: t.funscriptSync.deleteActiveScene,
+                      child: IconButton(
+                        onPressed: _deleteActiveStashScene,
+                        icon: const AppIcon(Symbols.delete_rounded, fill: 1, color: Colors.red),
+                      ),
+                    ),
                   ),
                   const SizedBox(width: 16),
                 ],

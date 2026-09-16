@@ -38,6 +38,9 @@ const String credentialVaultKeyPref = 'credential_vault_key_v1';
 /// Legacy single-slot Plex token, superseded by the connection registry.
 const String legacyPlexTokenPref = 'plex_token';
 
+/// Shared secret used to authenticate Plezy with a local FunScriptSync server.
+const String funscriptSyncSecretPref = 'funscript_sync_secret';
+
 /// Unscoped base keys used by `TrackerAccountStore`, one per tracker service.
 const List<String> trackerSessionBaseKeys = <String>[
   'mal_session',
@@ -74,4 +77,7 @@ bool isSeerrSessionPrefKey(String key) => profileScopedCredentialBaseKey(key) ==
 /// Whether [key] holds a credential and must never be dropped or exported
 /// without an explicit, informed user decision.
 bool isSensitivePrefKey(String key) =>
-    key == credentialVaultKeyPref || key == legacyPlexTokenPref || profileScopedCredentialBaseKey(key) != null;
+    key == credentialVaultKeyPref ||
+    key == legacyPlexTokenPref ||
+    key == funscriptSyncSecretPref ||
+    profileScopedCredentialBaseKey(key) != null;
