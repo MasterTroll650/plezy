@@ -6,7 +6,7 @@
   <div class="footer-content">
     <div class="footer-brand">
       <span class="footer-logo"><Logo /></span>
-      <span>Plezy</span>
+      <span>Pleazy</span>
     </div>
 
     <nav class="footer-nav" aria-label="Footer navigation">

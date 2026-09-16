@@ -99,7 +99,7 @@ class _Translations$app$ja extends Translations$app$en {
 	final TranslationsJa _root; // ignore: unused_field
 
 	// Translations
-	@override String get title => 'Plezy';
+	@override String get title => 'Pleazy';
 }
 
 // Path: auth
@@ -2086,10 +2086,10 @@ class _Translations$seerr$ja extends Translations$seerr$en {
 	@override String get signInWithEmby => 'Embyでサインイン';
 	@override String get signInWithLocal => 'ローカルアカウントを使う';
 	@override String get email => 'メールアドレス';
-	@override String get noSignInMethods => 'この Seerr インスタンスには Plezy が対応しているサインイン方法がありません。';
+	@override String get noSignInMethods => 'この Seerr インスタンスには Pleazy が対応しているサインイン方法がありません。';
 	@override String get instance => 'インスタンス';
 	@override String get disconnectConfirm => 'Seerr の接続を解除しますか？';
-	@override String get disconnectConfirmBody => 'Plezy はこの Seerr インスタンスの情報を削除します。いつでも再接続できます。';
+	@override String get disconnectConfirmBody => 'Pleazy はこの Seerr インスタンスの情報を削除します。いつでも再接続できます。';
 	@override String get request => 'リクエスト';
 	@override String get request4k => '4K でリクエスト';
 	@override String get seasons => 'シーズン';
@@ -2863,7 +2863,7 @@ class _Translations$services$deviceCode$ja extends Translations$services$deviceC
 	final TranslationsJa _root; // ignore: unused_field
 
 	// Translations
-	@override String title({required Object service}) => '${service} で Plezy を有効化';
+	@override String title({required Object service}) => '${service} で Pleazy を有効化';
 	@override String get instructions => 'QRコードをスキャンするか、以下のアドレスにアクセスしてこのコードを入力してください:';
 	@override String openToActivate({required Object service}) => '${service} を開いて有効化';
 	@override String get copyCode => 'アクティベーションコードをコピー';
@@ -2923,7 +2923,7 @@ class _Translations$services$libraryFilter$ja extends Translations$services$libr
 extension on TranslationsJa {
 	dynamic _flatMapFunction(String path) {
 		return switch (path) {
-			'app.title' => 'Plezy',
+			'app.title' => 'Pleazy',
 			'auth.signInWithPlex' => 'Plexでサインイン',
 			'auth.showQRCode' => 'QRコードを表示',
 			'auth.authenticate' => '認証',
@@ -4784,10 +4784,10 @@ extension on TranslationsJa {
 			'seerr.signInWithEmby' => 'Embyでサインイン',
 			'seerr.signInWithLocal' => 'ローカルアカウントを使う',
 			'seerr.email' => 'メールアドレス',
-			'seerr.noSignInMethods' => 'この Seerr インスタンスには Plezy が対応しているサインイン方法がありません。',
+			'seerr.noSignInMethods' => 'この Seerr インスタンスには Pleazy が対応しているサインイン方法がありません。',
 			'seerr.instance' => 'インスタンス',
 			'seerr.disconnectConfirm' => 'Seerr の接続を解除しますか？',
-			'seerr.disconnectConfirmBody' => 'Plezy はこの Seerr インスタンスの情報を削除します。いつでも再接続できます。',
+			'seerr.disconnectConfirmBody' => 'Pleazy はこの Seerr インスタンスの情報を削除します。いつでも再接続できます。',
 			'seerr.request' => 'リクエスト',
 			'seerr.request4k' => '4K でリクエスト',
 			'seerr.seasons' => 'シーズン',
@@ -4833,7 +4833,7 @@ extension on TranslationsJa {
 			'services.names.simkl' => 'Simkl',
 			'services.names.seerr' => 'Seerr',
 			'services.names.mdblist' => 'MDBList',
-			'services.deviceCode.title' => ({required Object service}) => '${service} で Plezy を有効化',
+			'services.deviceCode.title' => ({required Object service}) => '${service} で Pleazy を有効化',
 			'services.deviceCode.instructions' => 'QRコードをスキャンするか、以下のアドレスにアクセスしてこのコードを入力してください:',
 			'services.deviceCode.openToActivate' => ({required Object service}) => '${service} を開いて有効化',
 			'services.deviceCode.copyCode' => 'アクティベーションコードをコピー',

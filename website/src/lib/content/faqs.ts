@@ -1,5 +1,5 @@
 export const watchTogetherFaqAnswer =
-  "Watch Together requires every participant to have access to the same media on the same server. It uses a WebSocket relay to exchange room and participant details, server and media identifiers, an optional media title, and playback timing/control state. It does not relay the media stream or your media-server credentials. Plezy’s relay is the default; if you choose a custom relay, that relay’s operator controls its security, logging, retention, and location.";
+  "Watch Together requires every participant to have access to the same media on the same server. It uses a WebSocket relay to exchange room and participant details, server and media identifiers, an optional media title, and playback timing/control state. It does not relay the media stream or your media-server credentials. Pleazy’s relay is the default; if you choose a custom relay, that relay’s operator controls its security, logging, retention, and location.";
 
 export type Faq = {
   id: string;
@@ -13,28 +13,28 @@ export const faqs: Faq[] = [
     id: "plex-pass",
     question: "Do I need Plex Pass to stream remotely?",
     answer:
-      "No. The remote viewing checks are done client-side in the official Plex apps, not on your server. Plezy connects directly to your server's API, so there are no such checks.",
+      "No. The remote viewing checks are done client-side in the official Plex apps, not on your server. Pleazy connects directly to your server's API, so there are no such checks.",
   },
   {
     id: "jellyfin",
-    question: "Does Plezy support Jellyfin?",
+    question: "Does Pleazy support Jellyfin?",
     answer:
-      "Yes! Plezy works with Jellyfin servers alongside Plex. You can sign in with either your Jellyfin username and password or use Quick Connect for a one-tap login from another device. Most of Plezy's features — direct play, HDR, subtitles, offline downloads — work the same way on both.",
+      "Yes! Pleazy works with Jellyfin servers alongside Plex. You can sign in with either your Jellyfin username and password or use Quick Connect for a one-tap login from another device. Most of Pleazy's features — direct play, HDR, subtitles, offline downloads — work the same way on both.",
   },
   {
     id: "free",
-    question: "Is Plezy free?",
+    question: "Is Pleazy free?",
     answer:
-      "Plezy is open-source and free to download from GitHub. The App Store and Play Store versions are paid (one-time purchase, price varies by region). The charge helps cover developer account fees, test devices, and the time spent developing and maintaining the app.<br><br>There's no free trial because the app stores don't natively support trials for paid apps. The only way to offer one would be to make the app free and use in-app purchases — which means integrating StoreKit and Google Play Billing, gating features behind a paywall, and adding a layer of complexity that doesn't make sense for a simple one-time purchase. If you'd like to try before you buy, you can sideload the binaries from GitHub or try it on desktop first.",
+      "Pleazy is open-source and free to download from GitHub. The App Store and Play Store versions are paid (one-time purchase, price varies by region). The charge helps cover developer account fees, test devices, and the time spent developing and maintaining the app.<br><br>There's no free trial because the app stores don't natively support trials for paid apps. The only way to offer one would be to make the app free and use in-app purchases — which means integrating StoreKit and Google Play Billing, gating features behind a paywall, and adding a layer of complexity that doesn't make sense for a simple one-time purchase. If you'd like to try before you buy, you can sideload the binaries from GitHub or try it on desktop first.",
   },
   {
     id: "apple-tv",
-    question: "Does Plezy work on Apple TV?",
-    answer: "Yes, Plezy is available for tvOS on the App Store.",
+    question: "Does Pleazy work on Apple TV?",
+    answer: "Yes, Pleazy is available for tvOS on the App Store.",
   },
   {
     id: "android-tv",
-    question: "Does Plezy work on Android TV / Shield?",
+    question: "Does Pleazy work on Android TV / Shield?",
     answer: "Yes! The app is available for Android TV including the Shield.",
   },
   {
@@ -44,7 +44,7 @@ export const faqs: Faq[] = [
   },
   {
     id: "video-player",
-    question: "What video player does Plezy use?",
+    question: "What video player does Pleazy use?",
     answer:
       'mpv on most platforms, with ExoPlayer available on Android for HDR support and better performance. ExoPlayer also has libass support via <a href="https://github.com/peerless2012/libass-android" target="_blank" rel="noopener">libass-android</a>.',
     schemaAnswer:

@@ -29,7 +29,7 @@
   <SectionHeader
     label="FAQ"
     heading="Common questions"
-    description="Everything you need to know about Plezy."
+    description="Everything you need to know about Pleazy."
   />
 
   <div class="faq-list">

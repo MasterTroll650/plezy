@@ -40,10 +40,10 @@
       label: 'Phone',
       sizes: '(min-width: 1024px) 214px, 187px',
       shots: [
-        { image: phoneHomeImage, alt: 'Plezy home screen' },
-        { image: phoneLibraryImage, alt: 'Plezy library view' },
-        { image: phoneMdImage, alt: 'Plezy media details' },
-        { image: phoneSearchImage, alt: 'Plezy search' },
+        { image: phoneHomeImage, alt: 'Pleazy home screen' },
+        { image: phoneLibraryImage, alt: 'Pleazy library view' },
+        { image: phoneMdImage, alt: 'Pleazy media details' },
+        { image: phoneSearchImage, alt: 'Pleazy search' },
       ],
     },
     {
@@ -52,10 +52,10 @@
       label: 'Tablet',
       sizes: '(min-width: 1024px) 768px, 672px',
       shots: [
-        { image: tabletHomeImage, alt: 'Plezy on tablet - home' },
-        { image: tabletLibraryImage, alt: 'Plezy on tablet - library' },
-        { image: tabletMdImage, alt: 'Plezy on tablet - media details' },
-        { image: tabletPlayerImage, alt: 'Plezy on tablet - video player' },
+        { image: tabletHomeImage, alt: 'Pleazy on tablet - home' },
+        { image: tabletLibraryImage, alt: 'Pleazy on tablet - library' },
+        { image: tabletMdImage, alt: 'Pleazy on tablet - media details' },
+        { image: tabletPlayerImage, alt: 'Pleazy on tablet - video player' },
       ],
     },
     {
@@ -64,10 +64,10 @@
       label: 'Desktop',
       sizes: '(min-width: 1024px) 768px, 672px',
       shots: [
-        { image: desktopHomeImage, alt: 'Plezy on desktop - home' },
-        { image: desktopLibraryImage, alt: 'Plezy on desktop - library' },
-        { image: desktopMdImage, alt: 'Plezy on desktop - media details' },
-        { image: desktopPlayerImage, alt: 'Plezy on desktop - video player' },
+        { image: desktopHomeImage, alt: 'Pleazy on desktop - home' },
+        { image: desktopLibraryImage, alt: 'Pleazy on desktop - library' },
+        { image: desktopMdImage, alt: 'Pleazy on desktop - media details' },
+        { image: desktopPlayerImage, alt: 'Pleazy on desktop - video player' },
       ],
     },
     {
@@ -76,10 +76,10 @@
       label: 'TV',
       sizes: '(min-width: 1024px) 854px, 747px',
       shots: [
-        { image: tvHomeImage, alt: 'Plezy on TV - home' },
-        { image: tvLibraryImage, alt: 'Plezy on TV - library' },
-        { image: tvMdImage, alt: 'Plezy on TV - media details' },
-        { image: tvPlayerImage, alt: 'Plezy on TV - video player' },
+        { image: tvHomeImage, alt: 'Pleazy on TV - home' },
+        { image: tvLibraryImage, alt: 'Pleazy on TV - library' },
+        { image: tvMdImage, alt: 'Pleazy on TV - media details' },
+        { image: tvPlayerImage, alt: 'Pleazy on TV - video player' },
       ],
     },
   ];

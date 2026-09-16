@@ -7,14 +7,14 @@
 	const siteSchema = {
 		"@context": "https://schema.org",
 		"@type": "WebSite",
-		"name": "Plezy",
+		"name": "Pleazy",
 		"url": "https://plezy.app"
 	};
 
 	const orgSchema = {
 		"@context": "https://schema.org",
 		"@type": "Organization",
-		"name": "Plezy",
+		"name": "Pleazy",
 		"url": "https://plezy.app",
 		"logo": "https://plezy.app/og/plezy-social.png",
 		"sameAs": ["https://github.com/edde746/plezy"]

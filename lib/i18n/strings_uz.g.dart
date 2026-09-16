@@ -99,7 +99,7 @@ class _Translations$app$uz extends Translations$app$en {
 	final TranslationsUz _root; // ignore: unused_field
 
 	// Translations
-	@override String get title => 'Plezy';
+	@override String get title => 'Pleazy';
 }
 
 // Path: auth
@@ -124,7 +124,7 @@ class _Translations$auth$uz extends Translations$auth$en {
 	@override String get quickConnectWaiting => 'Tasdiq kutilmoqda…';
 	@override String get quickConnectCancel => 'Bekor qilish';
 	@override String get quickConnectExpired => 'Tezkor ulanish vaqti tugadi. Qaytadan urinib koʻring.';
-	@override String get localDataRecoveryRequired => 'Plezy mahalliy kirish maʼlumotlarini tiklay olmadi. Iltimos, qaytadan kiring.';
+	@override String get localDataRecoveryRequired => 'Pleazy mahalliy kirish maʼlumotlarini tiklay olmadi. Iltimos, qaytadan kiring.';
 	@override String get pinCheckRejected => 'Plex PIN tekshiruvi rad etildi';
 }
 
@@ -226,7 +226,7 @@ class _Translations$settings$uz extends Translations$settings$en {
 
 	// Translations
 	@override String get title => 'Sozlamalar';
-	@override String get supportDeveloper => 'Plezy-ni qoʻllab-quvvatlash';
+	@override String get supportDeveloper => 'Pleazy-ni qoʻllab-quvvatlash';
 	@override String get supportDeveloperDescription => 'Dasturchini Liberapay orqali qoʻllab-quvvatlang';
 	@override String get language => 'Til';
 	@override String get theme => 'Mavzu';
@@ -360,7 +360,7 @@ class _Translations$settings$uz extends Translations$settings$en {
 	@override String get importSettingsDescription => 'Parametrlarni fayldan tiklang';
 	@override String get importSettingsConfirm => 'Bu joriy sozlamalaringiz ustidan yoziladi. Davom etasizmi?';
 	@override String get importSettingsSuccess => 'Sozlamalar import qilindi';
-	@override String get importSettingsInvalidFile => 'Ushbu fayl toʻgʻri Plezy sozlamalar fayli emas';
+	@override String get importSettingsInvalidFile => 'Ushbu fayl toʻgʻri Pleazy sozlamalar fayli emas';
 	@override String get importSettingsNoUser => 'Sozlamalarni import qilishdan oldin tizimga kiring';
 	@override String get shortcutsReset => 'Tugmalar birlashmasi standart holatga qaytarildi';
 	@override String get about => 'Dastur haqida';
@@ -457,7 +457,7 @@ class _Translations$settings$uz extends Translations$settings$en {
 	@override String get forceTvMode => 'TV rejimini majburlash';
 	@override String get forceTvModeDescription => 'TV interfeysini majburiy yoqish.';
 	@override String get startInFullscreen => 'Toʻliq ekranda boshlash';
-	@override String get startInFullscreenDescription => 'Plezy-ni ochganda toʻliq ekran rejimida ochish';
+	@override String get startInFullscreenDescription => 'Pleazy-ni ochganda toʻliq ekran rejimida ochish';
 	@override String get exitFullscreenOnPlayerClose => 'Pleyer yopilganda toʻliq ekrandan chiqish';
 	@override String get exitFullscreenOnPlayerCloseDescription => 'Video pleyerni yopganda avtomatik ravishda toʻliq ekrandan chiqish';
 	@override String get autoHidePerformanceOverlay => 'Unumdorlik panelini avto-yashirish';
@@ -504,7 +504,7 @@ class _Translations$settings$uz extends Translations$settings$en {
 	@override String get playerScopeGlobal => 'Hamma joyda';
 	@override String get playerScopeLibrary => 'Kutubxona boʻyicha';
 	@override String get playerScopeTitle => 'Serial yoki film boʻyicha';
-	@override String get exportDialogTitle => 'Plezy sozlamalarini eksport qilish';
+	@override String get exportDialogTitle => 'Pleazy sozlamalarini eksport qilish';
 }
 
 // Path: search
@@ -702,8 +702,8 @@ class _Translations$mediaMenu$uz extends Translations$mediaMenu$en {
 		one: 'Xuddi shu faylda yana ${n} qism saqlanadi va u ham oʻchiriladi:',
 		other: 'Xuddi shu faylda yana ${n} qism saqlanadi va ular ham oʻchiriladi:',
 	);
-	@override String get deleteScopeUnverifiedProbeFailed => 'Plezy qaysi fayllar olib tashlanishini tekshira olmadi, shuning uchun u yuqorida koʻrsatilgan elementdan koʻproq narsani oʻchirishi mumkin. Bekor qilib qaytadan urining yoki baribir oʻchiring.';
-	@override String get deleteScopeUnverifiedNoFileInfo => 'Serveringiz ushbu element uchun fayl tafsilotlarini taqdim etmadi, shuning uchun Plezy qaysi fayllar olib tashlanishini tekshira olmaydi. U yuqorida koʻrsatilgan elementdan koʻproq narsani oʻchirishi mumkin.';
+	@override String get deleteScopeUnverifiedProbeFailed => 'Pleazy qaysi fayllar olib tashlanishini tekshira olmadi, shuning uchun u yuqorida koʻrsatilgan elementdan koʻproq narsani oʻchirishi mumkin. Bekor qilib qaytadan urining yoki baribir oʻchiring.';
+	@override String get deleteScopeUnverifiedNoFileInfo => 'Serveringiz ushbu element uchun fayl tafsilotlarini taqdim etmadi, shuning uchun Pleazy qaysi fayllar olib tashlanishini tekshira olmaydi. U yuqorida koʻrsatilgan elementdan koʻproq narsani oʻchirishi mumkin.';
 	@override String get mediaDeletedSuccessfully => 'Media elementi muvaffaqiyatli oʻchirildi';
 	@override String get mediaFailedToDelete => 'Media elementini oʻchirib boʻlmadi';
 	@override String get rate => 'Baho berish';
@@ -1024,7 +1024,7 @@ class _Translations$profiles$uz extends Translations$profiles$en {
 	final TranslationsUz _root; // ignore: unused_field
 
 	// Translations
-	@override String get addPlezyProfile => 'Plezy profilini qoʻshish';
+	@override String get addPlezyProfile => 'Pleazy profilini qoʻshish';
 	@override String get switchingProfile => 'Profil almashtirilmoqda…';
 	@override String get deleteThisProfileTitle => 'Ushbu profil oʻchirilsinmi?';
 	@override String deleteThisProfileMessage({required Object displayName}) => '${displayName} oʻchiriladi. Ulanishlarga taʼsir qilmaydi.';
@@ -1104,7 +1104,7 @@ class _Translations$connections$uz extends Translations$connections$en {
 	@override String sessionExpiredMany({required Object count}) => '${count} server uchun seans vaqti tugadi';
 	@override String get signInAgain => 'Qaytadan kirish';
 	@override String editMediaBrowserTitle({required Object product}) => '${product} ulanishini tahrirlash';
-	@override String editMediaBrowserIntro({required Object serverName}) => '${serverName} uchun URL-larni qoʻshing yoki olib tashlang. Plezy eng kam kechikishga ega boʻlgan mavjud URL-dan foydalanadi.';
+	@override String editMediaBrowserIntro({required Object serverName}) => '${serverName} uchun URL-larni qoʻshing yoki olib tashlang. Pleazy eng kam kechikishga ega boʻlgan mavjud URL-dan foydalanadi.';
 }
 
 // Path: accountPreferences
@@ -1118,7 +1118,7 @@ class _Translations$accountPreferences$uz extends Translations$accountPreference
 	@override String hubSubtitleSingle({required Object account}) => '${account} hisobida saqlangan audio, subtitr va kutubxona parametrlari';
 	@override String hubSubtitleMultiple({required Object count}) => '${count} ta hisobda saqlangan audio, subtitr va kutubxona parametrlari';
 	@override String get pickAccount => 'Har bir hisob oʻz sozlamalarini saqlaydi. Tahrirlash uchun birini tanlang.';
-	@override String get storedOnAccount => 'Bu parametrlar hisobning oʻzida saqlanadi — unga kirilgan har bir ilova ulardan foydalanadi, jumladan boshqa qurilmalaringizdagi Plezy ham.';
+	@override String get storedOnAccount => 'Bu parametrlar hisobning oʻzida saqlanadi — unga kirilgan har bir ilova ulardan foydalanadi, jumladan boshqa qurilmalaringizdagi Pleazy ham.';
 	@override String get noAccounts => 'Sozlanadigan hisoblar yoʻq';
 	@override String get noAccountsHint => 'Plex-ga kiring yoki Jellyfin yoki Emby serverini ulang — shunda oʻsha hisobda saqlangan sozlamalar shu yerda koʻrinadi.';
 	@override String get unavailable => 'Bu hisobga ulanib boʻlmadi';
@@ -1321,9 +1321,9 @@ class _Translations$startup$uz extends Translations$startup$en {
 	final TranslationsUz _root; // ignore: unused_field
 
 	// Translations
-	@override String get failedTitle => 'Plezy ishga tusha olmadi';
+	@override String get failedTitle => 'Pleazy ishga tusha olmadi';
 	@override String get failedBody => 'Ishga tushirish paytida nimadir xato ketdi. Quyidagi tafsilotlar aynan nima muvaffaqiyatsiz boʻlganini koʻrsatadi.';
-	@override String get failedBodyRepairable => 'Plezyning saqlangan sozlamalar fayli shikastlangan va Plezy ishga tushishidan oldin uni qayta tiklash kerak. Qayta urinish yordam bermaydi — Saqlashni tiklashni tanlang.';
+	@override String get failedBodyRepairable => 'Plezyning saqlangan sozlamalar fayli shikastlangan va Pleazy ishga tushishidan oldin uni qayta tiklash kerak. Qayta urinish yordam bermaydi — Saqlashni tiklashni tanlang.';
 	@override String get phaseLabel => 'Qadam';
 	@override String get showDetails => 'Tafsilotlarni koʻrsatish';
 	@override String get hideDetails => 'Tafsilotlarni yashirish';
@@ -1336,12 +1336,12 @@ class _Translations$startup$uz extends Translations$startup$en {
 	@override String get repairBodyOneCredential => 'Bitta saqlangan kirish maʼlumoti shikastlangan va uni oʻqib boʻlmaydi. Tiklash faqat uni olib tashlaydi; boshqa sozlamalaringizga tegilmaydi.';
 	@override String get repairBodySignInsKept => 'Serverlaringiz va profillaringiz tizimga kirgan holda qoladi.';
 	@override String get repairBodySignInsLost => 'Saqlangan kirish maʼlumotlaringizni himoya qiluvchi kalitni ushbu fayldan tiklab boʻlmaydi, shuning uchun har bir server va profilga qaytadan kirishingiz kerak boʻladi. Media serveringizdagi hech narsaga taʼsir qilmaydi.';
-	@override String get repairBodySessionsUncertain => 'Trekerlar (MAL, AniList, Simkl, Trakt) va Seerr alohida saqlanadi va ular saqlanib qolishi ham, yoʻqolishi ham mumkin. Plezy aynan nimani saqlaganini sizga xabar qiladi.';
+	@override String get repairBodySessionsUncertain => 'Trekerlar (MAL, AniList, Simkl, Trakt) va Seerr alohida saqlanadi va ular saqlanib qolishi ham, yoʻqolishi ham mumkin. Pleazy aynan nimani saqlaganini sizga xabar qiladi.';
 	@override String get repairConfirm => 'Tiklash';
 	@override String get repairSucceeded => 'Saqlash tiklandi';
 	@override String get repairNeedsRestart => 'Saqlash tiklandi — qayta ishga tushirish kerak';
-	@override String get restartRequiredBody => 'Maʼlumotlaringiz tiklandi, lekin Plezy ulardan foydalanishi uchun yangidan ishga tushishi kerak. Plezy-ni yoping va qayta oching.';
-	@override String get quitPlezy => 'Plezy-dan chiqish';
+	@override String get restartRequiredBody => 'Maʼlumotlaringiz tiklandi, lekin Pleazy ulardan foydalanishi uchun yangidan ishga tushishi kerak. Pleazy-ni yoping va qayta oching.';
+	@override String get quitPlezy => 'Pleazy-dan chiqish';
 	@override String get repairFailed => 'Tiklash amalga oshmadi';
 	@override String get repairKeptSignIns => 'Serverlaringiz va profillaringiz hali ham tizimga kirgan.';
 	@override String get repairLostSignIns => 'Saqlangan kirish maʼlumotlaringizni himoya qiluvchi kalitni tiklab boʻlmadi. Har bir server va profilga qaytadan kirishingiz kerak boʻladi.';
@@ -1350,7 +1350,7 @@ class _Translations$startup$uz extends Translations$startup$en {
 	@override String get backupWarning => 'Unda kirish hisob maʼlumotlaringiz bor. Uni yuklamang yoki baham koʻrmang.';
 	@override String get deleteBackup => 'Nusxani oʻchirish';
 	@override String get backupDeleted => 'Nusxa oʻchirildi.';
-	@override String get previousFailureTitle => 'Plezy oxirgi marta ishga tushmadi';
+	@override String get previousFailureTitle => 'Pleazy oxirgi marta ishga tushmadi';
 }
 
 // Path: licenses
@@ -2071,11 +2071,11 @@ class _Translations$trakt$uz extends Translations$trakt$en {
 	@override String get connected => 'Ulandi';
 	@override String connectedAs({required Object username}) => '@${username} sifatida ulandi';
 	@override String get disconnectConfirm => 'Trakt uzilsinmi?';
-	@override String get disconnectConfirmBody => 'Plezy Trakt-ga maʼlumot yuborishni toʻxtatadi.';
+	@override String get disconnectConfirmBody => 'Pleazy Trakt-ga maʼlumot yuborishni toʻxtatadi.';
 	@override String get scrobble => 'Real vaqt rejimida kuzatish';
 	@override String get scrobbleDescription => 'Ijro paytida Trakt-ga maʼlumot yuborish.';
 	@override String get watchedSync => 'Koʻrish holatini sinxronlash';
-	@override String get watchedSyncDescription => 'Plezy-da belgilanganda Trakt-da ham belgilanadi.';
+	@override String get watchedSyncDescription => 'Pleazy-da belgilanganda Trakt-da ham belgilanadi.';
 }
 
 // Path: seerr
@@ -2097,7 +2097,7 @@ class _Translations$seerr$uz extends Translations$seerr$en {
 	@override String get noSignInMethods => 'Ushbu Seerr qoʻllab-quvvatlanadigan kirish usulini taklif qilmaydi.';
 	@override String get instance => 'Instansiya';
 	@override String get disconnectConfirm => 'Seerr uzilsinmi?';
-	@override String get disconnectConfirmBody => 'Plezy ushbu Seerr manzilini oʻchiradi.';
+	@override String get disconnectConfirmBody => 'Pleazy ushbu Seerr manzilini oʻchiradi.';
 	@override String get request => 'Soʻrov yuborish';
 	@override String get request4k => '4K soʻrov yuborish';
 	@override String get seasons => 'Mavsumlar';
@@ -2145,7 +2145,7 @@ class _Translations$services$uz extends Translations$services$en {
 	@override String get scrobble => 'Jarayonni avtomatik kuzatish';
 	@override String get scrobbleDescription => 'Roʻyxatingizni avtomatik yangilang.';
 	@override String disconnectConfirm({required Object service}) => '${service} uzilsinmi?';
-	@override String disconnectConfirmBody({required Object service}) => 'Plezy ${service} yangilanishini toʻxtatadi.';
+	@override String disconnectConfirmBody({required Object service}) => 'Pleazy ${service} yangilanishini toʻxtatadi.';
 	@override String connectFailed({required Object service}) => '${service} ulana olmadi. Qaytadan urinib koʻring.';
 	@override late final _Translations$services$names$uz names = _Translations$services$names$uz._(_root);
 	@override late final _Translations$services$deviceCode$uz deviceCode = _Translations$services$deviceCode$uz._(_root);
@@ -2731,14 +2731,14 @@ class _Translations$downloads$backgroundWarning$uz extends Translations$download
 	@override String get bannerAction => 'Batafsil';
 	@override String get sheetTitle => 'Fondagi yuklamalar bloklangan';
 	@override String get sheetTitleDegraded => 'Fondagi yuklamalar cheklangan boʻlishi mumkin';
-	@override String get sheetIntro => 'Android Plezy-ning fonda ishonchli yuklab olishiga toʻsqinlik qilmoqda.';
-	@override String get sheetIntroDegraded => 'Qurilmangiz Plezy fonda qachon yuklay olishini cheklamoqda.';
-	@override String get reasonBackgroundRestricted => 'Plezy-ning fondagi faoliyati cheklangan. Batareya yoki fondagi foydalanishni "Cheklanmagan" qilib belgilang.';
-	@override String get reasonStandbyRestricted => 'Android Plezy-ni cheklangan kutish holatiga oʻtkazdi. Batareya foydalanishini "Cheklanmagan" qilib belgilang.';
+	@override String get sheetIntro => 'Android Pleazy-ning fonda ishonchli yuklab olishiga toʻsqinlik qilmoqda.';
+	@override String get sheetIntroDegraded => 'Qurilmangiz Pleazy fonda qachon yuklay olishini cheklamoqda.';
+	@override String get reasonBackgroundRestricted => 'Pleazy-ning fondagi faoliyati cheklangan. Batareya yoki fondagi foydalanishni "Cheklanmagan" qilib belgilang.';
+	@override String get reasonStandbyRestricted => 'Android Pleazy-ni cheklangan kutish holatiga oʻtkazdi. Batareya foydalanishini "Cheklanmagan" qilib belgilang.';
 	@override String get reasonDownloadChannelBlocked => 'Yuklash bildirishnomalari oʻchirilgan, shuning uchun jarayon koʻrsatkichi va boshqaruv elementlari mavjud boʻlmasligi mumkin.';
 	@override String get reasonNotificationsDisabled => 'Bildirishnomalar oʻchirilgan. Android 13 va undan yangi versiyalarda uzoq davom etadigan fondagi yuklamalar uchun ular talab qilinadi.';
 	@override String get reasonDataSaver => 'Trafik tejash yoqilgan, bu mobil internetda fondagi yuklamalarni bloklaydi. Wi-Fi orqali yuklamalar ishlashi kerak.';
-	@override String get reasonOemUnknown => 'Plezy fonda boʻlganida yuklamalar bir necha marta toʻxtadi. Plezy-ning batareya yoki fondagi foydalanish sozlamalarini tekshiring.';
+	@override String get reasonOemUnknown => 'Pleazy fonda boʻlganida yuklamalar bir necha marta toʻxtadi. Pleazy-ning batareya yoki fondagi foydalanish sozlamalarini tekshiring.';
 	@override String get openSettings => 'Sozlamalarni ochish';
 	@override String get stillNotWorking => 'Qurilmaga oid yordam';
 	@override String get stillNotWorkingDescription => 'Qurilmangiz uchun qadamlarni koʻring yoki muammo davom etsa Sozlamalar › Jurnallarni koʻrish boʻlimidan jurnal yuboring.';
@@ -2782,12 +2782,12 @@ class _Translations$companionRemote$pairing$uz extends Translations$companionRem
 	final TranslationsUz _root; // ignore: unused_field
 
 	// Translations
-	@override String get discoveryDescription => 'Bir xil Plex hisobidagi Plezy qurilmalari bu yerda koʻrinadi';
+	@override String get discoveryDescription => 'Bir xil Plex hisobidagi Pleazy qurilmalari bu yerda koʻrinadi';
 	@override String get hostAddressHint => '192.168.1.100:48632';
 	@override String get connecting => 'Ulanilmoqda...';
 	@override String get searchingForDevices => 'Qurilmalar qidirilmoqda...';
 	@override String get noDevicesFound => 'Tarmoqda qurilmalar topilmadi';
-	@override String get noDevicesHint => 'Kompyuterda Plezy-ni oching va bir xil Wi-Fi-ga ulaning';
+	@override String get noDevicesHint => 'Kompyuterda Pleazy-ni oching va bir xil Wi-Fi-ga ulaning';
 	@override String get availableDevices => 'Mavjud qurilmalar';
 	@override String get manualConnection => 'Qoʻlda ulanish';
 	@override String get cryptoInitFailed => 'Xavfsiz ulanish xatoligi. Avval Plex-ga kiring.';
@@ -2873,7 +2873,7 @@ class _Translations$services$deviceCode$uz extends Translations$services$deviceC
 	final TranslationsUz _root; // ignore: unused_field
 
 	// Translations
-	@override String title({required Object service}) => 'Plezy-ni ${service} xizmatida faollashtiring';
+	@override String title({required Object service}) => 'Pleazy-ni ${service} xizmatida faollashtiring';
 	@override String get instructions => 'QR-kodni skanerlang yoki quyidagi manzilga oʻtib, bu kodni kiriting:';
 	@override String openToActivate({required Object service}) => 'Faollashtirish uchun ${service} xizmatini oching';
 	@override String get copyCode => 'Faollashtirish kodini nusxalash';
@@ -2933,7 +2933,7 @@ class _Translations$services$libraryFilter$uz extends Translations$services$libr
 extension on TranslationsUz {
 	dynamic _flatMapFunction(String path) {
 		return switch (path) {
-			'app.title' => 'Plezy',
+			'app.title' => 'Pleazy',
 			'auth.signInWithPlex' => 'Plex orqali kirish',
 			'auth.showQRCode' => 'QR kodni koʻrsatish',
 			'auth.authenticate' => 'Tasdiqlash',
@@ -2949,7 +2949,7 @@ extension on TranslationsUz {
 			'auth.quickConnectWaiting' => 'Tasdiq kutilmoqda…',
 			'auth.quickConnectCancel' => 'Bekor qilish',
 			'auth.quickConnectExpired' => 'Tezkor ulanish vaqti tugadi. Qaytadan urinib koʻring.',
-			'auth.localDataRecoveryRequired' => 'Plezy mahalliy kirish maʼlumotlarini tiklay olmadi. Iltimos, qaytadan kiring.',
+			'auth.localDataRecoveryRequired' => 'Pleazy mahalliy kirish maʼlumotlarini tiklay olmadi. Iltimos, qaytadan kiring.',
 			'auth.pinCheckRejected' => 'Plex PIN tekshiruvi rad etildi',
 			'common.cancel' => 'Bekor qilish',
 			'common.save' => 'Saqlash',
@@ -3036,7 +3036,7 @@ extension on TranslationsUz {
 			'update.latestVersion' => 'Sizda eng soʻnggi versiya oʻrnatilgan',
 			'update.checkFailed' => 'Yangilanishlarni tekshirish imkoni boʻlmadi',
 			'settings.title' => 'Sozlamalar',
-			'settings.supportDeveloper' => 'Plezy-ni qoʻllab-quvvatlash',
+			'settings.supportDeveloper' => 'Pleazy-ni qoʻllab-quvvatlash',
 			'settings.supportDeveloperDescription' => 'Dasturchini Liberapay orqali qoʻllab-quvvatlang',
 			'settings.language' => 'Til',
 			'settings.theme' => 'Mavzu',
@@ -3170,7 +3170,7 @@ extension on TranslationsUz {
 			'settings.importSettingsDescription' => 'Parametrlarni fayldan tiklang',
 			'settings.importSettingsConfirm' => 'Bu joriy sozlamalaringiz ustidan yoziladi. Davom etasizmi?',
 			'settings.importSettingsSuccess' => 'Sozlamalar import qilindi',
-			'settings.importSettingsInvalidFile' => 'Ushbu fayl toʻgʻri Plezy sozlamalar fayli emas',
+			'settings.importSettingsInvalidFile' => 'Ushbu fayl toʻgʻri Pleazy sozlamalar fayli emas',
 			'settings.importSettingsNoUser' => 'Sozlamalarni import qilishdan oldin tizimga kiring',
 			'settings.shortcutsReset' => 'Tugmalar birlashmasi standart holatga qaytarildi',
 			'settings.about' => 'Dastur haqida',
@@ -3267,7 +3267,7 @@ extension on TranslationsUz {
 			'settings.forceTvMode' => 'TV rejimini majburlash',
 			'settings.forceTvModeDescription' => 'TV interfeysini majburiy yoqish.',
 			'settings.startInFullscreen' => 'Toʻliq ekranda boshlash',
-			'settings.startInFullscreenDescription' => 'Plezy-ni ochganda toʻliq ekran rejimida ochish',
+			'settings.startInFullscreenDescription' => 'Pleazy-ni ochganda toʻliq ekran rejimida ochish',
 			'settings.exitFullscreenOnPlayerClose' => 'Pleyer yopilganda toʻliq ekrandan chiqish',
 			'settings.exitFullscreenOnPlayerCloseDescription' => 'Video pleyerni yopganda avtomatik ravishda toʻliq ekrandan chiqish',
 			'settings.autoHidePerformanceOverlay' => 'Unumdorlik panelini avto-yashirish',
@@ -3314,7 +3314,7 @@ extension on TranslationsUz {
 			'settings.playerScopeGlobal' => 'Hamma joyda',
 			'settings.playerScopeLibrary' => 'Kutubxona boʻyicha',
 			'settings.playerScopeTitle' => 'Serial yoki film boʻyicha',
-			'settings.exportDialogTitle' => 'Plezy sozlamalarini eksport qilish',
+			'settings.exportDialogTitle' => 'Pleazy sozlamalarini eksport qilish',
 			'search.hint' => 'Filmlar, seriallar, musiqa qidirish...',
 			'search.tryDifferentTerm' => 'Boshqa qidiruv soʻzini kiriting',
 			'search.searchYourMedia' => 'Medialaringizdan qidiring',
@@ -3493,8 +3493,8 @@ extension on TranslationsUz {
 			'mediaMenu.deleteEpisodeCountWarning' => ({required num n}) => (_root.$meta.cardinalResolver ?? PluralResolvers.cardinal('uz'))(n, one: 'Bu undagi barcha ${n} qismni va uning faylini oʻchiradi.', other: 'Bu undagi barcha ${n} qismni va ularning fayllarini oʻchiradi.', ), 
 			'mediaMenu.deleteMultiPartWarning' => ({required num n}) => (_root.$meta.cardinalResolver ?? PluralResolvers.cardinal('uz'))(n, one: 'Bu element ${n} fayl shaklida saqlanadi va u oʻchiriladi.', other: 'Bu element ${n} faylda saqlanadi va ularning barchasi oʻchiriladi.', ), 
 			'mediaMenu.deleteSharedFileHeading' => ({required num n}) => (_root.$meta.cardinalResolver ?? PluralResolvers.cardinal('uz'))(n, one: 'Xuddi shu faylda yana ${n} qism saqlanadi va u ham oʻchiriladi:', other: 'Xuddi shu faylda yana ${n} qism saqlanadi va ular ham oʻchiriladi:', ), 
-			'mediaMenu.deleteScopeUnverifiedProbeFailed' => 'Plezy qaysi fayllar olib tashlanishini tekshira olmadi, shuning uchun u yuqorida koʻrsatilgan elementdan koʻproq narsani oʻchirishi mumkin. Bekor qilib qaytadan urining yoki baribir oʻchiring.',
-			'mediaMenu.deleteScopeUnverifiedNoFileInfo' => 'Serveringiz ushbu element uchun fayl tafsilotlarini taqdim etmadi, shuning uchun Plezy qaysi fayllar olib tashlanishini tekshira olmaydi. U yuqorida koʻrsatilgan elementdan koʻproq narsani oʻchirishi mumkin.',
+			'mediaMenu.deleteScopeUnverifiedProbeFailed' => 'Pleazy qaysi fayllar olib tashlanishini tekshira olmadi, shuning uchun u yuqorida koʻrsatilgan elementdan koʻproq narsani oʻchirishi mumkin. Bekor qilib qaytadan urining yoki baribir oʻchiring.',
+			'mediaMenu.deleteScopeUnverifiedNoFileInfo' => 'Serveringiz ushbu element uchun fayl tafsilotlarini taqdim etmadi, shuning uchun Pleazy qaysi fayllar olib tashlanishini tekshira olmaydi. U yuqorida koʻrsatilgan elementdan koʻproq narsani oʻchirishi mumkin.',
 			'mediaMenu.mediaDeletedSuccessfully' => 'Media elementi muvaffaqiyatli oʻchirildi',
 			'mediaMenu.mediaFailedToDelete' => 'Media elementini oʻchirib boʻlmadi',
 			'mediaMenu.rate' => 'Baho berish',
@@ -3729,7 +3729,7 @@ extension on TranslationsUz {
 			'mpvConfig.configPlaceholder' => 'gpu-api=vulkan\nhwdec=auto\n# izoh',
 			'mpvConfig.embeddedVoHint' => 'Linux-da vo, gpu-context va gpu-api e\'tiborga olinmaydi: ichki video har doim video tekisligida vo=libmpv orqali ko\'rsatiladi va gpu-next (ArtCNN kabi compute shaderlar uchun zarur) ichki rejimda ishlay olmaydi.',
 			'dialog.confirmAction' => 'Harakatni tasdiqlash',
-			'profiles.addPlezyProfile' => 'Plezy profilini qoʻshish',
+			'profiles.addPlezyProfile' => 'Pleazy profilini qoʻshish',
 			'profiles.switchingProfile' => 'Profil almashtirilmoqda…',
 			'profiles.deleteThisProfileTitle' => 'Ushbu profil oʻchirilsinmi?',
 			'profiles.deleteThisProfileMessage' => ({required Object displayName}) => '${displayName} oʻchiriladi. Ulanishlarga taʼsir qilmaydi.',
@@ -3800,12 +3800,12 @@ extension on TranslationsUz {
 			'connections.sessionExpiredMany' => ({required Object count}) => '${count} server uchun seans vaqti tugadi',
 			'connections.signInAgain' => 'Qaytadan kirish',
 			'connections.editMediaBrowserTitle' => ({required Object product}) => '${product} ulanishini tahrirlash',
-			'connections.editMediaBrowserIntro' => ({required Object serverName}) => '${serverName} uchun URL-larni qoʻshing yoki olib tashlang. Plezy eng kam kechikishga ega boʻlgan mavjud URL-dan foydalanadi.',
+			'connections.editMediaBrowserIntro' => ({required Object serverName}) => '${serverName} uchun URL-larni qoʻshing yoki olib tashlang. Pleazy eng kam kechikishga ega boʻlgan mavjud URL-dan foydalanadi.',
 			'accountPreferences.sectionTitle' => 'Hisob sozlamalari',
 			'accountPreferences.hubSubtitleSingle' => ({required Object account}) => '${account} hisobida saqlangan audio, subtitr va kutubxona parametrlari',
 			'accountPreferences.hubSubtitleMultiple' => ({required Object count}) => '${count} ta hisobda saqlangan audio, subtitr va kutubxona parametrlari',
 			'accountPreferences.pickAccount' => 'Har bir hisob oʻz sozlamalarini saqlaydi. Tahrirlash uchun birini tanlang.',
-			'accountPreferences.storedOnAccount' => 'Bu parametrlar hisobning oʻzida saqlanadi — unga kirilgan har bir ilova ulardan foydalanadi, jumladan boshqa qurilmalaringizdagi Plezy ham.',
+			'accountPreferences.storedOnAccount' => 'Bu parametrlar hisobning oʻzida saqlanadi — unga kirilgan har bir ilova ulardan foydalanadi, jumladan boshqa qurilmalaringizdagi Pleazy ham.',
 			'accountPreferences.noAccounts' => 'Sozlanadigan hisoblar yoʻq',
 			'accountPreferences.noAccountsHint' => 'Plex-ga kiring yoki Jellyfin yoki Emby serverini ulang — shunda oʻsha hisobda saqlangan sozlamalar shu yerda koʻrinadi.',
 			'accountPreferences.unavailable' => 'Bu hisobga ulanib boʻlmadi',
@@ -3995,9 +3995,9 @@ extension on TranslationsUz {
 			'logs.clearLogs' => 'Jurnallarni tozalash',
 			'logs.copyLogs' => 'Jurnallarni nusxalash',
 			'logs.uploadLogs' => 'Jurnallarni yuklash',
-			'startup.failedTitle' => 'Plezy ishga tusha olmadi',
+			'startup.failedTitle' => 'Pleazy ishga tusha olmadi',
 			'startup.failedBody' => 'Ishga tushirish paytida nimadir xato ketdi. Quyidagi tafsilotlar aynan nima muvaffaqiyatsiz boʻlganini koʻrsatadi.',
-			'startup.failedBodyRepairable' => 'Plezyning saqlangan sozlamalar fayli shikastlangan va Plezy ishga tushishidan oldin uni qayta tiklash kerak. Qayta urinish yordam bermaydi — Saqlashni tiklashni tanlang.',
+			'startup.failedBodyRepairable' => 'Plezyning saqlangan sozlamalar fayli shikastlangan va Pleazy ishga tushishidan oldin uni qayta tiklash kerak. Qayta urinish yordam bermaydi — Saqlashni tiklashni tanlang.',
 			'startup.phaseLabel' => 'Qadam',
 			'startup.showDetails' => 'Tafsilotlarni koʻrsatish',
 			'startup.hideDetails' => 'Tafsilotlarni yashirish',
@@ -4010,12 +4010,12 @@ extension on TranslationsUz {
 			'startup.repairBodyOneCredential' => 'Bitta saqlangan kirish maʼlumoti shikastlangan va uni oʻqib boʻlmaydi. Tiklash faqat uni olib tashlaydi; boshqa sozlamalaringizga tegilmaydi.',
 			'startup.repairBodySignInsKept' => 'Serverlaringiz va profillaringiz tizimga kirgan holda qoladi.',
 			'startup.repairBodySignInsLost' => 'Saqlangan kirish maʼlumotlaringizni himoya qiluvchi kalitni ushbu fayldan tiklab boʻlmaydi, shuning uchun har bir server va profilga qaytadan kirishingiz kerak boʻladi. Media serveringizdagi hech narsaga taʼsir qilmaydi.',
-			'startup.repairBodySessionsUncertain' => 'Trekerlar (MAL, AniList, Simkl, Trakt) va Seerr alohida saqlanadi va ular saqlanib qolishi ham, yoʻqolishi ham mumkin. Plezy aynan nimani saqlaganini sizga xabar qiladi.',
+			'startup.repairBodySessionsUncertain' => 'Trekerlar (MAL, AniList, Simkl, Trakt) va Seerr alohida saqlanadi va ular saqlanib qolishi ham, yoʻqolishi ham mumkin. Pleazy aynan nimani saqlaganini sizga xabar qiladi.',
 			'startup.repairConfirm' => 'Tiklash',
 			'startup.repairSucceeded' => 'Saqlash tiklandi',
 			'startup.repairNeedsRestart' => 'Saqlash tiklandi — qayta ishga tushirish kerak',
-			'startup.restartRequiredBody' => 'Maʼlumotlaringiz tiklandi, lekin Plezy ulardan foydalanishi uchun yangidan ishga tushishi kerak. Plezy-ni yoping va qayta oching.',
-			'startup.quitPlezy' => 'Plezy-dan chiqish',
+			'startup.restartRequiredBody' => 'Maʼlumotlaringiz tiklandi, lekin Pleazy ulardan foydalanishi uchun yangidan ishga tushishi kerak. Pleazy-ni yoping va qayta oching.',
+			'startup.quitPlezy' => 'Pleazy-dan chiqish',
 			'startup.repairFailed' => 'Tiklash amalga oshmadi',
 			'startup.repairKeptSignIns' => 'Serverlaringiz va profillaringiz hali ham tizimga kirgan.',
 			'startup.repairLostSignIns' => 'Saqlangan kirish maʼlumotlaringizni himoya qiluvchi kalitni tiklab boʻlmadi. Har bir server va profilga qaytadan kirishingiz kerak boʻladi.',
@@ -4024,7 +4024,7 @@ extension on TranslationsUz {
 			'startup.backupWarning' => 'Unda kirish hisob maʼlumotlaringiz bor. Uni yuklamang yoki baham koʻrmang.',
 			'startup.deleteBackup' => 'Nusxani oʻchirish',
 			'startup.backupDeleted' => 'Nusxa oʻchirildi.',
-			'startup.previousFailureTitle' => 'Plezy oxirgi marta ishga tushmadi',
+			'startup.previousFailureTitle' => 'Pleazy oxirgi marta ishga tushmadi',
 			'licenses.relatedPackages' => 'Bogʻliq paketlar',
 			'licenses.license' => 'Litsenziya',
 			'licenses.licenseNumber' => ({required Object number}) => 'Litsenziya ${number}',
@@ -4489,14 +4489,14 @@ extension on TranslationsUz {
 			'downloads.backgroundWarning.bannerAction' => 'Batafsil',
 			'downloads.backgroundWarning.sheetTitle' => 'Fondagi yuklamalar bloklangan',
 			'downloads.backgroundWarning.sheetTitleDegraded' => 'Fondagi yuklamalar cheklangan boʻlishi mumkin',
-			'downloads.backgroundWarning.sheetIntro' => 'Android Plezy-ning fonda ishonchli yuklab olishiga toʻsqinlik qilmoqda.',
-			'downloads.backgroundWarning.sheetIntroDegraded' => 'Qurilmangiz Plezy fonda qachon yuklay olishini cheklamoqda.',
-			'downloads.backgroundWarning.reasonBackgroundRestricted' => 'Plezy-ning fondagi faoliyati cheklangan. Batareya yoki fondagi foydalanishni "Cheklanmagan" qilib belgilang.',
-			'downloads.backgroundWarning.reasonStandbyRestricted' => 'Android Plezy-ni cheklangan kutish holatiga oʻtkazdi. Batareya foydalanishini "Cheklanmagan" qilib belgilang.',
+			'downloads.backgroundWarning.sheetIntro' => 'Android Pleazy-ning fonda ishonchli yuklab olishiga toʻsqinlik qilmoqda.',
+			'downloads.backgroundWarning.sheetIntroDegraded' => 'Qurilmangiz Pleazy fonda qachon yuklay olishini cheklamoqda.',
+			'downloads.backgroundWarning.reasonBackgroundRestricted' => 'Pleazy-ning fondagi faoliyati cheklangan. Batareya yoki fondagi foydalanishni "Cheklanmagan" qilib belgilang.',
+			'downloads.backgroundWarning.reasonStandbyRestricted' => 'Android Pleazy-ni cheklangan kutish holatiga oʻtkazdi. Batareya foydalanishini "Cheklanmagan" qilib belgilang.',
 			'downloads.backgroundWarning.reasonDownloadChannelBlocked' => 'Yuklash bildirishnomalari oʻchirilgan, shuning uchun jarayon koʻrsatkichi va boshqaruv elementlari mavjud boʻlmasligi mumkin.',
 			'downloads.backgroundWarning.reasonNotificationsDisabled' => 'Bildirishnomalar oʻchirilgan. Android 13 va undan yangi versiyalarda uzoq davom etadigan fondagi yuklamalar uchun ular talab qilinadi.',
 			'downloads.backgroundWarning.reasonDataSaver' => 'Trafik tejash yoqilgan, bu mobil internetda fondagi yuklamalarni bloklaydi. Wi-Fi orqali yuklamalar ishlashi kerak.',
-			'downloads.backgroundWarning.reasonOemUnknown' => 'Plezy fonda boʻlganida yuklamalar bir necha marta toʻxtadi. Plezy-ning batareya yoki fondagi foydalanish sozlamalarini tekshiring.',
+			'downloads.backgroundWarning.reasonOemUnknown' => 'Pleazy fonda boʻlganida yuklamalar bir necha marta toʻxtadi. Pleazy-ning batareya yoki fondagi foydalanish sozlamalarini tekshiring.',
 			'downloads.backgroundWarning.openSettings' => 'Sozlamalarni ochish',
 			'downloads.backgroundWarning.stillNotWorking' => 'Qurilmaga oid yordam',
 			'downloads.backgroundWarning.stillNotWorkingDescription' => 'Qurilmangiz uchun qadamlarni koʻring yoki muammo davom etsa Sozlamalar › Jurnallarni koʻrish boʻlimidan jurnal yuboring.',
@@ -4550,12 +4550,12 @@ extension on TranslationsUz {
 			'companionRemote.session.stopServer' => 'Serverni toʻxtatish',
 			'companionRemote.session.minimize' => 'Yigʻish',
 			'companionRemote.session.manualAddressHint' => 'Qoʻlda ulanish manzili:',
-			'companionRemote.pairing.discoveryDescription' => 'Bir xil Plex hisobidagi Plezy qurilmalari bu yerda koʻrinadi',
+			'companionRemote.pairing.discoveryDescription' => 'Bir xil Plex hisobidagi Pleazy qurilmalari bu yerda koʻrinadi',
 			'companionRemote.pairing.hostAddressHint' => '192.168.1.100:48632',
 			'companionRemote.pairing.connecting' => 'Ulanilmoqda...',
 			'companionRemote.pairing.searchingForDevices' => 'Qurilmalar qidirilmoqda...',
 			'companionRemote.pairing.noDevicesFound' => 'Tarmoqda qurilmalar topilmadi',
-			'companionRemote.pairing.noDevicesHint' => 'Kompyuterda Plezy-ni oching va bir xil Wi-Fi-ga ulaning',
+			'companionRemote.pairing.noDevicesHint' => 'Kompyuterda Pleazy-ni oching va bir xil Wi-Fi-ga ulaning',
 			'companionRemote.pairing.availableDevices' => 'Mavjud qurilmalar',
 			'companionRemote.pairing.manualConnection' => 'Qoʻlda ulanish',
 			'companionRemote.pairing.cryptoInitFailed' => 'Xavfsiz ulanish xatoligi. Avval Plex-ga kiring.',
@@ -4780,11 +4780,11 @@ extension on TranslationsUz {
 			'trakt.connected' => 'Ulandi',
 			'trakt.connectedAs' => ({required Object username}) => '@${username} sifatida ulandi',
 			'trakt.disconnectConfirm' => 'Trakt uzilsinmi?',
-			'trakt.disconnectConfirmBody' => 'Plezy Trakt-ga maʼlumot yuborishni toʻxtatadi.',
+			'trakt.disconnectConfirmBody' => 'Pleazy Trakt-ga maʼlumot yuborishni toʻxtatadi.',
 			'trakt.scrobble' => 'Real vaqt rejimida kuzatish',
 			'trakt.scrobbleDescription' => 'Ijro paytida Trakt-ga maʼlumot yuborish.',
 			'trakt.watchedSync' => 'Koʻrish holatini sinxronlash',
-			'trakt.watchedSyncDescription' => 'Plezy-da belgilanganda Trakt-da ham belgilanadi.',
+			'trakt.watchedSyncDescription' => 'Pleazy-da belgilanganda Trakt-da ham belgilanadi.',
 			'seerr.title' => 'Seerr',
 			'seerr.connectTitle' => 'Seerr ulash',
 			'seerr.serverUrl' => 'Server URL-i',
@@ -4797,7 +4797,7 @@ extension on TranslationsUz {
 			'seerr.noSignInMethods' => 'Ushbu Seerr qoʻllab-quvvatlanadigan kirish usulini taklif qilmaydi.',
 			'seerr.instance' => 'Instansiya',
 			'seerr.disconnectConfirm' => 'Seerr uzilsinmi?',
-			'seerr.disconnectConfirmBody' => 'Plezy ushbu Seerr manzilini oʻchiradi.',
+			'seerr.disconnectConfirmBody' => 'Pleazy ushbu Seerr manzilini oʻchiradi.',
 			'seerr.request' => 'Soʻrov yuborish',
 			'seerr.request4k' => '4K soʻrov yuborish',
 			'seerr.seasons' => 'Mavsumlar',
@@ -4836,14 +4836,14 @@ extension on TranslationsUz {
 			'services.scrobble' => 'Jarayonni avtomatik kuzatish',
 			'services.scrobbleDescription' => 'Roʻyxatingizni avtomatik yangilang.',
 			'services.disconnectConfirm' => ({required Object service}) => '${service} uzilsinmi?',
-			'services.disconnectConfirmBody' => ({required Object service}) => 'Plezy ${service} yangilanishini toʻxtatadi.',
+			'services.disconnectConfirmBody' => ({required Object service}) => 'Pleazy ${service} yangilanishini toʻxtatadi.',
 			'services.connectFailed' => ({required Object service}) => '${service} ulana olmadi. Qaytadan urinib koʻring.',
 			'services.names.mal' => 'MyAnimeList',
 			'services.names.anilist' => 'AniList',
 			'services.names.simkl' => 'Simkl',
 			'services.names.seerr' => 'Seerr',
 			'services.names.mdblist' => 'MDBList',
-			'services.deviceCode.title' => ({required Object service}) => 'Plezy-ni ${service} xizmatida faollashtiring',
+			'services.deviceCode.title' => ({required Object service}) => 'Pleazy-ni ${service} xizmatida faollashtiring',
 			'services.deviceCode.instructions' => 'QR-kodni skanerlang yoki quyidagi manzilga oʻtib, bu kodni kiriting:',
 			'services.deviceCode.openToActivate' => ({required Object service}) => 'Faollashtirish uchun ${service} xizmatini oching',
 			'services.deviceCode.copyCode' => 'Faollashtirish kodini nusxalash',

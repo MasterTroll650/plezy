@@ -11,15 +11,15 @@
 
   const { data } = $props();
 
-  const title = "Plezy - A Beautiful Plex & Jellyfin Client";
-  const description = "Plezy is a beautiful client for Plex and Jellyfin, available on iOS, Android, Android TV, tvOS, Windows, macOS, and Linux. HDR, Dolby Vision, offline downloads, and more.";
+  const title = "Pleazy - A Beautiful Plex & Jellyfin Client";
+  const description = "Pleazy is a beautiful client for Plex and Jellyfin, available on iOS, Android, Android TV, tvOS, Windows, macOS, and Linux. HDR, Dolby Vision, offline downloads, and more.";
   const url = "https://plezy.app/";
 
   const softwareAppSchema = $derived.by(() => {
     const schema: Record<string, unknown> = {
       "@context": "https://schema.org",
       "@type": "SoftwareApplication",
-      "name": "Plezy",
+      "name": "Pleazy",
       "description": description,
       "url": "https://plezy.app",
       "applicationCategory": "MultimediaApplication",

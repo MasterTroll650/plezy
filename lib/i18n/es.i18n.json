@@ -1,6 +1,6 @@
 {
   "app": {
-    "title": "Plezy"
+    "title": "Pleazy"
   },
   "auth": {
     "signInWithPlex": "Inicia sesión con Plex",
@@ -18,7 +18,7 @@
     "quickConnectWaiting": "Esperando aprobación…",
     "quickConnectCancel": "Cancelar",
     "quickConnectExpired": "Quick Connect caducó. Inténtalo de nuevo.",
-    "localDataRecoveryRequired": "Plezy no pudo recuperar de forma segura los datos locales de inicio de sesión ni la reproducción pendiente. Vuelve a iniciar sesión.",
+    "localDataRecoveryRequired": "Pleazy no pudo recuperar de forma segura los datos locales de inicio de sesión ni la reproducción pendiente. Vuelve a iniciar sesión.",
     "pinCheckRejected": "La comprobación del PIN de Plex fue rechazada"
   },
   "common": {
@@ -117,7 +117,7 @@
   },
   "settings": {
     "title": "Configuración",
-    "supportDeveloper": "Apoya Plezy",
+    "supportDeveloper": "Apoya Pleazy",
     "supportDeveloperDescription": "Dona vía Liberapay para financiar el desarrollo",
     "language": "Idioma",
     "theme": "Tema",
@@ -256,7 +256,7 @@
     "importSettingsDescription": "Restaurar preferencias desde un archivo",
     "importSettingsConfirm": "Esto reemplazará tu configuración actual. ¿Continuar?",
     "importSettingsSuccess": "Configuración importada",
-    "importSettingsInvalidFile": "Este archivo no es una exportación válida de Plezy",
+    "importSettingsInvalidFile": "Este archivo no es una exportación válida de Pleazy",
     "importSettingsNoUser": "Inicia sesión antes de importar la configuración",
     "shortcutsReset": "Atajos restablecidos a los valores predeterminados",
     "about": "Acerca de",
@@ -365,7 +365,7 @@
     "forceTvMode": "Forzar modo TV",
     "forceTvModeDescription": "Forzar diseño TV. Para dispositivos que no lo detectan. Requiere reinicio.",
     "startInFullscreen": "Iniciar en pantalla completa",
-    "startInFullscreenDescription": "Abrir Plezy en modo pantalla completa al iniciar",
+    "startInFullscreenDescription": "Abrir Pleazy en modo pantalla completa al iniciar",
     "exitFullscreenOnPlayerClose": "Salir de pantalla completa al cerrar el reproductor",
     "exitFullscreenOnPlayerCloseDescription": "Salir automáticamente del modo de pantalla completa al cerrar el reproductor de video",
     "autoHidePerformanceOverlay": "Ocultar superposición de rendimiento automáticamente",
@@ -414,7 +414,7 @@
     "playerScopeGlobal": "En todas partes",
     "playerScopeLibrary": "Por biblioteca",
     "playerScopeTitle": "Por serie o película",
-    "exportDialogTitle": "Exportar ajustes de Plezy"
+    "exportDialogTitle": "Exportar ajustes de Pleazy"
   },
   "search": {
     "hint": "Buscar películas, series, música...",
@@ -610,8 +610,8 @@
       "one": "${n} episodio más se almacena en el mismo archivo y también se eliminará:",
       "other": "${n} episodios más se almacenan en el mismo archivo y también se eliminarán:"
     },
-    "deleteScopeUnverifiedProbeFailed": "Plezy no pudo comprobar qué archivos se eliminarán, por lo que podría borrar más de lo indicado arriba. Cancela y vuelve a intentarlo, o elimina de todos modos.",
-    "deleteScopeUnverifiedNoFileInfo": "Tu servidor no proporcionó los detalles del archivo de este elemento, por lo que Plezy no puede comprobar qué archivos se eliminarán. Podría borrar más de lo indicado arriba.",
+    "deleteScopeUnverifiedProbeFailed": "Pleazy no pudo comprobar qué archivos se eliminarán, por lo que podría borrar más de lo indicado arriba. Cancela y vuelve a intentarlo, o elimina de todos modos.",
+    "deleteScopeUnverifiedNoFileInfo": "Tu servidor no proporcionó los detalles del archivo de este elemento, por lo que Pleazy no puede comprobar qué archivos se eliminarán. Podría borrar más de lo indicado arriba.",
     "mediaDeletedSuccessfully": "Elemento multimedia eliminado con éxito",
     "mediaFailedToDelete": "Error al eliminar el elemento multimedia",
     "rate": "Calificar",
@@ -881,7 +881,7 @@
     "confirmAction": "Confirmar acción"
   },
   "profiles": {
-    "addPlezyProfile": "Añadir perfil de Plezy",
+    "addPlezyProfile": "Añadir perfil de Pleazy",
     "switchingProfile": "Cambiando de perfil…",
     "deleteThisProfileTitle": "¿Eliminar este perfil?",
     "deleteThisProfileMessage": "Eliminar ${displayName}. Las conexiones no se verán afectadas.",
@@ -954,14 +954,14 @@
     "sessionExpiredMany": "Sesión caducada para ${count} servidores",
     "signInAgain": "Iniciar sesión de nuevo",
     "editMediaBrowserTitle": "Editar conexión de ${product}",
-    "editMediaBrowserIntro": "Añade o elimina URL para ${serverName}. Plezy usará la URL accesible con menor latencia."
+    "editMediaBrowserIntro": "Añade o elimina URL para ${serverName}. Pleazy usará la URL accesible con menor latencia."
   },
   "accountPreferences": {
     "sectionTitle": "Preferencias de cuenta",
     "hubSubtitleSingle": "Opciones de audio, subtítulos y biblioteca guardadas en ${account}",
     "hubSubtitleMultiple": "Opciones de audio, subtítulos y biblioteca guardadas en ${count} cuentas",
     "pickAccount": "Cada cuenta guarda sus propias preferencias. Elige la que quieras editar.",
-    "storedOnAccount": "Estas opciones se guardan en la propia cuenta, así que cualquier aplicación con la sesión iniciada las usa, incluido Plezy en tus otros dispositivos.",
+    "storedOnAccount": "Estas opciones se guardan en la propia cuenta, así que cualquier aplicación con la sesión iniciada las usa, incluido Pleazy en tus otros dispositivos.",
     "noAccounts": "No hay cuentas que configurar",
     "noAccountsHint": "Inicia sesión con Plex o conecta un servidor de Jellyfin o Emby y las preferencias guardadas en esa cuenta aparecerán aquí.",
     "unavailable": "No se puede acceder a esta cuenta",
@@ -1188,9 +1188,9 @@
     "uploadLogs": "Subir registros"
   },
   "startup": {
-    "failedTitle": "Plezy no pudo iniciarse",
+    "failedTitle": "Pleazy no pudo iniciarse",
     "failedBody": "Algo salió mal durante el inicio. Los detalles de abajo indican qué ha fallado.",
-    "failedBodyRepairable": "El archivo de ajustes guardados de Plezy está dañado y debe reconstruirse antes de que Plezy pueda iniciarse. Reintentar no servirá: elige Reparar almacenamiento.",
+    "failedBodyRepairable": "El archivo de ajustes guardados de Pleazy está dañado y debe reconstruirse antes de que Pleazy pueda iniciarse. Reintentar no servirá: elige Reparar almacenamiento.",
     "phaseLabel": "Paso",
     "showDetails": "Mostrar detalles",
     "hideDetails": "Ocultar detalles",
@@ -1199,16 +1199,16 @@
     "uploadDetails": "Subir detalles",
     "repairStorage": "Reparar almacenamiento",
     "repairTitle": "¿Reparar los datos guardados?",
-    "repairBodyCommon": "El archivo de ajustes de Plezy está dañado y no puede leerse. La reparación restablece todos los ajustes a sus valores predeterminados.",
+    "repairBodyCommon": "El archivo de ajustes de Pleazy está dañado y no puede leerse. La reparación restablece todos los ajustes a sus valores predeterminados.",
     "repairBodyOneCredential": "Un inicio de sesión guardado está dañado y no puede leerse. La reparación elimina solo ese; el resto de tus ajustes se mantienen intactos.",
     "repairBodySignInsKept": "Tus servidores y perfiles deberían permanecer con la sesión iniciada.",
     "repairBodySignInsLost": "La clave que protege tus inicios de sesión guardados no se puede recuperar de este archivo, por lo que tendrás que iniciar sesión de nuevo en cada servidor y perfil. Nada en tu servidor de medios se ve afectado.",
-    "repairBodySessionsUncertain": "Los rastreadores (MAL, AniList, Simkl, Trakt) y Seerr se guardan por separado y pueden sobrevivir o no. Plezy te dirá exactamente qué ha conservado.",
+    "repairBodySessionsUncertain": "Los rastreadores (MAL, AniList, Simkl, Trakt) y Seerr se guardan por separado y pueden sobrevivir o no. Pleazy te dirá exactamente qué ha conservado.",
     "repairConfirm": "Reparar",
     "repairSucceeded": "Almacenamiento reparado",
     "repairNeedsRestart": "Almacenamiento reparado: es necesario reiniciar",
-    "restartRequiredBody": "Tus datos se repararon, pero Plezy debe iniciarse de nuevo antes de poder usarlos. Cierra Plezy y ábrelo otra vez.",
-    "quitPlezy": "Salir de Plezy",
+    "restartRequiredBody": "Tus datos se repararon, pero Pleazy debe iniciarse de nuevo antes de poder usarlos. Cierra Pleazy y ábrelo otra vez.",
+    "quitPlezy": "Salir de Pleazy",
     "repairFailed": "Error en la reparación",
     "repairKeptSignIns": "Tus servidores y perfiles siguen con la sesión iniciada.",
     "repairLostSignIns": "La clave que protege tus inicios de sesión guardados no se pudo recuperar. Tendrás que iniciar sesión de nuevo en cada servidor y perfil.",
@@ -1217,7 +1217,7 @@
     "backupWarning": "Contiene tus credenciales de inicio de sesión. No la subas ni la compartas.",
     "deleteBackup": "Eliminar copia",
     "backupDeleted": "Copia eliminada.",
-    "previousFailureTitle": "Plezy no se inició la última vez"
+    "previousFailureTitle": "Pleazy no se inició la última vez"
   },
   "licenses": {
     "relatedPackages": "Paquetes relacionados",
@@ -1753,14 +1753,14 @@
       "bannerAction": "Detalles",
       "sheetTitle": "Las descargas en segundo plano están bloqueadas",
       "sheetTitleDegraded": "Las descargas en segundo plano pueden estar limitadas",
-      "sheetIntro": "Android impide que Plezy descargue de forma fiable en segundo plano.",
-      "sheetIntroDegraded": "Tu dispositivo limita cuándo puede descargar Plezy en segundo plano.",
-      "reasonBackgroundRestricted": "El uso en segundo plano de Plezy está restringido. Configura el uso de batería o en segundo plano como \"Sin restricciones\".",
-      "reasonStandbyRestricted": "Android ha puesto a Plezy en un estado de espera restringido. Configura el uso de batería como \"Sin restricciones\".",
+      "sheetIntro": "Android impide que Pleazy descargue de forma fiable en segundo plano.",
+      "sheetIntroDegraded": "Tu dispositivo limita cuándo puede descargar Pleazy en segundo plano.",
+      "reasonBackgroundRestricted": "El uso en segundo plano de Pleazy está restringido. Configura el uso de batería o en segundo plano como \"Sin restricciones\".",
+      "reasonStandbyRestricted": "Android ha puesto a Pleazy en un estado de espera restringido. Configura el uso de batería como \"Sin restricciones\".",
       "reasonDownloadChannelBlocked": "Las notificaciones de descargas están desactivadas, por lo que el progreso y los controles podrían no estar disponibles.",
       "reasonNotificationsDisabled": "Las notificaciones están desactivadas. En Android 13 o versiones posteriores, son necesarias para las descargas largas en segundo plano.",
       "reasonDataSaver": "El Ahorro de datos está activado y bloquea las descargas en segundo plano con datos móviles. Las descargas deberían seguir funcionando con Wi-Fi.",
-      "reasonOemUnknown": "Las descargas se detuvieron repetidamente mientras Plezy estaba en segundo plano. Revisa la configuración de batería o de uso en segundo plano de Plezy.",
+      "reasonOemUnknown": "Las descargas se detuvieron repetidamente mientras Pleazy estaba en segundo plano. Revisa la configuración de batería o de uso en segundo plano de Pleazy.",
       "openSettings": "Abrir configuración",
       "stillNotWorking": "Ayuda específica para tu dispositivo",
       "stillNotWorkingDescription": "Consulta los pasos para tu dispositivo o envía un registro desde Configuración › Ver registros si el problema continúa.",
@@ -1822,19 +1822,19 @@
       "manualAddressHint": "Dirección de conexión manual:"
     },
     "pairing": {
-      "discoveryDescription": "Los dispositivos Plezy con la misma cuenta Plex aparecen aquí",
+      "discoveryDescription": "Los dispositivos Pleazy con la misma cuenta Plex aparecen aquí",
       "hostAddressHint": "192.168.1.100:48632",
       "connecting": "Conectando...",
       "searchingForDevices": "Buscando dispositivos...",
       "noDevicesFound": "No se encontraron dispositivos en tu red",
-      "noDevicesHint": "Abre Plezy en tu equipo y usa la misma red WiFi",
+      "noDevicesHint": "Abre Pleazy en tu equipo y usa la misma red WiFi",
       "availableDevices": "Dispositivos disponibles",
       "manualConnection": "Conexión manual",
       "cryptoInitFailed": "No se pudo iniciar la conexión segura. Inicia sesión en Plex primero.",
       "validationHostRequired": "Introduce la dirección del host",
       "validationHostFormat": "El formato debe ser IP:puerto (p. ej., 192.168.1.100:48632)",
       "connectionTimedOut": "Tiempo de conexión agotado. Usa la misma red en ambos dispositivos.",
-      "sessionNotFound": "Dispositivo no encontrado. Asegúrate de que Plezy esté en ejecución en el host.",
+      "sessionNotFound": "Dispositivo no encontrado. Asegúrate de que Pleazy esté en ejecución en el host.",
       "authFailed": "Autenticación fallida. Ambos dispositivos necesitan la misma cuenta Plex.",
       "failedToConnect": "Error al conectar: ${error}"
     },
@@ -2073,11 +2073,11 @@
     "connected": "Conectado",
     "connectedAs": "Conectado como @${username}",
     "disconnectConfirm": "¿Desconectar cuenta de Trakt?",
-    "disconnectConfirmBody": "Plezy dejará de enviar eventos a Trakt. Puedes reconectar cuando quieras.",
+    "disconnectConfirmBody": "Pleazy dejará de enviar eventos a Trakt. Puedes reconectar cuando quieras.",
     "scrobble": "Scrobbling en tiempo real",
     "scrobbleDescription": "Enviar eventos de reproducción, pausa y parada a Trakt durante la reproducción.",
     "watchedSync": "Sincronizar el estado de visualización",
-    "watchedSyncDescription": "Cuando marques contenido como visto en Plezy, también se marcará como visto en Trakt."
+    "watchedSyncDescription": "Cuando marques contenido como visto en Pleazy, también se marcará como visto en Trakt."
   },
   "seerr": {
     "title": "Seerr",
@@ -2089,10 +2089,10 @@
     "signInWithEmby": "Iniciar sesión con Emby",
     "signInWithLocal": "Usar una cuenta local",
     "email": "Correo electrónico",
-    "noSignInMethods": "Esta instancia de Seerr no ofrece ningún método de inicio de sesión compatible con Plezy.",
+    "noSignInMethods": "Esta instancia de Seerr no ofrece ningún método de inicio de sesión compatible con Pleazy.",
     "instance": "Instancia",
     "disconnectConfirm": "¿Desconectar Seerr?",
-    "disconnectConfirmBody": "Plezy olvidará esta instancia de Seerr. Reconecta cuando quieras.",
+    "disconnectConfirmBody": "Pleazy olvidará esta instancia de Seerr. Reconecta cuando quieras.",
     "request": "Solicitar",
     "request4k": "Solicitar en 4K",
     "seasons": "Temporadas",
@@ -2140,7 +2140,7 @@
     "scrobble": "Registrar progreso automáticamente",
     "scrobbleDescription": "Actualiza tu lista cuando termines un episodio o película.",
     "disconnectConfirm": "¿Desconectar ${service}?",
-    "disconnectConfirmBody": "Plezy dejará de actualizar ${service}. Reconecta cuando quieras.",
+    "disconnectConfirmBody": "Pleazy dejará de actualizar ${service}. Reconecta cuando quieras.",
     "connectFailed": "No se pudo conectar a ${service}. Inténtalo de nuevo.",
     "names": {
       "mal": "MyAnimeList",
@@ -2150,7 +2150,7 @@
       "mdblist": "MDBList"
     },
     "deviceCode": {
-      "title": "Activar Plezy en ${service}",
+      "title": "Activar Pleazy en ${service}",
       "instructions": "Escanea el código QR o visita la dirección que aparece a continuación e introduce este código:",
       "openToActivate": "Abrir ${service} para activar",
       "copyCode": "Copiar código de activación",

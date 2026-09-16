@@ -285,7 +285,7 @@ android {
   }
 
   defaultConfig {
-    applicationId = "com.edde746.plezy"
+    applicationId = "com.mastertroll650.pleazy"
     minSdk = 25 // Fire OS 6.x (API 25); :libmpv shares the same floor
     targetSdk = flutter.targetSdkVersion
     versionCode = flutter.versionCode
@@ -304,8 +304,13 @@ android {
 
     if (System.getenv("AMAZON") != null) {
       versionCode = (flutter.versionCode ?: 0) + 3000
-      ndk {
-        abiFilters += listOf("armeabi-v7a", "arm64-v8a")
+      // A universal Amazon Store APK explicitly carries both ARM ABIs. Local
+      // Fire TV sideload builds use Flutter's --split-per-abi instead; Gradle
+      // rejects combining an ABI split with explicit ndk abiFilters.
+      if ((findProperty("split-per-abi") as String?) != "true") {
+        ndk {
+          abiFilters += listOf("armeabi-v7a", "arm64-v8a")
+        }
       }
     }
   }
@@ -338,6 +343,11 @@ android {
       val keystorePropertiesFile = rootProject.file("key.properties")
       if (keystorePropertiesFile.exists()) {
         signingConfig = signingConfigs.getByName("release")
+      } else {
+        // Local sideload builds (including Fire TV) still need a signature.
+        // The publishing pipeline provides key.properties and therefore never
+        // uses this debug-key fallback.
+        signingConfig = signingConfigs.getByName("debug")
       }
       // If key.properties doesn't exist, it will use debug signing for CI builds
       ndk {

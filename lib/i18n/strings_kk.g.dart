@@ -99,7 +99,7 @@ class _Translations$app$kk extends Translations$app$en {
 	final TranslationsKk _root; // ignore: unused_field
 
 	// Translations
-	@override String get title => 'Plezy';
+	@override String get title => 'Pleazy';
 }
 
 // Path: auth
@@ -124,7 +124,7 @@ class _Translations$auth$kk extends Translations$auth$en {
 	@override String get quickConnectWaiting => 'Растау күтілуде…';
 	@override String get quickConnectCancel => 'Бас тарту';
 	@override String get quickConnectExpired => 'Жылдам қосылу мерзімі өтті. Қайтадан байқап көріңіз.';
-	@override String get localDataRecoveryRequired => 'Plezy жергілікті кіру мәліметтерін қалпына келтіре алмады. Қайтадан кіріңіз.';
+	@override String get localDataRecoveryRequired => 'Pleazy жергілікті кіру мәліметтерін қалпына келтіре алмады. Қайтадан кіріңіз.';
 	@override String get pinCheckRejected => 'Plex PIN кодын тексеру қабылданбады';
 }
 
@@ -226,7 +226,7 @@ class _Translations$settings$kk extends Translations$settings$en {
 
 	// Translations
 	@override String get title => 'Баптаулар';
-	@override String get supportDeveloper => 'Plezy жобасын қолдау';
+	@override String get supportDeveloper => 'Pleazy жобасын қолдау';
 	@override String get supportDeveloperDescription => 'Дамытуды қаржыландыру үшін Liberapay арқылы демеушілік жасаңыз';
 	@override String get language => 'Тіл';
 	@override String get theme => 'Тақырып';
@@ -360,7 +360,7 @@ class _Translations$settings$kk extends Translations$settings$en {
 	@override String get importSettingsDescription => 'Параметрлерді файлдан қалпына келтіріңіз';
 	@override String get importSettingsConfirm => 'Бұл ағымдағы баптауларыңыздың үстінен жазады. Жалғастырасыз ба?';
 	@override String get importSettingsSuccess => 'Баптаулар импортталды';
-	@override String get importSettingsInvalidFile => 'Бұл файл дұрыс Plezy баптаулар файлы емес';
+	@override String get importSettingsInvalidFile => 'Бұл файл дұрыс Pleazy баптаулар файлы емес';
 	@override String get importSettingsNoUser => 'Баптауларды импорттау алдында жүйеге кіріңіз';
 	@override String get shortcutsReset => 'Пернелер тіркесі әдепкі күйге қайтарылды';
 	@override String get about => 'Қолданба туралы';
@@ -457,7 +457,7 @@ class _Translations$settings$kk extends Translations$settings$en {
 	@override String get forceTvMode => 'TV режимін мәжбүрлеу';
 	@override String get forceTvModeDescription => 'TV интерфейсін мәжбүрлеу.';
 	@override String get startInFullscreen => 'Толық экранда бастау';
-	@override String get startInFullscreenDescription => 'Plezy-ді ашқанда толық экран режимінде ашу';
+	@override String get startInFullscreenDescription => 'Pleazy-ді ашқанда толық экран режимінде ашу';
 	@override String get exitFullscreenOnPlayerClose => 'Ойнатқыш жабылғанда толық экраннан шығу';
 	@override String get exitFullscreenOnPlayerCloseDescription => 'Видео ойнатқышты жапқанда автоматты түрде толық экраннан шығу';
 	@override String get autoHidePerformanceOverlay => 'Өнімділік панелін авто-жасыру';
@@ -504,7 +504,7 @@ class _Translations$settings$kk extends Translations$settings$en {
 	@override String get playerScopeGlobal => 'Барлық жерде';
 	@override String get playerScopeLibrary => 'Кітапхана бойынша';
 	@override String get playerScopeTitle => 'Сериал немесе фильм бойынша';
-	@override String get exportDialogTitle => 'Plezy параметрлерін экспорттау';
+	@override String get exportDialogTitle => 'Pleazy параметрлерін экспорттау';
 }
 
 // Path: search
@@ -702,8 +702,8 @@ class _Translations$mediaMenu$kk extends Translations$mediaMenu$en {
 		one: 'Сол файлда тағы ${n} бөлім сақталған, ол да өшіріледі:',
 		other: 'Сол файлда тағы ${n} бөлім сақталған, олар да өшіріледі:',
 	);
-	@override String get deleteScopeUnverifiedProbeFailed => 'Plezy қандай файлдар өшірілетінін тексере алмады, сондықтан ол жоғарыда аталған элементтен артық өшіруі мүмкін. Бас тартып, қайталап көріңіз немесе бәрібір өшіріңіз.';
-	@override String get deleteScopeUnverifiedNoFileInfo => 'Серверіңіз бұл элемент үшін файл мәліметтерін ұсынбады, сондықтан Plezy қандай файлдар өшірілетінін тексере алмайды. Ол жоғарыда аталған элементтен артық өшіруі мүмкін.';
+	@override String get deleteScopeUnverifiedProbeFailed => 'Pleazy қандай файлдар өшірілетінін тексере алмады, сондықтан ол жоғарыда аталған элементтен артық өшіруі мүмкін. Бас тартып, қайталап көріңіз немесе бәрібір өшіріңіз.';
+	@override String get deleteScopeUnverifiedNoFileInfo => 'Серверіңіз бұл элемент үшін файл мәліметтерін ұсынбады, сондықтан Pleazy қандай файлдар өшірілетінін тексере алмайды. Ол жоғарыда аталған элементтен артық өшіруі мүмкін.';
 	@override String get mediaDeletedSuccessfully => 'Медиа элементі сәтті өшірілді';
 	@override String get mediaFailedToDelete => 'Медиа элементін өшіру мүмкін болмады';
 	@override String get rate => 'Бағалау';
@@ -1024,7 +1024,7 @@ class _Translations$profiles$kk extends Translations$profiles$en {
 	final TranslationsKk _root; // ignore: unused_field
 
 	// Translations
-	@override String get addPlezyProfile => 'Plezy профилін қосу';
+	@override String get addPlezyProfile => 'Pleazy профилін қосу';
 	@override String get switchingProfile => 'Профильді ауыстыру…';
 	@override String get deleteThisProfileTitle => 'Осы профиль өшірілсін бе?';
 	@override String deleteThisProfileMessage({required Object displayName}) => '${displayName} өшіріледі. Қосылымдарға әсер етпейді.';
@@ -1104,7 +1104,7 @@ class _Translations$connections$kk extends Translations$connections$en {
 	@override String sessionExpiredMany({required Object count}) => '${count} сервер үшін сеанс мерзімі өтті';
 	@override String get signInAgain => 'Қайтадан кіру';
 	@override String editMediaBrowserTitle({required Object product}) => '${product} қосылымын өңдеу';
-	@override String editMediaBrowserIntro({required Object serverName}) => '${serverName} үшін URL мекенжайларды қосыңыз немесе өшіріңіз. Plezy ең төмен кідірісі бар қолжетімді URL мекенжайды пайдаланады.';
+	@override String editMediaBrowserIntro({required Object serverName}) => '${serverName} үшін URL мекенжайларды қосыңыз немесе өшіріңіз. Pleazy ең төмен кідірісі бар қолжетімді URL мекенжайды пайдаланады.';
 }
 
 // Path: accountPreferences
@@ -1118,7 +1118,7 @@ class _Translations$accountPreferences$kk extends Translations$accountPreference
 	@override String hubSubtitleSingle({required Object account}) => '${account} тіркелгісінде сақталған аудио, субтитр және кітапхана баптаулары';
 	@override String hubSubtitleMultiple({required Object count}) => '${count} тіркелгіде сақталған аудио, субтитр және кітапхана баптаулары';
 	@override String get pickAccount => 'Әр тіркелгі өз баптауларын сақтайды. Өңдеу үшін біреуін таңдаңыз.';
-	@override String get storedOnAccount => 'Бұл баптаулар тіркелгінің өзінде сақталады, сондықтан оған кірген әрбір қолданба оларды пайдаланады — басқа құрылғыларыңыздағы Plezy қоса.';
+	@override String get storedOnAccount => 'Бұл баптаулар тіркелгінің өзінде сақталады, сондықтан оған кірген әрбір қолданба оларды пайдаланады — басқа құрылғыларыңыздағы Pleazy қоса.';
 	@override String get noAccounts => 'Баптауға тіркелгілер жоқ';
 	@override String get noAccountsHint => 'Plex-ке кіріңіз немесе Jellyfin не Emby серверін қосыңыз, сонда сол тіркелгіде сақталған баптаулар осында көрсетіледі.';
 	@override String get unavailable => 'Бұл тіркелгіге қол жеткізу мүмкін емес';
@@ -1321,9 +1321,9 @@ class _Translations$startup$kk extends Translations$startup$en {
 	final TranslationsKk _root; // ignore: unused_field
 
 	// Translations
-	@override String get failedTitle => 'Plezy іске қосылмады';
+	@override String get failedTitle => 'Pleazy іске қосылмады';
 	@override String get failedBody => 'Іске қосу кезінде қате орын алды. Төмендегі мәліметтер ненің сәтсіз аяқталғанын көрсетеді.';
-	@override String get failedBodyRepairable => 'Plezy сақталған баптаулар файлы зақымдалған және Plezy іске қосылмас бұрын оны қайта құру қажет. Қайталау көмектеспейді — «Сақтауды қалпына келтіру» тармағын таңдаңыз.';
+	@override String get failedBodyRepairable => 'Pleazy сақталған баптаулар файлы зақымдалған және Pleazy іске қосылмас бұрын оны қайта құру қажет. Қайталау көмектеспейді — «Сақтауды қалпына келтіру» тармағын таңдаңыз.';
 	@override String get phaseLabel => 'Қадам';
 	@override String get showDetails => 'Мәліметтерді көрсету';
 	@override String get hideDetails => 'Мәліметтерді жасыру';
@@ -1332,16 +1332,16 @@ class _Translations$startup$kk extends Translations$startup$en {
 	@override String get uploadDetails => 'Мәліметтерді жүктеп жіберу';
 	@override String get repairStorage => 'Сақтауды қалпына келтіру';
 	@override String get repairTitle => 'Сақталған деректер қалпына келтірілсін бе?';
-	@override String get repairBodyCommon => 'Plezy баптаулар файлы зақымдалған және оқылмайды. Қалпына келтіру барлық баптауды әдепкі мәнге қайтарады.';
+	@override String get repairBodyCommon => 'Pleazy баптаулар файлы зақымдалған және оқылмайды. Қалпына келтіру барлық баптауды әдепкі мәнге қайтарады.';
 	@override String get repairBodyOneCredential => 'Бір сақталған кіру деректері зақымдалған және оқылмайды. Қалпына келтіру тек соны өшіреді; қалған баптауларыңызға тиіспейді.';
 	@override String get repairBodySignInsKept => 'Серверлеріңіз бен профильдеріңіз кірген күйінде қалады.';
 	@override String get repairBodySignInsLost => 'Сақталған кіру деректерін қорғайтын кілт осы файлдан қалпына келтірілмейді, сондықтан әрбір сервер мен профильге қайта кіруге тура келеді. Медиа серверіңіздегі ештеңеге әсер етілмейді.';
-	@override String get repairBodySessionsUncertain => 'Tracker-лар (MAL, AniList, Simkl, Trakt) және Seerr бөлек сақталады және сақталуы да, сақталмауы да мүмкін. Plezy не сақталғанын нақты айтады.';
+	@override String get repairBodySessionsUncertain => 'Tracker-лар (MAL, AniList, Simkl, Trakt) және Seerr бөлек сақталады және сақталуы да, сақталмауы да мүмкін. Pleazy не сақталғанын нақты айтады.';
 	@override String get repairConfirm => 'Қалпына келтіру';
 	@override String get repairSucceeded => 'Сақтау қалпына келтірілді';
 	@override String get repairNeedsRestart => 'Сақтау қалпына келтірілді — қайта іске қосу қажет';
-	@override String get restartRequiredBody => 'Деректеріңіз қалпына келтірілді, бірақ Plezy оларды пайдаланар алдында жаңадан іске қосылуы керек. Plezy жабыңыз да, қайта ашыңыз.';
-	@override String get quitPlezy => 'Plezy бағдарламасынан шығу';
+	@override String get restartRequiredBody => 'Деректеріңіз қалпына келтірілді, бірақ Pleazy оларды пайдаланар алдында жаңадан іске қосылуы керек. Pleazy жабыңыз да, қайта ашыңыз.';
+	@override String get quitPlezy => 'Pleazy бағдарламасынан шығу';
 	@override String get repairFailed => 'Қалпына келтіру сәтсіз аяқталды';
 	@override String get repairKeptSignIns => 'Серверлеріңіз бен профильдеріңіз әлі кірген күйде.';
 	@override String get repairLostSignIns => 'Сақталған кіру деректерін қорғайтын кілт қалпына келтірілмеді. Әрбір сервер мен профильге қайта кіруге тура келеді.';
@@ -1350,7 +1350,7 @@ class _Translations$startup$kk extends Translations$startup$en {
 	@override String get backupWarning => 'Онда сіздің кіру деректеріңіз бар. Оны жүктеп жібермеңіз немесе бөліспеңіз.';
 	@override String get deleteBackup => 'Көшірмені өшіру';
 	@override String get backupDeleted => 'Көшірме өшірілді.';
-	@override String get previousFailureTitle => 'Plezy соңғы рет іске қосыла алмады';
+	@override String get previousFailureTitle => 'Pleazy соңғы рет іске қосыла алмады';
 }
 
 // Path: licenses
@@ -2071,11 +2071,11 @@ class _Translations$trakt$kk extends Translations$trakt$en {
 	@override String get connected => 'Қосылды';
 	@override String connectedAs({required Object username}) => '@${username} ретінде қосылды';
 	@override String get disconnectConfirm => 'Trakt ажыратылсын ба?';
-	@override String get disconnectConfirmBody => 'Plezy Trakt-қа деректер жіберуді тоқтатады.';
+	@override String get disconnectConfirmBody => 'Pleazy Trakt-қа деректер жіберуді тоқтатады.';
 	@override String get scrobble => 'Нақты уақытта бақылау';
 	@override String get scrobbleDescription => 'Ойнату кезінде Trakt-қа деректер жіберу.';
 	@override String get watchedSync => 'Көру мәртебесін синхрондау';
-	@override String get watchedSyncDescription => 'Plezy-де белгіленгенде Trakt-та да белгіленеді.';
+	@override String get watchedSyncDescription => 'Pleazy-де белгіленгенде Trakt-та да белгіленеді.';
 }
 
 // Path: seerr
@@ -2097,7 +2097,7 @@ class _Translations$seerr$kk extends Translations$seerr$en {
 	@override String get noSignInMethods => 'Бұл Seerr қолдау көрсетілетін кіру әдісін ұсынбайды.';
 	@override String get instance => 'Инстанция';
 	@override String get disconnectConfirm => 'Seerr ажыратылсын ба?';
-	@override String get disconnectConfirmBody => 'Plezy бұл Seerr мекенжайын өшіреді.';
+	@override String get disconnectConfirmBody => 'Pleazy бұл Seerr мекенжайын өшіреді.';
 	@override String get request => 'Сұрау салу';
 	@override String get request4k => '4K сұрау салу';
 	@override String get seasons => 'Маусымдар';
@@ -2145,7 +2145,7 @@ class _Translations$services$kk extends Translations$services$en {
 	@override String get scrobble => 'Барысты автоматты бақылау';
 	@override String get scrobbleDescription => 'Тізіміңізді автоматты түрде жаңартыңыз.';
 	@override String disconnectConfirm({required Object service}) => '${service} ажыратылсын ба?';
-	@override String disconnectConfirmBody({required Object service}) => 'Plezy ${service} жаңартуды тоқтатады.';
+	@override String disconnectConfirmBody({required Object service}) => 'Pleazy ${service} жаңартуды тоқтатады.';
 	@override String connectFailed({required Object service}) => '${service} қосылу мүмкін болмады. Қайтадан байқап көріңіз.';
 	@override late final _Translations$services$names$kk names = _Translations$services$names$kk._(_root);
 	@override late final _Translations$services$deviceCode$kk deviceCode = _Translations$services$deviceCode$kk._(_root);
@@ -2731,14 +2731,14 @@ class _Translations$downloads$backgroundWarning$kk extends Translations$download
 	@override String get bannerAction => 'Толығырақ';
 	@override String get sheetTitle => 'Фондық жүктеулер бұғатталған';
 	@override String get sheetTitleDegraded => 'Фондық жүктеулер шектелуі мүмкін';
-	@override String get sheetIntro => 'Android Plezy-дің фонда сенімді жүктеуіне кедергі келтіруде.';
-	@override String get sheetIntroDegraded => 'Құрылғыңыз Plezy-дің фонда қашан жүктей алатынын шектеп отыр.';
-	@override String get reasonBackgroundRestricted => 'Plezy-дің фондық жұмысы шектелген. Батарея немесе фондық пайдалануды "Шектеусіз" етіп қойыңыз.';
-	@override String get reasonStandbyRestricted => 'Android Plezy-ді шектеулі күту режиміне ауыстырды. Батарея пайдалануын "Шектеусіз" етіп қойыңыз.';
+	@override String get sheetIntro => 'Android Pleazy-дің фонда сенімді жүктеуіне кедергі келтіруде.';
+	@override String get sheetIntroDegraded => 'Құрылғыңыз Pleazy-дің фонда қашан жүктей алатынын шектеп отыр.';
+	@override String get reasonBackgroundRestricted => 'Pleazy-дің фондық жұмысы шектелген. Батарея немесе фондық пайдалануды "Шектеусіз" етіп қойыңыз.';
+	@override String get reasonStandbyRestricted => 'Android Pleazy-ді шектеулі күту режиміне ауыстырды. Батарея пайдалануын "Шектеусіз" етіп қойыңыз.';
 	@override String get reasonDownloadChannelBlocked => 'Жүктеу хабарландырулары өшірілген, сондықтан жүктеу барысы мен басқару элементтері қолжетімсіз болуы мүмкін.';
 	@override String get reasonNotificationsDisabled => 'Хабарландырулар өшірілген. Android 13 және одан жаңа нұсқаларда ұзақ фондық жүктеулер үшін олар қажет.';
 	@override String get reasonDataSaver => 'Трафикті үнемдеу қосулы, бұл мобильді деректер арқылы фондық жүктеулерді бұғаттайды. Wi-Fi арқылы жүктеулер жұмыс істеуі тиіс.';
-	@override String get reasonOemUnknown => 'Plezy фонда тұрғанда жүктеулер бірнеше рет тоқтады. Plezy-дің батарея немесе фондық пайдалану баптауларын тексеріңіз.';
+	@override String get reasonOemUnknown => 'Pleazy фонда тұрғанда жүктеулер бірнеше рет тоқтады. Pleazy-дің батарея немесе фондық пайдалану баптауларын тексеріңіз.';
 	@override String get openSettings => 'Баптауларды ашу';
 	@override String get stillNotWorking => 'Құрылғыға арналған көмек';
 	@override String get stillNotWorkingDescription => 'Құрылғыңызға арналған қадамдарды қараңыз немесе мәселе жалғасса Баптаулар › Журналдарды көру бөлімінен журнал жіберіңіз.';
@@ -2782,12 +2782,12 @@ class _Translations$companionRemote$pairing$kk extends Translations$companionRem
 	final TranslationsKk _root; // ignore: unused_field
 
 	// Translations
-	@override String get discoveryDescription => 'Бірдей Plex тіркелгісіндегі Plezy құрылғылары мұнда көрінеді';
+	@override String get discoveryDescription => 'Бірдей Plex тіркелгісіндегі Pleazy құрылғылары мұнда көрінеді';
 	@override String get hostAddressHint => '192.168.1.100:48632';
 	@override String get connecting => 'Қосылуда...';
 	@override String get searchingForDevices => 'Құрылғылар ізделуде...';
 	@override String get noDevicesFound => 'Желіде құрылғылар табылмады';
-	@override String get noDevicesHint => 'ПК-де Plezy-ді ашып, бір Wi-Fi-ға қосылыңыз';
+	@override String get noDevicesHint => 'ПК-де Pleazy-ді ашып, бір Wi-Fi-ға қосылыңыз';
 	@override String get availableDevices => 'Қолжетімді құрылғылар';
 	@override String get manualConnection => 'Қолмен қосылу';
 	@override String get cryptoInitFailed => 'Қауіпсіз қосылым қатесі. Алдымен Plex-ке кіріңіз.';
@@ -2873,7 +2873,7 @@ class _Translations$services$deviceCode$kk extends Translations$services$deviceC
 	final TranslationsKk _root; // ignore: unused_field
 
 	// Translations
-	@override String title({required Object service}) => 'Plezy-ді ${service} қызметінде белсендіру';
+	@override String title({required Object service}) => 'Pleazy-ді ${service} қызметінде белсендіру';
 	@override String get instructions => 'QR кодын сканерлеңіз немесе төмендегі мекенжайға өтіп, мына кодты енгізіңіз:';
 	@override String openToActivate({required Object service}) => 'Белсендіру үшін ${service} ашу';
 	@override String get copyCode => 'Белсендіру кодын көшіру';
@@ -2933,7 +2933,7 @@ class _Translations$services$libraryFilter$kk extends Translations$services$libr
 extension on TranslationsKk {
 	dynamic _flatMapFunction(String path) {
 		return switch (path) {
-			'app.title' => 'Plezy',
+			'app.title' => 'Pleazy',
 			'auth.signInWithPlex' => 'Plex арқылы кіру',
 			'auth.showQRCode' => 'QR кодты көрсету',
 			'auth.authenticate' => 'Растау',
@@ -2949,7 +2949,7 @@ extension on TranslationsKk {
 			'auth.quickConnectWaiting' => 'Растау күтілуде…',
 			'auth.quickConnectCancel' => 'Бас тарту',
 			'auth.quickConnectExpired' => 'Жылдам қосылу мерзімі өтті. Қайтадан байқап көріңіз.',
-			'auth.localDataRecoveryRequired' => 'Plezy жергілікті кіру мәліметтерін қалпына келтіре алмады. Қайтадан кіріңіз.',
+			'auth.localDataRecoveryRequired' => 'Pleazy жергілікті кіру мәліметтерін қалпына келтіре алмады. Қайтадан кіріңіз.',
 			'auth.pinCheckRejected' => 'Plex PIN кодын тексеру қабылданбады',
 			'common.cancel' => 'Бас тарту',
 			'common.save' => 'Сақтау',
@@ -3036,7 +3036,7 @@ extension on TranslationsKk {
 			'update.latestVersion' => 'Сізде ең соңғы нұсқа орнатылған',
 			'update.checkFailed' => 'Жаңартуларды тексеру мүмкін болмады',
 			'settings.title' => 'Баптаулар',
-			'settings.supportDeveloper' => 'Plezy жобасын қолдау',
+			'settings.supportDeveloper' => 'Pleazy жобасын қолдау',
 			'settings.supportDeveloperDescription' => 'Дамытуды қаржыландыру үшін Liberapay арқылы демеушілік жасаңыз',
 			'settings.language' => 'Тіл',
 			'settings.theme' => 'Тақырып',
@@ -3170,7 +3170,7 @@ extension on TranslationsKk {
 			'settings.importSettingsDescription' => 'Параметрлерді файлдан қалпына келтіріңіз',
 			'settings.importSettingsConfirm' => 'Бұл ағымдағы баптауларыңыздың үстінен жазады. Жалғастырасыз ба?',
 			'settings.importSettingsSuccess' => 'Баптаулар импортталды',
-			'settings.importSettingsInvalidFile' => 'Бұл файл дұрыс Plezy баптаулар файлы емес',
+			'settings.importSettingsInvalidFile' => 'Бұл файл дұрыс Pleazy баптаулар файлы емес',
 			'settings.importSettingsNoUser' => 'Баптауларды импорттау алдында жүйеге кіріңіз',
 			'settings.shortcutsReset' => 'Пернелер тіркесі әдепкі күйге қайтарылды',
 			'settings.about' => 'Қолданба туралы',
@@ -3267,7 +3267,7 @@ extension on TranslationsKk {
 			'settings.forceTvMode' => 'TV режимін мәжбүрлеу',
 			'settings.forceTvModeDescription' => 'TV интерфейсін мәжбүрлеу.',
 			'settings.startInFullscreen' => 'Толық экранда бастау',
-			'settings.startInFullscreenDescription' => 'Plezy-ді ашқанда толық экран режимінде ашу',
+			'settings.startInFullscreenDescription' => 'Pleazy-ді ашқанда толық экран режимінде ашу',
 			'settings.exitFullscreenOnPlayerClose' => 'Ойнатқыш жабылғанда толық экраннан шығу',
 			'settings.exitFullscreenOnPlayerCloseDescription' => 'Видео ойнатқышты жапқанда автоматты түрде толық экраннан шығу',
 			'settings.autoHidePerformanceOverlay' => 'Өнімділік панелін авто-жасыру',
@@ -3314,7 +3314,7 @@ extension on TranslationsKk {
 			'settings.playerScopeGlobal' => 'Барлық жерде',
 			'settings.playerScopeLibrary' => 'Кітапхана бойынша',
 			'settings.playerScopeTitle' => 'Сериал немесе фильм бойынша',
-			'settings.exportDialogTitle' => 'Plezy параметрлерін экспорттау',
+			'settings.exportDialogTitle' => 'Pleazy параметрлерін экспорттау',
 			'search.hint' => 'Фильмдер, сериалдар, музыка іздеу...',
 			'search.tryDifferentTerm' => 'Басқа іздеу сөзін байқап көріңіз',
 			'search.searchYourMedia' => 'Медиафайлдардан іздеу',
@@ -3493,8 +3493,8 @@ extension on TranslationsKk {
 			'mediaMenu.deleteEpisodeCountWarning' => ({required num n}) => (_root.$meta.cardinalResolver ?? PluralResolvers.cardinal('kk'))(n, one: 'Бұл ондағы ${n} бөлімді және оның файлын өшіреді.', other: 'Бұл ондағы барлық ${n} бөлімді және олардың файлдарын өшіреді.', ), 
 			'mediaMenu.deleteMultiPartWarning' => ({required num n}) => (_root.$meta.cardinalResolver ?? PluralResolvers.cardinal('kk'))(n, one: 'Бұл элемент ${n} файл ретінде сақталған, ол өшіріледі.', other: 'Бұл элемент ${n} файлда сақталған, олардың барлығы өшіріледі.', ), 
 			'mediaMenu.deleteSharedFileHeading' => ({required num n}) => (_root.$meta.cardinalResolver ?? PluralResolvers.cardinal('kk'))(n, one: 'Сол файлда тағы ${n} бөлім сақталған, ол да өшіріледі:', other: 'Сол файлда тағы ${n} бөлім сақталған, олар да өшіріледі:', ), 
-			'mediaMenu.deleteScopeUnverifiedProbeFailed' => 'Plezy қандай файлдар өшірілетінін тексере алмады, сондықтан ол жоғарыда аталған элементтен артық өшіруі мүмкін. Бас тартып, қайталап көріңіз немесе бәрібір өшіріңіз.',
-			'mediaMenu.deleteScopeUnverifiedNoFileInfo' => 'Серверіңіз бұл элемент үшін файл мәліметтерін ұсынбады, сондықтан Plezy қандай файлдар өшірілетінін тексере алмайды. Ол жоғарыда аталған элементтен артық өшіруі мүмкін.',
+			'mediaMenu.deleteScopeUnverifiedProbeFailed' => 'Pleazy қандай файлдар өшірілетінін тексере алмады, сондықтан ол жоғарыда аталған элементтен артық өшіруі мүмкін. Бас тартып, қайталап көріңіз немесе бәрібір өшіріңіз.',
+			'mediaMenu.deleteScopeUnverifiedNoFileInfo' => 'Серверіңіз бұл элемент үшін файл мәліметтерін ұсынбады, сондықтан Pleazy қандай файлдар өшірілетінін тексере алмайды. Ол жоғарыда аталған элементтен артық өшіруі мүмкін.',
 			'mediaMenu.mediaDeletedSuccessfully' => 'Медиа элементі сәтті өшірілді',
 			'mediaMenu.mediaFailedToDelete' => 'Медиа элементін өшіру мүмкін болмады',
 			'mediaMenu.rate' => 'Бағалау',
@@ -3729,7 +3729,7 @@ extension on TranslationsKk {
 			'mpvConfig.configPlaceholder' => 'gpu-api=vulkan\nhwdec=auto\n# түсініктеме',
 			'mpvConfig.embeddedVoHint' => 'vo, gpu-context және gpu-api Linux-те еленбейді: ендірілген бейне әрқашан бейне жазықтығында vo=libmpv арқылы көрсетіледі, ал gpu-next (ArtCNN сияқты compute шейдерлеріне қажет) ендірілген режимде жұмыс істей алмайды.',
 			'dialog.confirmAction' => 'Әрекетті растау',
-			'profiles.addPlezyProfile' => 'Plezy профилін қосу',
+			'profiles.addPlezyProfile' => 'Pleazy профилін қосу',
 			'profiles.switchingProfile' => 'Профильді ауыстыру…',
 			'profiles.deleteThisProfileTitle' => 'Осы профиль өшірілсін бе?',
 			'profiles.deleteThisProfileMessage' => ({required Object displayName}) => '${displayName} өшіріледі. Қосылымдарға әсер етпейді.',
@@ -3800,12 +3800,12 @@ extension on TranslationsKk {
 			'connections.sessionExpiredMany' => ({required Object count}) => '${count} сервер үшін сеанс мерзімі өтті',
 			'connections.signInAgain' => 'Қайтадан кіру',
 			'connections.editMediaBrowserTitle' => ({required Object product}) => '${product} қосылымын өңдеу',
-			'connections.editMediaBrowserIntro' => ({required Object serverName}) => '${serverName} үшін URL мекенжайларды қосыңыз немесе өшіріңіз. Plezy ең төмен кідірісі бар қолжетімді URL мекенжайды пайдаланады.',
+			'connections.editMediaBrowserIntro' => ({required Object serverName}) => '${serverName} үшін URL мекенжайларды қосыңыз немесе өшіріңіз. Pleazy ең төмен кідірісі бар қолжетімді URL мекенжайды пайдаланады.',
 			'accountPreferences.sectionTitle' => 'Тіркелгі баптаулары',
 			'accountPreferences.hubSubtitleSingle' => ({required Object account}) => '${account} тіркелгісінде сақталған аудио, субтитр және кітапхана баптаулары',
 			'accountPreferences.hubSubtitleMultiple' => ({required Object count}) => '${count} тіркелгіде сақталған аудио, субтитр және кітапхана баптаулары',
 			'accountPreferences.pickAccount' => 'Әр тіркелгі өз баптауларын сақтайды. Өңдеу үшін біреуін таңдаңыз.',
-			'accountPreferences.storedOnAccount' => 'Бұл баптаулар тіркелгінің өзінде сақталады, сондықтан оған кірген әрбір қолданба оларды пайдаланады — басқа құрылғыларыңыздағы Plezy қоса.',
+			'accountPreferences.storedOnAccount' => 'Бұл баптаулар тіркелгінің өзінде сақталады, сондықтан оған кірген әрбір қолданба оларды пайдаланады — басқа құрылғыларыңыздағы Pleazy қоса.',
 			'accountPreferences.noAccounts' => 'Баптауға тіркелгілер жоқ',
 			'accountPreferences.noAccountsHint' => 'Plex-ке кіріңіз немесе Jellyfin не Emby серверін қосыңыз, сонда сол тіркелгіде сақталған баптаулар осында көрсетіледі.',
 			'accountPreferences.unavailable' => 'Бұл тіркелгіге қол жеткізу мүмкін емес',
@@ -3995,9 +3995,9 @@ extension on TranslationsKk {
 			'logs.clearLogs' => 'Журналдарды тазалау',
 			'logs.copyLogs' => 'Журналдарды көшіру',
 			'logs.uploadLogs' => 'Журналдарды жүктеу',
-			'startup.failedTitle' => 'Plezy іске қосылмады',
+			'startup.failedTitle' => 'Pleazy іске қосылмады',
 			'startup.failedBody' => 'Іске қосу кезінде қате орын алды. Төмендегі мәліметтер ненің сәтсіз аяқталғанын көрсетеді.',
-			'startup.failedBodyRepairable' => 'Plezy сақталған баптаулар файлы зақымдалған және Plezy іске қосылмас бұрын оны қайта құру қажет. Қайталау көмектеспейді — «Сақтауды қалпына келтіру» тармағын таңдаңыз.',
+			'startup.failedBodyRepairable' => 'Pleazy сақталған баптаулар файлы зақымдалған және Pleazy іске қосылмас бұрын оны қайта құру қажет. Қайталау көмектеспейді — «Сақтауды қалпына келтіру» тармағын таңдаңыз.',
 			'startup.phaseLabel' => 'Қадам',
 			'startup.showDetails' => 'Мәліметтерді көрсету',
 			'startup.hideDetails' => 'Мәліметтерді жасыру',
@@ -4006,16 +4006,16 @@ extension on TranslationsKk {
 			'startup.uploadDetails' => 'Мәліметтерді жүктеп жіберу',
 			'startup.repairStorage' => 'Сақтауды қалпына келтіру',
 			'startup.repairTitle' => 'Сақталған деректер қалпына келтірілсін бе?',
-			'startup.repairBodyCommon' => 'Plezy баптаулар файлы зақымдалған және оқылмайды. Қалпына келтіру барлық баптауды әдепкі мәнге қайтарады.',
+			'startup.repairBodyCommon' => 'Pleazy баптаулар файлы зақымдалған және оқылмайды. Қалпына келтіру барлық баптауды әдепкі мәнге қайтарады.',
 			'startup.repairBodyOneCredential' => 'Бір сақталған кіру деректері зақымдалған және оқылмайды. Қалпына келтіру тек соны өшіреді; қалған баптауларыңызға тиіспейді.',
 			'startup.repairBodySignInsKept' => 'Серверлеріңіз бен профильдеріңіз кірген күйінде қалады.',
 			'startup.repairBodySignInsLost' => 'Сақталған кіру деректерін қорғайтын кілт осы файлдан қалпына келтірілмейді, сондықтан әрбір сервер мен профильге қайта кіруге тура келеді. Медиа серверіңіздегі ештеңеге әсер етілмейді.',
-			'startup.repairBodySessionsUncertain' => 'Tracker-лар (MAL, AniList, Simkl, Trakt) және Seerr бөлек сақталады және сақталуы да, сақталмауы да мүмкін. Plezy не сақталғанын нақты айтады.',
+			'startup.repairBodySessionsUncertain' => 'Tracker-лар (MAL, AniList, Simkl, Trakt) және Seerr бөлек сақталады және сақталуы да, сақталмауы да мүмкін. Pleazy не сақталғанын нақты айтады.',
 			'startup.repairConfirm' => 'Қалпына келтіру',
 			'startup.repairSucceeded' => 'Сақтау қалпына келтірілді',
 			'startup.repairNeedsRestart' => 'Сақтау қалпына келтірілді — қайта іске қосу қажет',
-			'startup.restartRequiredBody' => 'Деректеріңіз қалпына келтірілді, бірақ Plezy оларды пайдаланар алдында жаңадан іске қосылуы керек. Plezy жабыңыз да, қайта ашыңыз.',
-			'startup.quitPlezy' => 'Plezy бағдарламасынан шығу',
+			'startup.restartRequiredBody' => 'Деректеріңіз қалпына келтірілді, бірақ Pleazy оларды пайдаланар алдында жаңадан іске қосылуы керек. Pleazy жабыңыз да, қайта ашыңыз.',
+			'startup.quitPlezy' => 'Pleazy бағдарламасынан шығу',
 			'startup.repairFailed' => 'Қалпына келтіру сәтсіз аяқталды',
 			'startup.repairKeptSignIns' => 'Серверлеріңіз бен профильдеріңіз әлі кірген күйде.',
 			'startup.repairLostSignIns' => 'Сақталған кіру деректерін қорғайтын кілт қалпына келтірілмеді. Әрбір сервер мен профильге қайта кіруге тура келеді.',
@@ -4024,7 +4024,7 @@ extension on TranslationsKk {
 			'startup.backupWarning' => 'Онда сіздің кіру деректеріңіз бар. Оны жүктеп жібермеңіз немесе бөліспеңіз.',
 			'startup.deleteBackup' => 'Көшірмені өшіру',
 			'startup.backupDeleted' => 'Көшірме өшірілді.',
-			'startup.previousFailureTitle' => 'Plezy соңғы рет іске қосыла алмады',
+			'startup.previousFailureTitle' => 'Pleazy соңғы рет іске қосыла алмады',
 			'licenses.relatedPackages' => 'Байланысты пакеттер',
 			'licenses.license' => 'Лицензия',
 			'licenses.licenseNumber' => ({required Object number}) => 'Лицензия ${number}',
@@ -4489,14 +4489,14 @@ extension on TranslationsKk {
 			'downloads.backgroundWarning.bannerAction' => 'Толығырақ',
 			'downloads.backgroundWarning.sheetTitle' => 'Фондық жүктеулер бұғатталған',
 			'downloads.backgroundWarning.sheetTitleDegraded' => 'Фондық жүктеулер шектелуі мүмкін',
-			'downloads.backgroundWarning.sheetIntro' => 'Android Plezy-дің фонда сенімді жүктеуіне кедергі келтіруде.',
-			'downloads.backgroundWarning.sheetIntroDegraded' => 'Құрылғыңыз Plezy-дің фонда қашан жүктей алатынын шектеп отыр.',
-			'downloads.backgroundWarning.reasonBackgroundRestricted' => 'Plezy-дің фондық жұмысы шектелген. Батарея немесе фондық пайдалануды "Шектеусіз" етіп қойыңыз.',
-			'downloads.backgroundWarning.reasonStandbyRestricted' => 'Android Plezy-ді шектеулі күту режиміне ауыстырды. Батарея пайдалануын "Шектеусіз" етіп қойыңыз.',
+			'downloads.backgroundWarning.sheetIntro' => 'Android Pleazy-дің фонда сенімді жүктеуіне кедергі келтіруде.',
+			'downloads.backgroundWarning.sheetIntroDegraded' => 'Құрылғыңыз Pleazy-дің фонда қашан жүктей алатынын шектеп отыр.',
+			'downloads.backgroundWarning.reasonBackgroundRestricted' => 'Pleazy-дің фондық жұмысы шектелген. Батарея немесе фондық пайдалануды "Шектеусіз" етіп қойыңыз.',
+			'downloads.backgroundWarning.reasonStandbyRestricted' => 'Android Pleazy-ді шектеулі күту режиміне ауыстырды. Батарея пайдалануын "Шектеусіз" етіп қойыңыз.',
 			'downloads.backgroundWarning.reasonDownloadChannelBlocked' => 'Жүктеу хабарландырулары өшірілген, сондықтан жүктеу барысы мен басқару элементтері қолжетімсіз болуы мүмкін.',
 			'downloads.backgroundWarning.reasonNotificationsDisabled' => 'Хабарландырулар өшірілген. Android 13 және одан жаңа нұсқаларда ұзақ фондық жүктеулер үшін олар қажет.',
 			'downloads.backgroundWarning.reasonDataSaver' => 'Трафикті үнемдеу қосулы, бұл мобильді деректер арқылы фондық жүктеулерді бұғаттайды. Wi-Fi арқылы жүктеулер жұмыс істеуі тиіс.',
-			'downloads.backgroundWarning.reasonOemUnknown' => 'Plezy фонда тұрғанда жүктеулер бірнеше рет тоқтады. Plezy-дің батарея немесе фондық пайдалану баптауларын тексеріңіз.',
+			'downloads.backgroundWarning.reasonOemUnknown' => 'Pleazy фонда тұрғанда жүктеулер бірнеше рет тоқтады. Pleazy-дің батарея немесе фондық пайдалану баптауларын тексеріңіз.',
 			'downloads.backgroundWarning.openSettings' => 'Баптауларды ашу',
 			'downloads.backgroundWarning.stillNotWorking' => 'Құрылғыға арналған көмек',
 			'downloads.backgroundWarning.stillNotWorkingDescription' => 'Құрылғыңызға арналған қадамдарды қараңыз немесе мәселе жалғасса Баптаулар › Журналдарды көру бөлімінен журнал жіберіңіз.',
@@ -4550,12 +4550,12 @@ extension on TranslationsKk {
 			'companionRemote.session.stopServer' => 'Серверді тоқтату',
 			'companionRemote.session.minimize' => 'Жию',
 			'companionRemote.session.manualAddressHint' => 'Қолмен қосылу мекенжайы:',
-			'companionRemote.pairing.discoveryDescription' => 'Бірдей Plex тіркелгісіндегі Plezy құрылғылары мұнда көрінеді',
+			'companionRemote.pairing.discoveryDescription' => 'Бірдей Plex тіркелгісіндегі Pleazy құрылғылары мұнда көрінеді',
 			'companionRemote.pairing.hostAddressHint' => '192.168.1.100:48632',
 			'companionRemote.pairing.connecting' => 'Қосылуда...',
 			'companionRemote.pairing.searchingForDevices' => 'Құрылғылар ізделуде...',
 			'companionRemote.pairing.noDevicesFound' => 'Желіде құрылғылар табылмады',
-			'companionRemote.pairing.noDevicesHint' => 'ПК-де Plezy-ді ашып, бір Wi-Fi-ға қосылыңыз',
+			'companionRemote.pairing.noDevicesHint' => 'ПК-де Pleazy-ді ашып, бір Wi-Fi-ға қосылыңыз',
 			'companionRemote.pairing.availableDevices' => 'Қолжетімді құрылғылар',
 			'companionRemote.pairing.manualConnection' => 'Қолмен қосылу',
 			'companionRemote.pairing.cryptoInitFailed' => 'Қауіпсіз қосылым қатесі. Алдымен Plex-ке кіріңіз.',
@@ -4780,11 +4780,11 @@ extension on TranslationsKk {
 			'trakt.connected' => 'Қосылды',
 			'trakt.connectedAs' => ({required Object username}) => '@${username} ретінде қосылды',
 			'trakt.disconnectConfirm' => 'Trakt ажыратылсын ба?',
-			'trakt.disconnectConfirmBody' => 'Plezy Trakt-қа деректер жіберуді тоқтатады.',
+			'trakt.disconnectConfirmBody' => 'Pleazy Trakt-қа деректер жіберуді тоқтатады.',
 			'trakt.scrobble' => 'Нақты уақытта бақылау',
 			'trakt.scrobbleDescription' => 'Ойнату кезінде Trakt-қа деректер жіберу.',
 			'trakt.watchedSync' => 'Көру мәртебесін синхрондау',
-			'trakt.watchedSyncDescription' => 'Plezy-де белгіленгенде Trakt-та да белгіленеді.',
+			'trakt.watchedSyncDescription' => 'Pleazy-де белгіленгенде Trakt-та да белгіленеді.',
 			'seerr.title' => 'Seerr',
 			'seerr.connectTitle' => 'Seerr қосу',
 			'seerr.serverUrl' => 'Сервер URL-і',
@@ -4797,7 +4797,7 @@ extension on TranslationsKk {
 			'seerr.noSignInMethods' => 'Бұл Seerr қолдау көрсетілетін кіру әдісін ұсынбайды.',
 			'seerr.instance' => 'Инстанция',
 			'seerr.disconnectConfirm' => 'Seerr ажыратылсын ба?',
-			'seerr.disconnectConfirmBody' => 'Plezy бұл Seerr мекенжайын өшіреді.',
+			'seerr.disconnectConfirmBody' => 'Pleazy бұл Seerr мекенжайын өшіреді.',
 			'seerr.request' => 'Сұрау салу',
 			'seerr.request4k' => '4K сұрау салу',
 			'seerr.seasons' => 'Маусымдар',
@@ -4836,14 +4836,14 @@ extension on TranslationsKk {
 			'services.scrobble' => 'Барысты автоматты бақылау',
 			'services.scrobbleDescription' => 'Тізіміңізді автоматты түрде жаңартыңыз.',
 			'services.disconnectConfirm' => ({required Object service}) => '${service} ажыратылсын ба?',
-			'services.disconnectConfirmBody' => ({required Object service}) => 'Plezy ${service} жаңартуды тоқтатады.',
+			'services.disconnectConfirmBody' => ({required Object service}) => 'Pleazy ${service} жаңартуды тоқтатады.',
 			'services.connectFailed' => ({required Object service}) => '${service} қосылу мүмкін болмады. Қайтадан байқап көріңіз.',
 			'services.names.mal' => 'MyAnimeList',
 			'services.names.anilist' => 'AniList',
 			'services.names.simkl' => 'Simkl',
 			'services.names.seerr' => 'Seerr',
 			'services.names.mdblist' => 'MDBList',
-			'services.deviceCode.title' => ({required Object service}) => 'Plezy-ді ${service} қызметінде белсендіру',
+			'services.deviceCode.title' => ({required Object service}) => 'Pleazy-ді ${service} қызметінде белсендіру',
 			'services.deviceCode.instructions' => 'QR кодын сканерлеңіз немесе төмендегі мекенжайға өтіп, мына кодты енгізіңіз:',
 			'services.deviceCode.openToActivate' => ({required Object service}) => 'Белсендіру үшін ${service} ашу',
 			'services.deviceCode.copyCode' => 'Белсендіру кодын көшіру',

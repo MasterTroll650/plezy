@@ -99,7 +99,7 @@ class _Translations$app$ko extends Translations$app$en {
 	final TranslationsKo _root; // ignore: unused_field
 
 	// Translations
-	@override String get title => 'Plezy';
+	@override String get title => 'Pleazy';
 }
 
 // Path: auth
@@ -226,7 +226,7 @@ class _Translations$settings$ko extends Translations$settings$en {
 
 	// Translations
 	@override String get title => '설정';
-	@override String get supportDeveloper => 'Plezy 후원하기';
+	@override String get supportDeveloper => 'Pleazy 후원하기';
 	@override String get supportDeveloperDescription => 'Liberapay로 후원하여 개발 지원';
 	@override String get language => '언어';
 	@override String get theme => '테마';
@@ -360,7 +360,7 @@ class _Translations$settings$ko extends Translations$settings$en {
 	@override String get importSettingsDescription => '파일에서 기본 설정 복원';
 	@override String get importSettingsConfirm => '현재 설정을 대체합니다. 계속하시겠습니까?';
 	@override String get importSettingsSuccess => '설정 가져오기 완료';
-	@override String get importSettingsInvalidFile => '유효한 Plezy 설정 내보내기 파일이 아닙니다';
+	@override String get importSettingsInvalidFile => '유효한 Pleazy 설정 내보내기 파일이 아닙니다';
 	@override String get importSettingsNoUser => '설정을 가져오기 전에 로그인하세요';
 	@override String get shortcutsReset => '단축키가 기본값으로 재설정되었습니다';
 	@override String get about => '정보';
@@ -504,7 +504,7 @@ class _Translations$settings$ko extends Translations$settings$en {
 	@override String get playerScopeGlobal => '모든 곳';
 	@override String get playerScopeLibrary => '라이브러리별';
 	@override String get playerScopeTitle => '시리즈 또는 영화별';
-	@override String get exportDialogTitle => 'Plezy 설정 내보내기';
+	@override String get exportDialogTitle => 'Pleazy 설정 내보내기';
 }
 
 // Path: search
@@ -1020,7 +1020,7 @@ class _Translations$profiles$ko extends Translations$profiles$en {
 	final TranslationsKo _root; // ignore: unused_field
 
 	// Translations
-	@override String get addPlezyProfile => 'Plezy 프로필 추가';
+	@override String get addPlezyProfile => 'Pleazy 프로필 추가';
 	@override String get switchingProfile => '프로필 전환 중…';
 	@override String get deleteThisProfileTitle => '이 프로필을 삭제하시겠습니까?';
 	@override String deleteThisProfileMessage({required Object displayName}) => '${displayName}을(를) 제거합니다. 연결에는 영향이 없습니다.';
@@ -1336,7 +1336,7 @@ class _Translations$startup$ko extends Translations$startup$en {
 	@override String get repairSucceeded => '저장소가 복구되었습니다';
 	@override String get repairNeedsRestart => '저장소가 복구되었습니다 — 재시작 필요';
 	@override String get restartRequiredBody => '데이터가 복구되었지만 Plezy는 이를 사용하려면 새로 시작해야 합니다. Plezy를 종료한 후 다시 열어주세요.';
-	@override String get quitPlezy => 'Plezy 종료';
+	@override String get quitPlezy => 'Pleazy 종료';
 	@override String get repairFailed => '복구 실패';
 	@override String get repairKeptSignIns => '서버와 프로필이 계속 로그인 상태입니다.';
 	@override String get repairLostSignIns => '저장된 로그인 정보를 보호하는 키를 복구할 수 없었습니다. 모든 서버와 프로필에 다시 로그인해야 합니다.';
@@ -2772,7 +2772,7 @@ class _Translations$companionRemote$pairing$ko extends Translations$companionRem
 	final TranslationsKo _root; // ignore: unused_field
 
 	// Translations
-	@override String get discoveryDescription => '같은 Plex 계정의 Plezy 기기가 여기에 표시됩니다';
+	@override String get discoveryDescription => '같은 Plex 계정의 Pleazy 기기가 여기에 표시됩니다';
 	@override String get hostAddressHint => '192.168.1.100:48632';
 	@override String get connecting => '연결 중...';
 	@override String get searchingForDevices => '기기 검색 중...';
@@ -2863,7 +2863,7 @@ class _Translations$services$deviceCode$ko extends Translations$services$deviceC
 	final TranslationsKo _root; // ignore: unused_field
 
 	// Translations
-	@override String title({required Object service}) => '${service}에서 Plezy 활성화';
+	@override String title({required Object service}) => '${service}에서 Pleazy 활성화';
 	@override String get instructions => 'QR 코드를 스캔하거나 아래 주소로 이동하여 이 코드를 입력하세요:';
 	@override String openToActivate({required Object service}) => '활성화하려면 ${service} 열기';
 	@override String get copyCode => '활성화 코드 복사';
@@ -2923,7 +2923,7 @@ class _Translations$services$libraryFilter$ko extends Translations$services$libr
 extension on TranslationsKo {
 	dynamic _flatMapFunction(String path) {
 		return switch (path) {
-			'app.title' => 'Plezy',
+			'app.title' => 'Pleazy',
 			'auth.signInWithPlex' => 'Plex 계정으로 로그인',
 			'auth.showQRCode' => 'QR 코드 표시',
 			'auth.authenticate' => '인증',
@@ -3026,7 +3026,7 @@ extension on TranslationsKo {
 			'update.latestVersion' => '최신 버전을 사용 중입니다',
 			'update.checkFailed' => '업데이트 확인 실패',
 			'settings.title' => '설정',
-			'settings.supportDeveloper' => 'Plezy 후원하기',
+			'settings.supportDeveloper' => 'Pleazy 후원하기',
 			'settings.supportDeveloperDescription' => 'Liberapay로 후원하여 개발 지원',
 			'settings.language' => '언어',
 			'settings.theme' => '테마',
@@ -3160,7 +3160,7 @@ extension on TranslationsKo {
 			'settings.importSettingsDescription' => '파일에서 기본 설정 복원',
 			'settings.importSettingsConfirm' => '현재 설정을 대체합니다. 계속하시겠습니까?',
 			'settings.importSettingsSuccess' => '설정 가져오기 완료',
-			'settings.importSettingsInvalidFile' => '유효한 Plezy 설정 내보내기 파일이 아닙니다',
+			'settings.importSettingsInvalidFile' => '유효한 Pleazy 설정 내보내기 파일이 아닙니다',
 			'settings.importSettingsNoUser' => '설정을 가져오기 전에 로그인하세요',
 			'settings.shortcutsReset' => '단축키가 기본값으로 재설정되었습니다',
 			'settings.about' => '정보',
@@ -3304,7 +3304,7 @@ extension on TranslationsKo {
 			'settings.playerScopeGlobal' => '모든 곳',
 			'settings.playerScopeLibrary' => '라이브러리별',
 			'settings.playerScopeTitle' => '시리즈 또는 영화별',
-			'settings.exportDialogTitle' => 'Plezy 설정 내보내기',
+			'settings.exportDialogTitle' => 'Pleazy 설정 내보내기',
 			'search.hint' => '영화, 시리즈, 음악 등을 검색하세요...',
 			'search.tryDifferentTerm' => '다른 검색어를 시도해 보세요',
 			'search.searchYourMedia' => '미디어 검색',
@@ -3719,7 +3719,7 @@ extension on TranslationsKo {
 			'mpvConfig.configPlaceholder' => 'gpu-api=vulkan\nhwdec=auto\n# comment',
 			'mpvConfig.embeddedVoHint' => 'Linux에서는 vo, gpu-context, gpu-api가 무시됩니다. 내장 동영상은 항상 비디오 평면에서 vo=libmpv로 렌더링되며, gpu-next(ArtCNN 같은 컴퓨트 셰이더에 필요)는 내장 방식으로 실행할 수 없습니다.',
 			'dialog.confirmAction' => '작업 확인',
-			'profiles.addPlezyProfile' => 'Plezy 프로필 추가',
+			'profiles.addPlezyProfile' => 'Pleazy 프로필 추가',
 			'profiles.switchingProfile' => '프로필 전환 중…',
 			'profiles.deleteThisProfileTitle' => '이 프로필을 삭제하시겠습니까?',
 			'profiles.deleteThisProfileMessage' => ({required Object displayName}) => '${displayName}을(를) 제거합니다. 연결에는 영향이 없습니다.',
@@ -4005,7 +4005,7 @@ extension on TranslationsKo {
 			'startup.repairSucceeded' => '저장소가 복구되었습니다',
 			'startup.repairNeedsRestart' => '저장소가 복구되었습니다 — 재시작 필요',
 			'startup.restartRequiredBody' => '데이터가 복구되었지만 Plezy는 이를 사용하려면 새로 시작해야 합니다. Plezy를 종료한 후 다시 열어주세요.',
-			'startup.quitPlezy' => 'Plezy 종료',
+			'startup.quitPlezy' => 'Pleazy 종료',
 			'startup.repairFailed' => '복구 실패',
 			'startup.repairKeptSignIns' => '서버와 프로필이 계속 로그인 상태입니다.',
 			'startup.repairLostSignIns' => '저장된 로그인 정보를 보호하는 키를 복구할 수 없었습니다. 모든 서버와 프로필에 다시 로그인해야 합니다.',
@@ -4540,7 +4540,7 @@ extension on TranslationsKo {
 			'companionRemote.session.stopServer' => '서버 중지',
 			'companionRemote.session.minimize' => '최소화',
 			'companionRemote.session.manualAddressHint' => '수동 연결 주소:',
-			'companionRemote.pairing.discoveryDescription' => '같은 Plex 계정의 Plezy 기기가 여기에 표시됩니다',
+			'companionRemote.pairing.discoveryDescription' => '같은 Plex 계정의 Pleazy 기기가 여기에 표시됩니다',
 			'companionRemote.pairing.hostAddressHint' => '192.168.1.100:48632',
 			'companionRemote.pairing.connecting' => '연결 중...',
 			'companionRemote.pairing.searchingForDevices' => '기기 검색 중...',
@@ -4833,7 +4833,7 @@ extension on TranslationsKo {
 			'services.names.simkl' => 'Simkl',
 			'services.names.seerr' => 'Seerr',
 			'services.names.mdblist' => 'MDBList',
-			'services.deviceCode.title' => ({required Object service}) => '${service}에서 Plezy 활성화',
+			'services.deviceCode.title' => ({required Object service}) => '${service}에서 Pleazy 활성화',
 			'services.deviceCode.instructions' => 'QR 코드를 스캔하거나 아래 주소로 이동하여 이 코드를 입력하세요:',
 			'services.deviceCode.openToActivate' => ({required Object service}) => '활성화하려면 ${service} 열기',
 			'services.deviceCode.copyCode' => '활성화 코드 복사',

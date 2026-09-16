@@ -1,6 +1,6 @@
 <h1>
-  <img src="assets/plezy.png" alt="Plezy Logo" height="24" style="vertical-align: middle;" />
-  Plezy
+  <img src="assets/plezy.png" alt="Pleazy Logo" height="24" style="vertical-align: middle;" />
+  Pleazy
 </h1>
 
 A modern client for Plex, Jellyfin, and Emby on desktop, mobile, and TV. Built with Flutter for native performance and a clean interface.
@@ -14,7 +14,7 @@ A modern client for Plex, Jellyfin, and Emby on desktop, mobile, and TV. Built w
 </p>
 
 <p align="center">
-  <img src="assets/readme-showcase.webp" alt="Plezy mobile screenshots" width="900" />
+  <img src="assets/readme-showcase.webp" alt="Pleazy mobile screenshots" width="900" />
 </p>
 
 ## Download
@@ -144,7 +144,7 @@ Older relays still accept explicit create/join, but failed recovery requires joi
 ### <img src="assets/readme_icons/integrations.svg" height="20" alt="" align="center" /> Integrations
 - Discord Rich Presence[^desktop]
 - Trakt, MyAnimeList, AniList, and Simkl — ratings, watched sync, and real-time scrobbling[^rt]
-- Plezy Remote — control desktop and TV from mobile
+- Pleazy Remote — control desktop and TV from mobile
 - Watch Next row and tvOS Top Shelf[^shelf]
 
 ### <img src="assets/readme_icons/customization.svg" height="20" alt="" align="center" /> Platform & Customization
@@ -229,7 +229,7 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for development workflow, formatting, tes
 
 ## License
 
-Plezy is licensed under [GPL-3.0](LICENSE).
+Pleazy is licensed under [GPL-3.0](LICENSE).
 
 ## Acknowledgments
 

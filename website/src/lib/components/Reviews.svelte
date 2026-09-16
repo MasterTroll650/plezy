@@ -110,7 +110,7 @@
       icon: GooglePlayIcon,
     },
     {
-      text: "Just brilliant. Using on all my Android TV boxes. UI and UX are great. I was having intermittent audio drops with the latest build of the official Plex app. No issues with Plezy.",
+      text: "Just brilliant. Using on all my Android TV boxes. UI and UX are great. I was having intermittent audio drops with the latest build of the official Plex app. No issues with Pleazy.",
       name: "Jon Evans",
       source: "Play Store",
       icon: GooglePlayIcon,
@@ -183,7 +183,7 @@
     <SectionHeader
       label="Reviews"
       heading="Loved by users"
-      description="See what people are saying about their experience with Plezy."
+      description="See what people are saying about their experience with Pleazy."
       descriptionGap="0"
     />
   </div>

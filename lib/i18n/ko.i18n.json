@@ -1,6 +1,6 @@
 {
   "app": {
-    "title": "Plezy"
+    "title": "Pleazy"
   },
   "auth": {
     "signInWithPlex": "Plex 계정으로 로그인",
@@ -117,7 +117,7 @@
   },
   "settings": {
     "title": "설정",
-    "supportDeveloper": "Plezy 후원하기",
+    "supportDeveloper": "Pleazy 후원하기",
     "supportDeveloperDescription": "Liberapay로 후원하여 개발 지원",
     "language": "언어",
     "theme": "테마",
@@ -256,7 +256,7 @@
     "importSettingsDescription": "파일에서 기본 설정 복원",
     "importSettingsConfirm": "현재 설정을 대체합니다. 계속하시겠습니까?",
     "importSettingsSuccess": "설정 가져오기 완료",
-    "importSettingsInvalidFile": "유효한 Plezy 설정 내보내기 파일이 아닙니다",
+    "importSettingsInvalidFile": "유효한 Pleazy 설정 내보내기 파일이 아닙니다",
     "importSettingsNoUser": "설정을 가져오기 전에 로그인하세요",
     "shortcutsReset": "단축키가 기본값으로 재설정되었습니다",
     "about": "정보",
@@ -414,7 +414,7 @@
     "playerScopeGlobal": "모든 곳",
     "playerScopeLibrary": "라이브러리별",
     "playerScopeTitle": "시리즈 또는 영화별",
-    "exportDialogTitle": "Plezy 설정 내보내기"
+    "exportDialogTitle": "Pleazy 설정 내보내기"
   },
   "search": {
     "hint": "영화, 시리즈, 음악 등을 검색하세요...",
@@ -877,7 +877,7 @@
     "confirmAction": "작업 확인"
   },
   "profiles": {
-    "addPlezyProfile": "Plezy 프로필 추가",
+    "addPlezyProfile": "Pleazy 프로필 추가",
     "switchingProfile": "프로필 전환 중…",
     "deleteThisProfileTitle": "이 프로필을 삭제하시겠습니까?",
     "deleteThisProfileMessage": "${displayName}을(를) 제거합니다. 연결에는 영향이 없습니다.",
@@ -1203,7 +1203,7 @@
     "repairSucceeded": "저장소가 복구되었습니다",
     "repairNeedsRestart": "저장소가 복구되었습니다 — 재시작 필요",
     "restartRequiredBody": "데이터가 복구되었지만 Plezy는 이를 사용하려면 새로 시작해야 합니다. Plezy를 종료한 후 다시 열어주세요.",
-    "quitPlezy": "Plezy 종료",
+    "quitPlezy": "Pleazy 종료",
     "repairFailed": "복구 실패",
     "repairKeptSignIns": "서버와 프로필이 계속 로그인 상태입니다.",
     "repairLostSignIns": "저장된 로그인 정보를 보호하는 키를 복구할 수 없었습니다. 모든 서버와 프로필에 다시 로그인해야 합니다.",
@@ -1811,7 +1811,7 @@
       "manualAddressHint": "수동 연결 주소:"
     },
     "pairing": {
-      "discoveryDescription": "같은 Plex 계정의 Plezy 기기가 여기에 표시됩니다",
+      "discoveryDescription": "같은 Plex 계정의 Pleazy 기기가 여기에 표시됩니다",
       "hostAddressHint": "192.168.1.100:48632",
       "connecting": "연결 중...",
       "searchingForDevices": "기기 검색 중...",
@@ -2139,7 +2139,7 @@
       "mdblist": "MDBList"
     },
     "deviceCode": {
-      "title": "${service}에서 Plezy 활성화",
+      "title": "${service}에서 Pleazy 활성화",
       "instructions": "QR 코드를 스캔하거나 아래 주소로 이동하여 이 코드를 입력하세요:",
       "openToActivate": "활성화하려면 ${service} 열기",
       "copyCode": "활성화 코드 복사",

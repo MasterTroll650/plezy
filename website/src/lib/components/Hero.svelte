@@ -11,7 +11,7 @@
       <div class="hero-copy">
         <div class="brand-row fade-in">
           <span class="brand-logo"><Logo /></span>
-          <span>Plezy</span>
+          <span>Pleazy</span>
         </div>
 
         <h1 class="hero-title fade-in" style="animation-delay: 60ms;">
@@ -61,7 +61,7 @@
         <div class="phone secondary-phone">
           <enhanced:img
             src={libraryImage}
-            alt="Plezy library screen on phone"
+            alt="Pleazy library screen on phone"
             class="phone-image"
             loading="eager"
             sizes="(min-width: 1024px) 250px, (min-width: 640px) 34vw, 42vw"
@@ -70,7 +70,7 @@
         <div class="phone primary-phone">
           <enhanced:img
             src={homeImage}
-            alt="Plezy home screen on phone"
+            alt="Pleazy home screen on phone"
             class="phone-image"
             fetchpriority="high"
             sizes="(min-width: 1024px) 280px, (min-width: 640px) 38vw, 48vw"

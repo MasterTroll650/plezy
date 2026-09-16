@@ -1,6 +1,6 @@
 {
   "app": {
-    "title": "Plezy"
+    "title": "Pleazy"
   },
   "auth": {
     "signInWithPlex": "Plexでサインイン",
@@ -2078,10 +2078,10 @@
     "signInWithEmby": "Embyでサインイン",
     "signInWithLocal": "ローカルアカウントを使う",
     "email": "メールアドレス",
-    "noSignInMethods": "この Seerr インスタンスには Plezy が対応しているサインイン方法がありません。",
+    "noSignInMethods": "この Seerr インスタンスには Pleazy が対応しているサインイン方法がありません。",
     "instance": "インスタンス",
     "disconnectConfirm": "Seerr の接続を解除しますか？",
-    "disconnectConfirmBody": "Plezy はこの Seerr インスタンスの情報を削除します。いつでも再接続できます。",
+    "disconnectConfirmBody": "Pleazy はこの Seerr インスタンスの情報を削除します。いつでも再接続できます。",
     "request": "リクエスト",
     "request4k": "4K でリクエスト",
     "seasons": "シーズン",
@@ -2139,7 +2139,7 @@
       "mdblist": "MDBList"
     },
     "deviceCode": {
-      "title": "${service} で Plezy を有効化",
+      "title": "${service} で Pleazy を有効化",
       "instructions": "QRコードをスキャンするか、以下のアドレスにアクセスしてこのコードを入力してください:",
       "openToActivate": "${service} を開いて有効化",
       "copyCode": "アクティベーションコードをコピー",

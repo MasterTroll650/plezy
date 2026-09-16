@@ -255,7 +255,7 @@ Future<_StartupDependencies> _initializeApplication() async {
   if (_enableSentry) {
     // Crash reporting is observability: it must never veto the launch it
     // exists to report on. `Sentry.init` runs its integrations eagerly, so an
-    // integration throwing used to fail the gate before any Plezy code ran.
+    // integration throwing used to fail the gate before any Pleazy code ran.
     //
     // Deliberately no `appRunner`. On every non-web platform `Sentry.init`
     // reduces it to `await appRunner()` after the integrations — error capture
@@ -1050,7 +1050,7 @@ Future<void> _logEnvironmentDiagnostics() async {
     await Future.sync(() => Sentry.configureScope((scope) => scope.setTag('renderer', rendererName ?? 'unknown')));
   }
   appLogger.i(
-    'Plezy v${packageInfo.version}+${packageInfo.buildNumber}$commitSuffix$renderer'
+    'Pleazy v${packageInfo.version}+${packageInfo.buildNumber}$commitSuffix$renderer'
     ' [effects: ${DevicePerformance.describeSync()}]',
   );
   appLogger.i('Display: ${DevicePerformance.describeDisplay()}');

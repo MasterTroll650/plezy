@@ -99,7 +99,7 @@ class _Translations$app$bg extends Translations$app$en {
 	final TranslationsBg _root; // ignore: unused_field
 
 	// Translations
-	@override String get title => 'Plezy';
+	@override String get title => 'Pleazy';
 }
 
 // Path: auth
@@ -124,7 +124,7 @@ class _Translations$auth$bg extends Translations$auth$en {
 	@override String get quickConnectWaiting => 'Изчакване на одобрение…';
 	@override String get quickConnectCancel => 'Отказ';
 	@override String get quickConnectExpired => 'Quick Connect изтече. Опитайте отново.';
-	@override String get localDataRecoveryRequired => 'Plezy не успя безопасно да възстанови локалните данни за вход и несинхронизираните данни за възпроизвеждане. Моля, влезте отново.';
+	@override String get localDataRecoveryRequired => 'Pleazy не успя безопасно да възстанови локалните данни за вход и несинхронизираните данни за възпроизвеждане. Моля, влезте отново.';
 	@override String get pinCheckRejected => 'Проверката на PIN кода на Plex беше отхвърлена';
 }
 
@@ -226,7 +226,7 @@ class _Translations$settings$bg extends Translations$settings$en {
 
 	// Translations
 	@override String get title => 'Настройки';
-	@override String get supportDeveloper => 'Подкрепи Plezy';
+	@override String get supportDeveloper => 'Подкрепи Pleazy';
 	@override String get supportDeveloperDescription => 'Дарение чрез Liberapay за финансиране на разработката';
 	@override String get language => 'Език';
 	@override String get theme => 'Тема';
@@ -360,7 +360,7 @@ class _Translations$settings$bg extends Translations$settings$en {
 	@override String get importSettingsDescription => 'Възстанови предпочитания от файл';
 	@override String get importSettingsConfirm => 'Това ще замени текущите ви настройки. Продължавате ли?';
 	@override String get importSettingsSuccess => 'Настройките са импортирани';
-	@override String get importSettingsInvalidFile => 'Този файл не е валиден експорт на настройки от Plezy';
+	@override String get importSettingsInvalidFile => 'Този файл не е валиден експорт на настройки от Pleazy';
 	@override String get importSettingsNoUser => 'Влезте, преди да импортирате настройки';
 	@override String get shortcutsReset => 'Клавишните комбинации са нулирани до подразбиране';
 	@override String get about => 'Относно';
@@ -457,7 +457,7 @@ class _Translations$settings$bg extends Translations$settings$en {
 	@override String get forceTvMode => 'Принуди TV режим';
 	@override String get forceTvModeDescription => 'Принуди ТВ оформление. За устройства, които не се разпознават автоматично. Изисква рестарт.';
 	@override String get startInFullscreen => 'Стартирай на цял екран';
-	@override String get startInFullscreenDescription => 'Отваряй Plezy в режим цял екран при стартиране';
+	@override String get startInFullscreenDescription => 'Отваряй Pleazy в режим цял екран при стартиране';
 	@override String get exitFullscreenOnPlayerClose => 'Изход от цял екран при затваряне на плейъра';
 	@override String get exitFullscreenOnPlayerCloseDescription => 'Автоматично излиза от режим цял екран при затваряне на видео плейъра';
 	@override String get autoHidePerformanceOverlay => 'Автоматично скриване на оверлея за производителност';
@@ -504,7 +504,7 @@ class _Translations$settings$bg extends Translations$settings$en {
 	@override String get playerScopeGlobal => 'Навсякъде';
 	@override String get playerScopeLibrary => 'По библиотека';
 	@override String get playerScopeTitle => 'По сериал или филм';
-	@override String get exportDialogTitle => 'Експортиране на настройките на Plezy';
+	@override String get exportDialogTitle => 'Експортиране на настройките на Pleazy';
 }
 
 // Path: search
@@ -702,8 +702,8 @@ class _Translations$mediaMenu$bg extends Translations$mediaMenu$en {
 		one: '${n} друг епизод се съхранява в същия файл и също ще бъде изтрит:',
 		other: '${n} други епизода се съхраняват в същия файл и също ще бъдат изтрити:',
 	);
-	@override String get deleteScopeUnverifiedProbeFailed => 'Plezy не успя да провери кои файлове ще бъдат премахнати, така че може да изтрие повече от посочения по-горе елемент. Откажете и опитайте отново, или изтрийте въпреки това.';
-	@override String get deleteScopeUnverifiedNoFileInfo => 'Сървърът ви не предостави данни за файловете на този елемент, така че Plezy не може да провери кои файлове ще бъдат премахнати. Може да изтрие повече от посочения по-горе елемент.';
+	@override String get deleteScopeUnverifiedProbeFailed => 'Pleazy не успя да провери кои файлове ще бъдат премахнати, така че може да изтрие повече от посочения по-горе елемент. Откажете и опитайте отново, или изтрийте въпреки това.';
+	@override String get deleteScopeUnverifiedNoFileInfo => 'Сървърът ви не предостави данни за файловете на този елемент, така че Pleazy не може да провери кои файлове ще бъдат премахнати. Може да изтрие повече от посочения по-горе елемент.';
 	@override String get mediaDeletedSuccessfully => 'Елементът е изтрит успешно';
 	@override String get mediaFailedToDelete => 'Неуспешно изтриване на елемента';
 	@override String get rate => 'Оцени';
@@ -1024,7 +1024,7 @@ class _Translations$profiles$bg extends Translations$profiles$en {
 	final TranslationsBg _root; // ignore: unused_field
 
 	// Translations
-	@override String get addPlezyProfile => 'Добави Plezy профил';
+	@override String get addPlezyProfile => 'Добави Pleazy профил';
 	@override String get switchingProfile => 'Смяна на профил…';
 	@override String get deleteThisProfileTitle => 'Да се изтрие ли този профил?';
 	@override String deleteThisProfileMessage({required Object displayName}) => 'Премахване на ${displayName}. Връзките не се засягат.';
@@ -1104,7 +1104,7 @@ class _Translations$connections$bg extends Translations$connections$en {
 	@override String sessionExpiredMany({required Object count}) => 'Сесиите за ${count} сървъра са изтекли';
 	@override String get signInAgain => 'Влез отново';
 	@override String editMediaBrowserTitle({required Object product}) => 'Редактирай връзката с ${product}';
-	@override String editMediaBrowserIntro({required Object serverName}) => 'Добавете или премахнете URL адреси за ${serverName}. Plezy ще използва достъпния URL адрес с най-ниска латентност.';
+	@override String editMediaBrowserIntro({required Object serverName}) => 'Добавете или премахнете URL адреси за ${serverName}. Pleazy ще използва достъпния URL адрес с най-ниска латентност.';
 }
 
 // Path: accountPreferences
@@ -1118,7 +1118,7 @@ class _Translations$accountPreferences$bg extends Translations$accountPreference
 	@override String hubSubtitleSingle({required Object account}) => 'Опции за аудио, субтитри и библиотека, запазени на ${account}';
 	@override String hubSubtitleMultiple({required Object count}) => 'Опции за аудио, субтитри и библиотека, запазени на ${count} акаунта';
 	@override String get pickAccount => 'Всеки акаунт съхранява собствени предпочитания. Изберете кой да редактирате.';
-	@override String get storedOnAccount => 'Тези опции се запазват на самия акаунт, така че всяко приложение, вписано в него, ги използва — включително Plezy на другите ви устройства.';
+	@override String get storedOnAccount => 'Тези опции се запазват на самия акаунт, така че всяко приложение, вписано в него, ги използва — включително Pleazy на другите ви устройства.';
 	@override String get noAccounts => 'Няма акаунти за настройка';
 	@override String get noAccountsHint => 'Влезте в Plex или свържете Jellyfin или Emby сървър и предпочитанията, запазени на този акаунт, ще се появят тук.';
 	@override String get unavailable => 'Акаунтът не може да бъде достигнат';
@@ -1321,9 +1321,9 @@ class _Translations$startup$bg extends Translations$startup$en {
 	final TranslationsBg _root; // ignore: unused_field
 
 	// Translations
-	@override String get failedTitle => 'Plezy не можа да стартира';
+	@override String get failedTitle => 'Pleazy не можа да стартира';
 	@override String get failedBody => 'Нещо се обърка по време на стартирането. Детайлите по-долу показват какво е причинило грешката.';
-	@override String get failedBodyRepairable => 'Запазеният файл с настройки на Plezy е повреден и трябва да бъде възстановен, преди Plezy да стартира. Повторните опити няма да помогнат — изберете „Ремонт на хранилището“.';
+	@override String get failedBodyRepairable => 'Запазеният файл с настройки на Pleazy е повреден и трябва да бъде възстановен, преди Pleazy да стартира. Повторните опити няма да помогнат — изберете „Ремонт на хранилището“.';
 	@override String get phaseLabel => 'Стъпка';
 	@override String get showDetails => 'Покажи детайлите';
 	@override String get hideDetails => 'Скрий детайлите';
@@ -1332,16 +1332,16 @@ class _Translations$startup$bg extends Translations$startup$en {
 	@override String get uploadDetails => 'Качи детайлите';
 	@override String get repairStorage => 'Ремонт на хранилището';
 	@override String get repairTitle => 'Да ремонтирам ли съхранените данни?';
-	@override String get repairBodyCommon => 'Файлът с настройки на Plezy е повреден и не може да бъде прочетен. Ремонтът връща всяка настройка към стойността ѝ по подразбиране.';
+	@override String get repairBodyCommon => 'Файлът с настройки на Pleazy е повреден и не може да бъде прочетен. Ремонтът връща всяка настройка към стойността ѝ по подразбиране.';
 	@override String get repairBodyOneCredential => 'Един запис за вход е повреден и не може да бъде прочетен. Ремонтът премахва само него; останалите ви настройки не се пипат.';
 	@override String get repairBodySignInsKept => 'Сървърите и профилите ви трябва да останат вписани.';
 	@override String get repairBodySignInsLost => 'Ключът, защитаващ запазените ви вписвания, не може да бъде възстановен от този файл, така че ще трябва да се впишете отново във всеки сървър и профил. Нищо на медийния ви сървър не се засяга.';
-	@override String get repairBodySessionsUncertain => 'Трекърите (MAL, AniList, Simkl, Trakt) и Seerr се съхраняват отделно и може да оцелеят или не. Plezy ще ви каже точно какво е запазил.';
+	@override String get repairBodySessionsUncertain => 'Трекърите (MAL, AniList, Simkl, Trakt) и Seerr се съхраняват отделно и може да оцелеят или не. Pleazy ще ви каже точно какво е запазил.';
 	@override String get repairConfirm => 'Ремонтирай';
 	@override String get repairSucceeded => 'Хранилището е ремонтирано';
 	@override String get repairNeedsRestart => 'Хранилището е ремонтирано — изисква се рестартиране';
-	@override String get restartRequiredBody => 'Данните ви бяха ремонтирани, но Plezy трябва да стартира наново, преди да ги използва. Затворете Plezy и го отворете отново.';
-	@override String get quitPlezy => 'Изход от Plezy';
+	@override String get restartRequiredBody => 'Данните ви бяха ремонтирани, но Pleazy трябва да стартира наново, преди да ги използва. Затворете Pleazy и го отворете отново.';
+	@override String get quitPlezy => 'Изход от Pleazy';
 	@override String get repairFailed => 'Ремонтът се провали';
 	@override String get repairKeptSignIns => 'Сървърите и профилите ви са все още вписани.';
 	@override String get repairLostSignIns => 'Ключът, защитаващ запазените ви вписвания, не можа да бъде възстановен. Ще трябва да се впишете отново във всеки сървър и профил.';
@@ -1350,7 +1350,7 @@ class _Translations$startup$bg extends Translations$startup$en {
 	@override String get backupWarning => 'То съдържа вашите данни за вписване. Не го качвайте и не го споделяйте.';
 	@override String get deleteBackup => 'Изтрий копието';
 	@override String get backupDeleted => 'Копието е изтрито.';
-	@override String get previousFailureTitle => 'Plezy не успя да стартира последния път';
+	@override String get previousFailureTitle => 'Pleazy не успя да стартира последния път';
 }
 
 // Path: licenses
@@ -2071,11 +2071,11 @@ class _Translations$trakt$bg extends Translations$trakt$en {
 	@override String get connected => 'Свързан';
 	@override String connectedAs({required Object username}) => 'Свързан като @${username}';
 	@override String get disconnectConfirm => 'Да се прекъсне ли Trakt акаунтът?';
-	@override String get disconnectConfirmBody => 'Plezy ще спре да изпраща събития към Trakt. Можете да се свържете отново по всяко време.';
+	@override String get disconnectConfirmBody => 'Pleazy ще спре да изпраща събития към Trakt. Можете да се свържете отново по всяко време.';
 	@override String get scrobble => 'Скроблиране в реално време';
 	@override String get scrobbleDescription => 'Изпращай събития за пускане, пауза и спиране към Trakt по време на възпроизвеждане.';
 	@override String get watchedSync => 'Синхронизирай статус гледано';
-	@override String get watchedSyncDescription => 'Когато маркирате елементи като гледани в Plezy, те се маркират и в Trakt.';
+	@override String get watchedSyncDescription => 'Когато маркирате елементи като гледани в Pleazy, те се маркират и в Trakt.';
 }
 
 // Path: seerr
@@ -2094,10 +2094,10 @@ class _Translations$seerr$bg extends Translations$seerr$en {
 	@override String get signInWithEmby => 'Вход с Emby';
 	@override String get signInWithLocal => 'Използвай локален акаунт';
 	@override String get email => 'Имейл';
-	@override String get noSignInMethods => 'Тази Seerr инстанция не предлага метод за вход, който Plezy поддържа.';
+	@override String get noSignInMethods => 'Тази Seerr инстанция не предлага метод за вход, който Pleazy поддържа.';
 	@override String get instance => 'Инстанция';
 	@override String get disconnectConfirm => 'Да се прекъсне ли Seerr?';
-	@override String get disconnectConfirmBody => 'Plezy ще забрави тази Seerr инстанция. Можете да се свържете отново по всяко време.';
+	@override String get disconnectConfirmBody => 'Pleazy ще забрави тази Seerr инстанция. Можете да се свържете отново по всяко време.';
 	@override String get request => 'Заяви';
 	@override String get request4k => 'Заяви в 4K';
 	@override String get seasons => 'Сезони';
@@ -2145,7 +2145,7 @@ class _Translations$services$bg extends Translations$services$en {
 	@override String get scrobble => 'Проследявай прогреса автоматично';
 	@override String get scrobbleDescription => 'Обновявай списъка си, когато завършиш епизод или филм.';
 	@override String disconnectConfirm({required Object service}) => 'Да се прекъсне ли ${service}?';
-	@override String disconnectConfirmBody({required Object service}) => 'Plezy ще спре да обновява ${service}. Можете да се свържете отново по всяко време.';
+	@override String disconnectConfirmBody({required Object service}) => 'Pleazy ще спре да обновява ${service}. Можете да се свържете отново по всяко време.';
 	@override String connectFailed({required Object service}) => 'Неуспешно свързване с ${service}. Опитайте отново.';
 	@override late final _Translations$services$names$bg names = _Translations$services$names$bg._(_root);
 	@override late final _Translations$services$deviceCode$bg deviceCode = _Translations$services$deviceCode$bg._(_root);
@@ -2731,14 +2731,14 @@ class _Translations$downloads$backgroundWarning$bg extends Translations$download
 	@override String get bannerAction => 'Подробности';
 	@override String get sheetTitle => 'Изтеглянията във фонов режим са блокирани';
 	@override String get sheetTitleDegraded => 'Изтеглянията във фонов режим може да бъдат ограничени';
-	@override String get sheetIntro => 'Android не позволява на Plezy да изтегля надеждно във фонов режим.';
-	@override String get sheetIntroDegraded => 'Устройството ви ограничава кога Plezy може да изтегля във фонов режим.';
-	@override String get reasonBackgroundRestricted => 'Работата на Plezy във фонов режим е ограничена. Задайте използването на батерията или работата във фонов режим на „Без ограничения“.';
-	@override String get reasonStandbyRestricted => 'Android е поставил Plezy в ограничено състояние на готовност. Задайте използването на батерията на „Без ограничения“.';
+	@override String get sheetIntro => 'Android не позволява на Pleazy да изтегля надеждно във фонов режим.';
+	@override String get sheetIntroDegraded => 'Устройството ви ограничава кога Pleazy може да изтегля във фонов режим.';
+	@override String get reasonBackgroundRestricted => 'Работата на Pleazy във фонов режим е ограничена. Задайте използването на батерията или работата във фонов режим на „Без ограничения“.';
+	@override String get reasonStandbyRestricted => 'Android е поставил Pleazy в ограничено състояние на готовност. Задайте използването на батерията на „Без ограничения“.';
 	@override String get reasonDownloadChannelBlocked => 'Известията за изтегляния са изключени, затова напредъкът и контролите може да не са достъпни.';
 	@override String get reasonNotificationsDisabled => 'Известията са изключени. В Android 13 или по-нова версия те са необходими за продължителни изтегляния във фонов режим.';
 	@override String get reasonDataSaver => '„Икономия на данни“ е включена и блокира изтеглянията във фонов режим през мобилни данни. Изтеглянията би трябвало да продължат през Wi-Fi.';
-	@override String get reasonOemUnknown => 'Изтеглянията спираха многократно, докато Plezy беше във фонов режим. Проверете настройките за батерията или работата на Plezy във фонов режим.';
+	@override String get reasonOemUnknown => 'Изтеглянията спираха многократно, докато Pleazy беше във фонов режим. Проверете настройките за батерията или работата на Pleazy във фонов режим.';
 	@override String get openSettings => 'Отвори настройките';
 	@override String get stillNotWorking => 'Помощ за конкретното устройство';
 	@override String get stillNotWorkingDescription => 'Вижте стъпките за устройството си или изпратете лог от Настройки › Виж логовете, ако проблемът продължи.';
@@ -2782,19 +2782,19 @@ class _Translations$companionRemote$pairing$bg extends Translations$companionRem
 	final TranslationsBg _root; // ignore: unused_field
 
 	// Translations
-	@override String get discoveryDescription => 'Plezy устройства със същия Plex акаунт се показват тук';
+	@override String get discoveryDescription => 'Pleazy устройства със същия Plex акаунт се показват тук';
 	@override String get hostAddressHint => '192.168.1.100:48632';
 	@override String get connecting => 'Свързване...';
 	@override String get searchingForDevices => 'Търсене на устройства...';
 	@override String get noDevicesFound => 'Не са намерени устройства във вашата мрежа';
-	@override String get noDevicesHint => 'Отворете Plezy на настолен компютър и използвайте същата Wi-Fi мрежа';
+	@override String get noDevicesHint => 'Отворете Pleazy на настолен компютър и използвайте същата Wi-Fi мрежа';
 	@override String get availableDevices => 'Налични устройства';
 	@override String get manualConnection => 'Ръчно свързване';
 	@override String get cryptoInitFailed => 'Не може да се стартира защитена връзка. Първо влезте в Plex.';
 	@override String get validationHostRequired => 'Моля, въведете адрес на хоста';
 	@override String get validationHostFormat => 'Форматът трябва да е IP:port (напр. 192.168.1.100:48632)';
 	@override String get connectionTimedOut => 'Връзката изтече. Използвайте една и съща мрежа на двете устройства.';
-	@override String get sessionNotFound => 'Устройството не е намерено. Уверете се, че Plezy работи на хоста.';
+	@override String get sessionNotFound => 'Устройството не е намерено. Уверете се, че Pleazy работи на хоста.';
 	@override String get authFailed => 'Удостоверяването е неуспешно. Двете устройства трябва да използват същия Plex акаунт.';
 	@override String failedToConnect({required Object error}) => 'Неуспешно свързване: ${error}';
 }
@@ -2873,7 +2873,7 @@ class _Translations$services$deviceCode$bg extends Translations$services$deviceC
 	final TranslationsBg _root; // ignore: unused_field
 
 	// Translations
-	@override String title({required Object service}) => 'Активиране на Plezy в ${service}';
+	@override String title({required Object service}) => 'Активиране на Pleazy в ${service}';
 	@override String get instructions => 'Сканирайте QR кода или посетете адреса по-долу и въведете този код:';
 	@override String openToActivate({required Object service}) => 'Отворете ${service}, за да активирате';
 	@override String get copyCode => 'Копирай кода за активиране';
@@ -2933,7 +2933,7 @@ class _Translations$services$libraryFilter$bg extends Translations$services$libr
 extension on TranslationsBg {
 	dynamic _flatMapFunction(String path) {
 		return switch (path) {
-			'app.title' => 'Plezy',
+			'app.title' => 'Pleazy',
 			'auth.signInWithPlex' => 'Вход с Plex',
 			'auth.showQRCode' => 'Покажи QR код',
 			'auth.authenticate' => 'Удостовери се',
@@ -2949,7 +2949,7 @@ extension on TranslationsBg {
 			'auth.quickConnectWaiting' => 'Изчакване на одобрение…',
 			'auth.quickConnectCancel' => 'Отказ',
 			'auth.quickConnectExpired' => 'Quick Connect изтече. Опитайте отново.',
-			'auth.localDataRecoveryRequired' => 'Plezy не успя безопасно да възстанови локалните данни за вход и несинхронизираните данни за възпроизвеждане. Моля, влезте отново.',
+			'auth.localDataRecoveryRequired' => 'Pleazy не успя безопасно да възстанови локалните данни за вход и несинхронизираните данни за възпроизвеждане. Моля, влезте отново.',
 			'auth.pinCheckRejected' => 'Проверката на PIN кода на Plex беше отхвърлена',
 			'common.cancel' => 'Отказ',
 			'common.save' => 'Запази',
@@ -3036,7 +3036,7 @@ extension on TranslationsBg {
 			'update.latestVersion' => 'Използвате най-новата версия',
 			'update.checkFailed' => 'Неуспешна проверка за актуализации',
 			'settings.title' => 'Настройки',
-			'settings.supportDeveloper' => 'Подкрепи Plezy',
+			'settings.supportDeveloper' => 'Подкрепи Pleazy',
 			'settings.supportDeveloperDescription' => 'Дарение чрез Liberapay за финансиране на разработката',
 			'settings.language' => 'Език',
 			'settings.theme' => 'Тема',
@@ -3170,7 +3170,7 @@ extension on TranslationsBg {
 			'settings.importSettingsDescription' => 'Възстанови предпочитания от файл',
 			'settings.importSettingsConfirm' => 'Това ще замени текущите ви настройки. Продължавате ли?',
 			'settings.importSettingsSuccess' => 'Настройките са импортирани',
-			'settings.importSettingsInvalidFile' => 'Този файл не е валиден експорт на настройки от Plezy',
+			'settings.importSettingsInvalidFile' => 'Този файл не е валиден експорт на настройки от Pleazy',
 			'settings.importSettingsNoUser' => 'Влезте, преди да импортирате настройки',
 			'settings.shortcutsReset' => 'Клавишните комбинации са нулирани до подразбиране',
 			'settings.about' => 'Относно',
@@ -3267,7 +3267,7 @@ extension on TranslationsBg {
 			'settings.forceTvMode' => 'Принуди TV режим',
 			'settings.forceTvModeDescription' => 'Принуди ТВ оформление. За устройства, които не се разпознават автоматично. Изисква рестарт.',
 			'settings.startInFullscreen' => 'Стартирай на цял екран',
-			'settings.startInFullscreenDescription' => 'Отваряй Plezy в режим цял екран при стартиране',
+			'settings.startInFullscreenDescription' => 'Отваряй Pleazy в режим цял екран при стартиране',
 			'settings.exitFullscreenOnPlayerClose' => 'Изход от цял екран при затваряне на плейъра',
 			'settings.exitFullscreenOnPlayerCloseDescription' => 'Автоматично излиза от режим цял екран при затваряне на видео плейъра',
 			'settings.autoHidePerformanceOverlay' => 'Автоматично скриване на оверлея за производителност',
@@ -3314,7 +3314,7 @@ extension on TranslationsBg {
 			'settings.playerScopeGlobal' => 'Навсякъде',
 			'settings.playerScopeLibrary' => 'По библиотека',
 			'settings.playerScopeTitle' => 'По сериал или филм',
-			'settings.exportDialogTitle' => 'Експортиране на настройките на Plezy',
+			'settings.exportDialogTitle' => 'Експортиране на настройките на Pleazy',
 			'search.hint' => 'Търсене на филми, сериали, музика...',
 			'search.tryDifferentTerm' => 'Опитайте с различна дума за търсене',
 			'search.searchYourMedia' => 'Търсете в медийното си съдържание',
@@ -3493,8 +3493,8 @@ extension on TranslationsBg {
 			'mediaMenu.deleteEpisodeCountWarning' => ({required num n}) => (_root.$meta.cardinalResolver ?? PluralResolvers.cardinal('bg'))(n, one: 'Това изтрива целия ${n} епизод в него, както и файла му.', other: 'Това изтрива всичките ${n} епизода в него, както и техните файлове.', ), 
 			'mediaMenu.deleteMultiPartWarning' => ({required num n}) => (_root.$meta.cardinalResolver ?? PluralResolvers.cardinal('bg'))(n, one: 'Този елемент се съхранява като ${n} файл, който ще бъде изтрит.', other: 'Този елемент се съхранява в ${n} файла и всички те ще бъдат изтрити.', ), 
 			'mediaMenu.deleteSharedFileHeading' => ({required num n}) => (_root.$meta.cardinalResolver ?? PluralResolvers.cardinal('bg'))(n, one: '${n} друг епизод се съхранява в същия файл и също ще бъде изтрит:', other: '${n} други епизода се съхраняват в същия файл и също ще бъдат изтрити:', ), 
-			'mediaMenu.deleteScopeUnverifiedProbeFailed' => 'Plezy не успя да провери кои файлове ще бъдат премахнати, така че може да изтрие повече от посочения по-горе елемент. Откажете и опитайте отново, или изтрийте въпреки това.',
-			'mediaMenu.deleteScopeUnverifiedNoFileInfo' => 'Сървърът ви не предостави данни за файловете на този елемент, така че Plezy не може да провери кои файлове ще бъдат премахнати. Може да изтрие повече от посочения по-горе елемент.',
+			'mediaMenu.deleteScopeUnverifiedProbeFailed' => 'Pleazy не успя да провери кои файлове ще бъдат премахнати, така че може да изтрие повече от посочения по-горе елемент. Откажете и опитайте отново, или изтрийте въпреки това.',
+			'mediaMenu.deleteScopeUnverifiedNoFileInfo' => 'Сървърът ви не предостави данни за файловете на този елемент, така че Pleazy не може да провери кои файлове ще бъдат премахнати. Може да изтрие повече от посочения по-горе елемент.',
 			'mediaMenu.mediaDeletedSuccessfully' => 'Елементът е изтрит успешно',
 			'mediaMenu.mediaFailedToDelete' => 'Неуспешно изтриване на елемента',
 			'mediaMenu.rate' => 'Оцени',
@@ -3729,7 +3729,7 @@ extension on TranslationsBg {
 			'mpvConfig.configPlaceholder' => 'gpu-api=vulkan\nhwdec=auto\n# comment',
 			'mpvConfig.embeddedVoHint' => 'vo, gpu-context и gpu-api се игнорират на Linux: вграденото видео винаги се рендерира през vo=libmpv върху видео равнината, а gpu-next (който е нужен за compute шейдъри като ArtCNN) не може да работи вградено.',
 			'dialog.confirmAction' => 'Потвърждение на действие',
-			'profiles.addPlezyProfile' => 'Добави Plezy профил',
+			'profiles.addPlezyProfile' => 'Добави Pleazy профил',
 			'profiles.switchingProfile' => 'Смяна на профил…',
 			'profiles.deleteThisProfileTitle' => 'Да се изтрие ли този профил?',
 			'profiles.deleteThisProfileMessage' => ({required Object displayName}) => 'Премахване на ${displayName}. Връзките не се засягат.',
@@ -3800,12 +3800,12 @@ extension on TranslationsBg {
 			'connections.sessionExpiredMany' => ({required Object count}) => 'Сесиите за ${count} сървъра са изтекли',
 			'connections.signInAgain' => 'Влез отново',
 			'connections.editMediaBrowserTitle' => ({required Object product}) => 'Редактирай връзката с ${product}',
-			'connections.editMediaBrowserIntro' => ({required Object serverName}) => 'Добавете или премахнете URL адреси за ${serverName}. Plezy ще използва достъпния URL адрес с най-ниска латентност.',
+			'connections.editMediaBrowserIntro' => ({required Object serverName}) => 'Добавете или премахнете URL адреси за ${serverName}. Pleazy ще използва достъпния URL адрес с най-ниска латентност.',
 			'accountPreferences.sectionTitle' => 'Предпочитания на акаунта',
 			'accountPreferences.hubSubtitleSingle' => ({required Object account}) => 'Опции за аудио, субтитри и библиотека, запазени на ${account}',
 			'accountPreferences.hubSubtitleMultiple' => ({required Object count}) => 'Опции за аудио, субтитри и библиотека, запазени на ${count} акаунта',
 			'accountPreferences.pickAccount' => 'Всеки акаунт съхранява собствени предпочитания. Изберете кой да редактирате.',
-			'accountPreferences.storedOnAccount' => 'Тези опции се запазват на самия акаунт, така че всяко приложение, вписано в него, ги използва — включително Plezy на другите ви устройства.',
+			'accountPreferences.storedOnAccount' => 'Тези опции се запазват на самия акаунт, така че всяко приложение, вписано в него, ги използва — включително Pleazy на другите ви устройства.',
 			'accountPreferences.noAccounts' => 'Няма акаунти за настройка',
 			'accountPreferences.noAccountsHint' => 'Влезте в Plex или свържете Jellyfin или Emby сървър и предпочитанията, запазени на този акаунт, ще се появят тук.',
 			'accountPreferences.unavailable' => 'Акаунтът не може да бъде достигнат',
@@ -3995,9 +3995,9 @@ extension on TranslationsBg {
 			'logs.clearLogs' => 'Изчисти логовете',
 			'logs.copyLogs' => 'Копирай логовете',
 			'logs.uploadLogs' => 'Качи логовете',
-			'startup.failedTitle' => 'Plezy не можа да стартира',
+			'startup.failedTitle' => 'Pleazy не можа да стартира',
 			'startup.failedBody' => 'Нещо се обърка по време на стартирането. Детайлите по-долу показват какво е причинило грешката.',
-			'startup.failedBodyRepairable' => 'Запазеният файл с настройки на Plezy е повреден и трябва да бъде възстановен, преди Plezy да стартира. Повторните опити няма да помогнат — изберете „Ремонт на хранилището“.',
+			'startup.failedBodyRepairable' => 'Запазеният файл с настройки на Pleazy е повреден и трябва да бъде възстановен, преди Pleazy да стартира. Повторните опити няма да помогнат — изберете „Ремонт на хранилището“.',
 			'startup.phaseLabel' => 'Стъпка',
 			'startup.showDetails' => 'Покажи детайлите',
 			'startup.hideDetails' => 'Скрий детайлите',
@@ -4006,16 +4006,16 @@ extension on TranslationsBg {
 			'startup.uploadDetails' => 'Качи детайлите',
 			'startup.repairStorage' => 'Ремонт на хранилището',
 			'startup.repairTitle' => 'Да ремонтирам ли съхранените данни?',
-			'startup.repairBodyCommon' => 'Файлът с настройки на Plezy е повреден и не може да бъде прочетен. Ремонтът връща всяка настройка към стойността ѝ по подразбиране.',
+			'startup.repairBodyCommon' => 'Файлът с настройки на Pleazy е повреден и не може да бъде прочетен. Ремонтът връща всяка настройка към стойността ѝ по подразбиране.',
 			'startup.repairBodyOneCredential' => 'Един запис за вход е повреден и не може да бъде прочетен. Ремонтът премахва само него; останалите ви настройки не се пипат.',
 			'startup.repairBodySignInsKept' => 'Сървърите и профилите ви трябва да останат вписани.',
 			'startup.repairBodySignInsLost' => 'Ключът, защитаващ запазените ви вписвания, не може да бъде възстановен от този файл, така че ще трябва да се впишете отново във всеки сървър и профил. Нищо на медийния ви сървър не се засяга.',
-			'startup.repairBodySessionsUncertain' => 'Трекърите (MAL, AniList, Simkl, Trakt) и Seerr се съхраняват отделно и може да оцелеят или не. Plezy ще ви каже точно какво е запазил.',
+			'startup.repairBodySessionsUncertain' => 'Трекърите (MAL, AniList, Simkl, Trakt) и Seerr се съхраняват отделно и може да оцелеят или не. Pleazy ще ви каже точно какво е запазил.',
 			'startup.repairConfirm' => 'Ремонтирай',
 			'startup.repairSucceeded' => 'Хранилището е ремонтирано',
 			'startup.repairNeedsRestart' => 'Хранилището е ремонтирано — изисква се рестартиране',
-			'startup.restartRequiredBody' => 'Данните ви бяха ремонтирани, но Plezy трябва да стартира наново, преди да ги използва. Затворете Plezy и го отворете отново.',
-			'startup.quitPlezy' => 'Изход от Plezy',
+			'startup.restartRequiredBody' => 'Данните ви бяха ремонтирани, но Pleazy трябва да стартира наново, преди да ги използва. Затворете Pleazy и го отворете отново.',
+			'startup.quitPlezy' => 'Изход от Pleazy',
 			'startup.repairFailed' => 'Ремонтът се провали',
 			'startup.repairKeptSignIns' => 'Сървърите и профилите ви са все още вписани.',
 			'startup.repairLostSignIns' => 'Ключът, защитаващ запазените ви вписвания, не можа да бъде възстановен. Ще трябва да се впишете отново във всеки сървър и профил.',
@@ -4024,7 +4024,7 @@ extension on TranslationsBg {
 			'startup.backupWarning' => 'То съдържа вашите данни за вписване. Не го качвайте и не го споделяйте.',
 			'startup.deleteBackup' => 'Изтрий копието',
 			'startup.backupDeleted' => 'Копието е изтрито.',
-			'startup.previousFailureTitle' => 'Plezy не успя да стартира последния път',
+			'startup.previousFailureTitle' => 'Pleazy не успя да стартира последния път',
 			'licenses.relatedPackages' => 'Свързани пакети',
 			'licenses.license' => 'Лиценз',
 			'licenses.licenseNumber' => ({required Object number}) => 'Лиценз ${number}',
@@ -4489,14 +4489,14 @@ extension on TranslationsBg {
 			'downloads.backgroundWarning.bannerAction' => 'Подробности',
 			'downloads.backgroundWarning.sheetTitle' => 'Изтеглянията във фонов режим са блокирани',
 			'downloads.backgroundWarning.sheetTitleDegraded' => 'Изтеглянията във фонов режим може да бъдат ограничени',
-			'downloads.backgroundWarning.sheetIntro' => 'Android не позволява на Plezy да изтегля надеждно във фонов режим.',
-			'downloads.backgroundWarning.sheetIntroDegraded' => 'Устройството ви ограничава кога Plezy може да изтегля във фонов режим.',
-			'downloads.backgroundWarning.reasonBackgroundRestricted' => 'Работата на Plezy във фонов режим е ограничена. Задайте използването на батерията или работата във фонов режим на „Без ограничения“.',
-			'downloads.backgroundWarning.reasonStandbyRestricted' => 'Android е поставил Plezy в ограничено състояние на готовност. Задайте използването на батерията на „Без ограничения“.',
+			'downloads.backgroundWarning.sheetIntro' => 'Android не позволява на Pleazy да изтегля надеждно във фонов режим.',
+			'downloads.backgroundWarning.sheetIntroDegraded' => 'Устройството ви ограничава кога Pleazy може да изтегля във фонов режим.',
+			'downloads.backgroundWarning.reasonBackgroundRestricted' => 'Работата на Pleazy във фонов режим е ограничена. Задайте използването на батерията или работата във фонов режим на „Без ограничения“.',
+			'downloads.backgroundWarning.reasonStandbyRestricted' => 'Android е поставил Pleazy в ограничено състояние на готовност. Задайте използването на батерията на „Без ограничения“.',
 			'downloads.backgroundWarning.reasonDownloadChannelBlocked' => 'Известията за изтегляния са изключени, затова напредъкът и контролите може да не са достъпни.',
 			'downloads.backgroundWarning.reasonNotificationsDisabled' => 'Известията са изключени. В Android 13 или по-нова версия те са необходими за продължителни изтегляния във фонов режим.',
 			'downloads.backgroundWarning.reasonDataSaver' => '„Икономия на данни“ е включена и блокира изтеглянията във фонов режим през мобилни данни. Изтеглянията би трябвало да продължат през Wi-Fi.',
-			'downloads.backgroundWarning.reasonOemUnknown' => 'Изтеглянията спираха многократно, докато Plezy беше във фонов режим. Проверете настройките за батерията или работата на Plezy във фонов режим.',
+			'downloads.backgroundWarning.reasonOemUnknown' => 'Изтеглянията спираха многократно, докато Pleazy беше във фонов режим. Проверете настройките за батерията или работата на Pleazy във фонов режим.',
 			'downloads.backgroundWarning.openSettings' => 'Отвори настройките',
 			'downloads.backgroundWarning.stillNotWorking' => 'Помощ за конкретното устройство',
 			'downloads.backgroundWarning.stillNotWorkingDescription' => 'Вижте стъпките за устройството си или изпратете лог от Настройки › Виж логовете, ако проблемът продължи.',
@@ -4550,19 +4550,19 @@ extension on TranslationsBg {
 			'companionRemote.session.stopServer' => 'Спри сървър',
 			'companionRemote.session.minimize' => 'Минимизирай',
 			'companionRemote.session.manualAddressHint' => 'Ръчен адрес за връзка:',
-			'companionRemote.pairing.discoveryDescription' => 'Plezy устройства със същия Plex акаунт се показват тук',
+			'companionRemote.pairing.discoveryDescription' => 'Pleazy устройства със същия Plex акаунт се показват тук',
 			'companionRemote.pairing.hostAddressHint' => '192.168.1.100:48632',
 			'companionRemote.pairing.connecting' => 'Свързване...',
 			'companionRemote.pairing.searchingForDevices' => 'Търсене на устройства...',
 			'companionRemote.pairing.noDevicesFound' => 'Не са намерени устройства във вашата мрежа',
-			'companionRemote.pairing.noDevicesHint' => 'Отворете Plezy на настолен компютър и използвайте същата Wi-Fi мрежа',
+			'companionRemote.pairing.noDevicesHint' => 'Отворете Pleazy на настолен компютър и използвайте същата Wi-Fi мрежа',
 			'companionRemote.pairing.availableDevices' => 'Налични устройства',
 			'companionRemote.pairing.manualConnection' => 'Ръчно свързване',
 			'companionRemote.pairing.cryptoInitFailed' => 'Не може да се стартира защитена връзка. Първо влезте в Plex.',
 			'companionRemote.pairing.validationHostRequired' => 'Моля, въведете адрес на хоста',
 			'companionRemote.pairing.validationHostFormat' => 'Форматът трябва да е IP:port (напр. 192.168.1.100:48632)',
 			'companionRemote.pairing.connectionTimedOut' => 'Връзката изтече. Използвайте една и съща мрежа на двете устройства.',
-			'companionRemote.pairing.sessionNotFound' => 'Устройството не е намерено. Уверете се, че Plezy работи на хоста.',
+			'companionRemote.pairing.sessionNotFound' => 'Устройството не е намерено. Уверете се, че Pleazy работи на хоста.',
 			'companionRemote.pairing.authFailed' => 'Удостоверяването е неуспешно. Двете устройства трябва да използват същия Plex акаунт.',
 			'companionRemote.pairing.failedToConnect' => ({required Object error}) => 'Неуспешно свързване: ${error}',
 			'companionRemote.remote.disconnectConfirm' => 'Искате ли да прекъснете връзката с дистанционната сесия?',
@@ -4780,11 +4780,11 @@ extension on TranslationsBg {
 			'trakt.connected' => 'Свързан',
 			'trakt.connectedAs' => ({required Object username}) => 'Свързан като @${username}',
 			'trakt.disconnectConfirm' => 'Да се прекъсне ли Trakt акаунтът?',
-			'trakt.disconnectConfirmBody' => 'Plezy ще спре да изпраща събития към Trakt. Можете да се свържете отново по всяко време.',
+			'trakt.disconnectConfirmBody' => 'Pleazy ще спре да изпраща събития към Trakt. Можете да се свържете отново по всяко време.',
 			'trakt.scrobble' => 'Скроблиране в реално време',
 			'trakt.scrobbleDescription' => 'Изпращай събития за пускане, пауза и спиране към Trakt по време на възпроизвеждане.',
 			'trakt.watchedSync' => 'Синхронизирай статус гледано',
-			'trakt.watchedSyncDescription' => 'Когато маркирате елементи като гледани в Plezy, те се маркират и в Trakt.',
+			'trakt.watchedSyncDescription' => 'Когато маркирате елементи като гледани в Pleazy, те се маркират и в Trakt.',
 			'seerr.title' => 'Seerr',
 			'seerr.connectTitle' => 'Свързване със Seerr',
 			'seerr.serverUrl' => 'URL на сървъра',
@@ -4794,10 +4794,10 @@ extension on TranslationsBg {
 			'seerr.signInWithEmby' => 'Вход с Emby',
 			'seerr.signInWithLocal' => 'Използвай локален акаунт',
 			'seerr.email' => 'Имейл',
-			'seerr.noSignInMethods' => 'Тази Seerr инстанция не предлага метод за вход, който Plezy поддържа.',
+			'seerr.noSignInMethods' => 'Тази Seerr инстанция не предлага метод за вход, който Pleazy поддържа.',
 			'seerr.instance' => 'Инстанция',
 			'seerr.disconnectConfirm' => 'Да се прекъсне ли Seerr?',
-			'seerr.disconnectConfirmBody' => 'Plezy ще забрави тази Seerr инстанция. Можете да се свържете отново по всяко време.',
+			'seerr.disconnectConfirmBody' => 'Pleazy ще забрави тази Seerr инстанция. Можете да се свържете отново по всяко време.',
 			'seerr.request' => 'Заяви',
 			'seerr.request4k' => 'Заяви в 4K',
 			'seerr.seasons' => 'Сезони',
@@ -4836,14 +4836,14 @@ extension on TranslationsBg {
 			'services.scrobble' => 'Проследявай прогреса автоматично',
 			'services.scrobbleDescription' => 'Обновявай списъка си, когато завършиш епизод или филм.',
 			'services.disconnectConfirm' => ({required Object service}) => 'Да се прекъсне ли ${service}?',
-			'services.disconnectConfirmBody' => ({required Object service}) => 'Plezy ще спре да обновява ${service}. Можете да се свържете отново по всяко време.',
+			'services.disconnectConfirmBody' => ({required Object service}) => 'Pleazy ще спре да обновява ${service}. Можете да се свържете отново по всяко време.',
 			'services.connectFailed' => ({required Object service}) => 'Неуспешно свързване с ${service}. Опитайте отново.',
 			'services.names.mal' => 'MyAnimeList',
 			'services.names.anilist' => 'AniList',
 			'services.names.simkl' => 'Simkl',
 			'services.names.seerr' => 'Seerr',
 			'services.names.mdblist' => 'MDBList',
-			'services.deviceCode.title' => ({required Object service}) => 'Активиране на Plezy в ${service}',
+			'services.deviceCode.title' => ({required Object service}) => 'Активиране на Pleazy в ${service}',
 			'services.deviceCode.instructions' => 'Сканирайте QR кода или посетете адреса по-долу и въведете този код:',
 			'services.deviceCode.openToActivate' => ({required Object service}) => 'Отворете ${service}, за да активирате',
 			'services.deviceCode.copyCode' => 'Копирай кода за активиране',
