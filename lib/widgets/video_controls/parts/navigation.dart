@@ -63,14 +63,14 @@ extension _PlexVideoControlsNavigationMethods on _PlexVideoControlsState {
     );
   }
 
-  void _onQueueItemSelected(MediaItem item) {
+  Future<void> _onQueueItemSelected(MediaItem item) async {
     // Same contract as next/previous: the switch is asynchronous, so a burst
     // still armed here would debounce into a seek on the outgoing item.
     _hiddenSeek.cancel();
     _desktopControlsKey.currentState?.abandonPendingSeek();
     _dismissSkipFeedback();
     final videoPlayerState = context.findAncestorStateOfType<VideoPlayerScreenState>();
-    videoPlayerState?.navigateToQueueItem(item);
+    await videoPlayerState?.navigateToQueueItem(item);
   }
 
   Future<SubtitleDownloadApplyOutcome> _onSubtitleDownloaded({

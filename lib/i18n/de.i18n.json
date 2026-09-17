@@ -2195,7 +2195,12 @@
     "deleteConfirmation": "Die aktuell in FunScriptSync aktive Stash-Szene löschen?",
     "cancel": "Abbrechen",
     "delete": "Löschen",
-    "sceneDeleted": "Stash-Szene gelöscht."
+    "sceneDeleted": "Stash-Szene gelöscht.",
+    "statusLoading": "Funscript: Lädt …",
+    "statusStash": "Funscript: Stash",
+    "statusAudio": "Funscript: Audio",
+    "statusFallback": "Funscript: Fallback",
+    "statusNoDevice": "Funscript: Kein Device"
   },
   "addServer": {
     "addMediaBrowserTitle": "${product}-Server hinzufügen",

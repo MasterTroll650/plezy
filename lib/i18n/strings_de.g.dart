@@ -2176,6 +2176,11 @@ class _Translations$funscriptSync$de extends Translations$funscriptSync$en {
 	@override String get cancel => 'Abbrechen';
 	@override String get delete => 'Löschen';
 	@override String get sceneDeleted => 'Stash-Szene gelöscht.';
+	@override String get statusLoading => 'Funscript: Lädt …';
+	@override String get statusStash => 'Funscript: Stash';
+	@override String get statusAudio => 'Funscript: Audio';
+	@override String get statusFallback => 'Funscript: Fallback';
+	@override String get statusNoDevice => 'Funscript: Kein Device';
 }
 
 // Path: addServer
@@ -4904,6 +4909,11 @@ extension on TranslationsDe {
 			'funscriptSync.cancel' => 'Abbrechen',
 			'funscriptSync.delete' => 'Löschen',
 			'funscriptSync.sceneDeleted' => 'Stash-Szene gelöscht.',
+			'funscriptSync.statusLoading' => 'Funscript: Lädt …',
+			'funscriptSync.statusStash' => 'Funscript: Stash',
+			'funscriptSync.statusAudio' => 'Funscript: Audio',
+			'funscriptSync.statusFallback' => 'Funscript: Fallback',
+			'funscriptSync.statusNoDevice' => 'Funscript: Kein Device',
 			'addServer.addMediaBrowserTitle' => ({required Object product}) => '${product}-Server hinzufügen',
 			'addServer.serverUrls' => 'Server-URLs',
 			'addServer.serverUrlsHelper' => 'Mehrere URLs möglich, durch Kommas getrennt.',

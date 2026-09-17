@@ -19,6 +19,7 @@ class FunScriptSyncService {
 
   static const _serverUrlPref = 'funscript_sync_server_url';
   static const _connectionTestPath = 'connection-test';
+  static const _activeSceneStatusPath = 'active-scene/status';
   static const _deleteActiveScenePath = 'active-scene/delete';
 
   Future<FunScriptSyncConfig> loadConfig() async {
@@ -92,6 +93,38 @@ class FunScriptSyncService {
     throw FunScriptSyncRequestException(_responseMessage(response));
   }
 
+  /// Reads the source of the Funscript currently active on FunScriptSync.
+  Future<FunScriptSyncSceneStatus?> getActiveSceneStatus() async {
+    final config = await loadConfig();
+    if (!config.isConfigured) return null;
+
+    final uri = Uri.parse('${config.serverUrl}/$_activeSceneStatusPath');
+    final response = await http
+        .get(uri, headers: {'X-FunScriptSync-Secret': config.secret, 'Accept': 'application/json'})
+        .timeout(const Duration(seconds: 5));
+    if (response.statusCode < 200 || response.statusCode >= 300) {
+      throw FunScriptSyncRequestException(_responseMessage(response));
+    }
+
+    try {
+      final decoded = jsonDecode(response.body);
+      if (decoded is! Map) throw const FormatException('Expected an object');
+      final source = switch (decoded['source']) {
+        'stash' => FunScriptSyncScriptSource.stash,
+        'audio' => FunScriptSyncScriptSource.audio,
+        'fallback' => FunScriptSyncScriptSource.fallback,
+        _ => null,
+      };
+      return FunScriptSyncSceneStatus(
+        loading: decoded['loading'] == true,
+        source: source,
+        deviceConnected: decoded['deviceConnected'] == true,
+      );
+    } catch (error) {
+      throw FunScriptSyncRequestException('Ungültige Statusantwort von FunScriptSync: $error');
+    }
+  }
+
   String _responseMessage(http.Response response) {
     final body = response.body.trim();
     if (body.isEmpty) return 'FunScriptSync antwortete mit HTTP ${response.statusCode}.';
@@ -121,6 +154,16 @@ class FunScriptSyncConfig {
   const FunScriptSyncConfig({required this.serverUrl, required this.secret});
 
   bool get isConfigured => serverUrl.isNotEmpty && secret.isNotEmpty;
+}
+
+enum FunScriptSyncScriptSource { stash, audio, fallback }
+
+class FunScriptSyncSceneStatus {
+  final bool loading;
+  final FunScriptSyncScriptSource? source;
+  final bool deviceConnected;
+
+  const FunScriptSyncSceneStatus({required this.loading, required this.source, required this.deviceConnected});
 }
 
 class FunScriptSyncConfigurationException implements Exception {

@@ -204,6 +204,10 @@ class DesktopVideoControlsState extends State<DesktopVideoControls> {
   bool _contentStripVisible = false;
   final GlobalKey<ContentStripState> _contentStripKey = GlobalKey<ContentStripState>();
 
+  Timer? _funscriptSyncStatusTimer;
+  FunScriptSyncSceneStatus? _funscriptSyncStatus;
+  bool _funscriptSyncStatusRequestInFlight = false;
+
   FocusNode? _lastFocusedButtonNode;
 
   /// Whether the content strip has any content to show
@@ -241,6 +245,11 @@ class DesktopVideoControlsState extends State<DesktopVideoControls> {
     ];
     _bindChapterLabelStreams();
     widget.chromeController?.addListener(_onChromeControllerChanged);
+    unawaited(_refreshFunscriptSyncStatus());
+    _funscriptSyncStatusTimer = Timer.periodic(
+      const Duration(seconds: 3),
+      (_) => unawaited(_refreshFunscriptSyncStatus()),
+    );
     _timelineSeek = DebouncedSeekAccumulator(
       currentPosition: () => widget.player.state.position,
       duration: () => widget.player.state.duration,
@@ -280,11 +289,16 @@ class DesktopVideoControlsState extends State<DesktopVideoControls> {
       oldWidget.chromeController?.removeListener(_onChromeControllerChanged);
       widget.chromeController?.addListener(_onChromeControllerChanged);
     }
+    if (oldWidget.metadata.globalKey != widget.metadata.globalKey) {
+      _funscriptSyncStatus = null;
+      unawaited(_refreshFunscriptSyncStatus());
+    }
   }
 
   @override
   void dispose() {
     widget.chromeController?.removeListener(_onChromeControllerChanged);
+    _funscriptSyncStatusTimer?.cancel();
     _keyRepeatThumbnailTimer?.cancel();
     _timelineSeek.dispose();
     _prevItemFocusNode.dispose();
@@ -302,6 +316,62 @@ class DesktopVideoControlsState extends State<DesktopVideoControls> {
       node.dispose();
     }
     super.dispose();
+  }
+
+  Future<void> _refreshFunscriptSyncStatus() async {
+    if (_funscriptSyncStatusRequestInFlight) return;
+    _funscriptSyncStatusRequestInFlight = true;
+    try {
+      final status = await FunScriptSyncService.instance.getActiveSceneStatus();
+      if (!mounted) return;
+      final current = _funscriptSyncStatus;
+      if (current?.loading == status?.loading &&
+          current?.source == status?.source &&
+          current?.deviceConnected == status?.deviceConnected) {
+        return;
+      }
+      setState(() => _funscriptSyncStatus = status);
+    } catch (_) {
+      if (mounted && _funscriptSyncStatus != null) setState(() => _funscriptSyncStatus = null);
+    } finally {
+      _funscriptSyncStatusRequestInFlight = false;
+    }
+  }
+
+  List<Widget> _buildFunscriptSyncStatusWidgets() {
+    final status = _funscriptSyncStatus;
+    // A null status is returned until a complete FunScriptSync connection
+    // (server URL and shared secret) has been saved.
+    if (status == null) return const [];
+    final text = !status.deviceConnected
+        ? t.funscriptSync.statusNoDevice
+        : status.loading
+        ? t.funscriptSync.statusLoading
+        : switch (status.source) {
+            FunScriptSyncScriptSource.stash => t.funscriptSync.statusStash,
+            FunScriptSyncScriptSource.audio => t.funscriptSync.statusAudio,
+            FunScriptSyncScriptSource.fallback => t.funscriptSync.statusFallback,
+            _ => null,
+          };
+    if (text == null) return const [];
+    final color = !status.deviceConnected
+        ? const Color(0xFFFF5252)
+        : status.loading
+        ? const Color(0xFF2196F3)
+        : const Color(0xFF69F0AE);
+    return [
+      ConstrainedBox(
+        constraints: const BoxConstraints(maxWidth: 150),
+        child: Text(
+          text,
+          style: TextStyle(color: color, fontSize: 13, fontWeight: FontWeight.w600),
+          maxLines: 1,
+          softWrap: false,
+          overflow: TextOverflow.fade,
+        ),
+      ),
+      const SizedBox(width: 8),
+    ];
   }
 
   void _onChromeControllerChanged() {
@@ -331,9 +401,12 @@ class DesktopVideoControlsState extends State<DesktopVideoControls> {
     }
   }
 
-  void _selectQueueItem(MediaItem item) {
+  Future<void> _selectQueueItem(MediaItem item) async {
     hideContentStrip();
-    widget.onQueueItemSelected?.call(item);
+    // The item swap is asynchronous and rebuilds the player chrome. Waiting
+    // for it prevents that rebuild's default Play/Pause focus from overriding
+    // the queue hand-off below.
+    await widget.onQueueItemSelected?.call(item);
     WidgetsBinding.instance.addPostFrameCallback((_) {
       if (!mounted || _timelineFocusNode.context == null) return;
       _timelineFocusNode.requestFocus();
@@ -1043,6 +1116,7 @@ class DesktopVideoControlsState extends State<DesktopVideoControls> {
                   ),
                 // Volume control (hidden on TV — hardware handles volume)
                 if (PlatformDetector.isTV()) ...[
+                  ..._buildFunscriptSyncStatusWidgets(),
                   FocusableWrapper(
                     focusNode: _deleteStashSceneFocusNode,
                     onSelect: _deleteActiveStashScene,
@@ -1066,19 +1140,25 @@ class DesktopVideoControlsState extends State<DesktopVideoControls> {
                     onKeyEvent: _handleVolumeKeyEvent,
                     onFocusChange: _onFocusChange,
                     onFocusActivity: widget.onFocusActivity,
-                    beforeMute: FocusableWrapper(
-                      focusNode: _deleteStashSceneFocusNode,
-                      onSelect: _deleteActiveStashScene,
-                      onKeyEvent: _handleDeleteStashSceneKeyEvent,
-                      onFocusChange: _onFocusChange,
-                      borderRadius: 20,
-                      autoScroll: false,
-                      useBackgroundFocus: true,
-                      semanticLabel: t.funscriptSync.deleteActiveScene,
-                      child: IconButton(
-                        onPressed: _deleteActiveStashScene,
-                        icon: const AppIcon(Symbols.delete_rounded, fill: 1, color: Colors.red),
-                      ),
+                    beforeMute: Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        ..._buildFunscriptSyncStatusWidgets(),
+                        FocusableWrapper(
+                          focusNode: _deleteStashSceneFocusNode,
+                          onSelect: _deleteActiveStashScene,
+                          onKeyEvent: _handleDeleteStashSceneKeyEvent,
+                          onFocusChange: _onFocusChange,
+                          borderRadius: 20,
+                          autoScroll: false,
+                          useBackgroundFocus: true,
+                          semanticLabel: t.funscriptSync.deleteActiveScene,
+                          child: IconButton(
+                            onPressed: _deleteActiveStashScene,
+                            icon: const AppIcon(Symbols.delete_rounded, fill: 1, color: Colors.red),
+                          ),
+                        ),
+                      ],
                     ),
                   ),
                   const SizedBox(width: 16),

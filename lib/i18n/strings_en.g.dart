@@ -5468,6 +5468,21 @@ class Translations$funscriptSync$en {
 
 	/// en: 'Stash scene deleted.'
 	String get sceneDeleted => 'Stash scene deleted.';
+
+	/// en: 'Funscript: Loading…'
+	String get statusLoading => 'Funscript: Loading…';
+
+	/// en: 'Funscript: Stash'
+	String get statusStash => 'Funscript: Stash';
+
+	/// en: 'Funscript: Audio'
+	String get statusAudio => 'Funscript: Audio';
+
+	/// en: 'Funscript: Fallback'
+	String get statusFallback => 'Funscript: Fallback';
+
+	/// en: 'Funscript: No device'
+	String get statusNoDevice => 'Funscript: No device';
 }
 
 // Path: addServer
@@ -9092,6 +9107,11 @@ extension on Translations {
 			'funscriptSync.cancel' => 'Cancel',
 			'funscriptSync.delete' => 'Delete',
 			'funscriptSync.sceneDeleted' => 'Stash scene deleted.',
+			'funscriptSync.statusLoading' => 'Funscript: Loading…',
+			'funscriptSync.statusStash' => 'Funscript: Stash',
+			'funscriptSync.statusAudio' => 'Funscript: Audio',
+			'funscriptSync.statusFallback' => 'Funscript: Fallback',
+			'funscriptSync.statusNoDevice' => 'Funscript: No device',
 			'addServer.addMediaBrowserTitle' => ({required Object product}) => 'Add ${product} server',
 			'addServer.serverUrls' => 'Server URLs',
 			'addServer.serverUrlsHelper' => 'Multiple URLs allowed, separated by commas.',

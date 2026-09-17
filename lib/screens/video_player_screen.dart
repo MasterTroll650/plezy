@@ -548,6 +548,10 @@ class VideoPlayerScreenState extends State<VideoPlayerScreen> with WidgetsBindin
   Future<void>? _routeExitOperation;
   Future<void>? _systemUiRestoreOperation;
 
+  /// Queue selection restores focus to the timeline itself. Other item-change
+  /// entry points keep the established Play/Pause fallback.
+  bool _queueItemNavigationInProgress = false;
+
   // Bounds navigation only. Native disposal and terminal reporting retain
   // their real futures; expiry never grants permission to reuse the core.
   static const _routeExitNavigationBudget = Duration(seconds: 1);
@@ -2594,7 +2598,12 @@ class VideoPlayerScreenState extends State<VideoPlayerScreen> with WidgetsBindin
   /// Navigate to a specific queue item (called from QueueSheet)
   Future<void> navigateToQueueItem(MediaItem metadata) async {
     if (!_canNavigateMediaItems()) return;
-    await _navigateToEpisode(metadata);
+    _queueItemNavigationInProgress = true;
+    try {
+      await _navigateToEpisode(metadata);
+    } finally {
+      _queueItemNavigationInProgress = false;
+    }
   }
 
   void _setPlayerState(VoidCallback fn) => setStateIfMounted(fn);

@@ -77,6 +77,7 @@ class _FunScriptSyncSettingsScreenState extends State<FunScriptSyncSettingsScree
   }
 
   Future<void> _testConnection() async {
+    if (_testing) return;
     if (!(_formKey.currentState?.validate() ?? false)) return;
     setState(() => _testing = true);
     try {
@@ -96,7 +97,12 @@ class _FunScriptSyncSettingsScreenState extends State<FunScriptSyncSettingsScree
     } catch (error) {
       if (mounted) showErrorSnackBar(context, error.toString());
     } finally {
-      if (mounted) setState(() => _testing = false);
+      if (mounted) {
+        setState(() => _testing = false);
+        WidgetsBinding.instance.addPostFrameCallback((_) {
+          if (mounted && _testFocus.canRequestFocus) _testFocus.requestFocus();
+        });
+      }
     }
   }
 
@@ -154,7 +160,9 @@ class _FunScriptSyncSettingsScreenState extends State<FunScriptSyncSettingsScree
                       FocusableButton(
                         focusNode: _testFocus,
                         useBackgroundFocus: true,
-                        onPressed: _testing ? null : _testConnection,
+                        // Keep the wrapper enabled while testing so its focus
+                        // node is not evicted to the preceding secret field.
+                        onPressed: _testConnection,
                         child: FilledButton.icon(
                           onPressed: _testing ? null : _testConnection,
                           icon: _testing
