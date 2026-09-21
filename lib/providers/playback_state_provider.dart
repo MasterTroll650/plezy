@@ -104,6 +104,9 @@ class PlaybackStateProvider with ChangeNotifier, DisposableChangeNotifierMixin {
   /// Whether any queue-based playback is active
   bool get isQueueActive => _playQueueId != null && _isQueueMode;
 
+  /// Whether the active queue is fully owned by the client (Jellyfin).
+  bool get isLocalQueue => isQueueActive && _playQueueId == -1;
+
   /// Whether [item] belongs to the currently active queue. Plex membership
   /// requires both the server queue id and media identity to match a loaded
   /// entry. Client-side membership uses the exact stored object because
@@ -189,6 +192,26 @@ class PlaybackStateProvider with ChangeNotifier, DisposableChangeNotifierMixin {
     _isQueueMode = true;
     _windowFetcher = null; // disable server-side window extension
     safeNotifyListeners();
+  }
+
+  /// Removes one item from the in-memory Jellyfin queue.
+  ///
+  /// Server-backed Plex queues intentionally remain untouched: their source of
+  /// truth is Plex and a local removal would be overwritten by the next window
+  /// refresh.
+  bool removeFromLocalQueue(MediaItem item) {
+    if (!isLocalQueue) return false;
+    final itemId = playQueueItemIdFor(item);
+    if (itemId == null) return false;
+    final index = _findLoadedIndex(itemId);
+    if (index == -1) return false;
+
+    _loadedItems.removeAt(index);
+    _syntheticIds.removeAt(index);
+    _playQueueTotalCount = _loadedItems.length;
+    if (_currentPlayQueueItemID == itemId) _currentPlayQueueItemID = null;
+    safeNotifyListeners();
+    return true;
   }
 
   /// Load a server queue window centered on [centerPlayQueueItemID].

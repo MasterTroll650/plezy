@@ -13,6 +13,8 @@ if not exist "%EMULATOR%" (
   exit /b 1
 )
 
-start "Pleazy Android TV Emulator" "%EMULATOR%" -avd Pleazy_TV_API_36 -netdelay none -netspeed full
+rem Kaltstart und Software-GPU vermeiden einen haengenden Quick-Boot-Snapshot
+rem bzw. einen schwarzen Bildschirm bei problematischen Grafiktreibern.
+start "Pleazy Android TV Emulator" "%EMULATOR%" -avd Pleazy_TV_API_36 -no-snapshot -gpu swiftshader_indirect -netdelay none -netspeed full
 
 endlocal

@@ -344,6 +344,24 @@ void main() {
       expect(p.isItemInActiveQueue(outsider), isFalse);
     });
 
+    test('removes the active item from a Jellyfin local queue without renumbering successors', () {
+      final p = PlaybackStateProvider();
+      addTearDown(p.dispose);
+      final first = testMediaItem(id: 'first', backend: MediaBackend.jellyfin, kind: MediaKind.episode);
+      final second = testMediaItem(id: 'second', backend: MediaBackend.jellyfin, kind: MediaKind.episode);
+
+      p.setPlaybackFromLocalQueue(LocalPlayQueue(id: 'jellyfin:queue', items: [first, second], currentIndex: 0));
+
+      expect(p.isLocalQueue, isTrue);
+      expect(p.removeFromLocalQueue(first), isTrue);
+      expect(p.loadedItems, [second]);
+      expect(p.currentPlayQueueItemID, isNull);
+      // The queue selection that follows deletion can still address the
+      // already-resolved successor by its stable synthetic queue id.
+      expect(p.playQueueItemIdFor(second), 1);
+      expect(p.removeFromLocalQueue(first), isFalse);
+    });
+
     test('isItemInActiveQueue keeps Plex playlist/collection queues alive', () async {
       // Anchor (Plex side): `_ensurePlayQueue` in episode_queue.dart gates
       // its "preserve vs. clobber" decision on `isItemInActiveQueue`. A

@@ -101,6 +101,11 @@ class DesktopVideoControls extends StatefulWidget {
   /// Called when a queue item is selected in the content strip
   final Function(MediaItem)? onQueueItemSelected;
 
+  /// Removes the currently deleted Stash scene from a local Jellyfin queue
+  /// and navigates to its already-resolved successor. Returns true when the
+  /// callback handled navigation or closed the player.
+  final Future<bool> Function()? onDeletedJellyfinQueueItem;
+
   /// Called to cancel auto-hide timer (e.g., when content strip is shown)
   final VoidCallback? onCancelAutoHide;
 
@@ -157,6 +162,7 @@ class DesktopVideoControls extends StatefulWidget {
     this.serverId,
     this.showQueueTab = false,
     this.onQueueItemSelected,
+    this.onDeletedJellyfinQueueItem,
     this.onCancelAutoHide,
     this.onStartAutoHide,
     this.onContentStripVisibilityChanged,
@@ -654,6 +660,7 @@ class DesktopVideoControlsState extends State<DesktopVideoControls> {
       await FunScriptSyncService.instance.deleteActiveScene();
       debugPrint('[FunScriptSync] Active scene delete request succeeded');
       showGlobalSuccessSnackBar(sceneDeletedMessage);
+      if (await widget.onDeletedJellyfinQueueItem?.call() ?? false) return;
       if (onNext != null) {
         onNext();
         WidgetsBinding.instance.addPostFrameCallback((_) {

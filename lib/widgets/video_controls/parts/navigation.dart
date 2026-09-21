@@ -52,6 +52,7 @@ extension _PlexVideoControlsNavigationMethods on _PlexVideoControlsState {
         serverId: widget.metadata.serverId,
         showQueueTab: playbackState.isQueueActive && widget.canNavigateMediaItems,
         onQueueItemSelected: playbackState.isQueueActive && widget.canNavigateMediaItems ? _onQueueItemSelected : null,
+        onDeletedJellyfinQueueItem: () => _removeDeletedJellyfinQueueItem(playbackState),
         onCancelAutoHide: widget.chromeController.cancelAutoHide,
         onStartAutoHide: _startHideTimer,
         onSeekCompleted: widget.onSeekCompleted,
@@ -71,6 +72,27 @@ extension _PlexVideoControlsNavigationMethods on _PlexVideoControlsState {
     _dismissSkipFeedback();
     final videoPlayerState = context.findAncestorStateOfType<VideoPlayerScreenState>();
     await videoPlayerState?.navigateToQueueItem(item);
+  }
+
+  /// Removes the active item only from a client-owned Jellyfin queue. Resolve
+  /// the successor first, because it is no longer possible to find an adjacent
+  /// item after the current entry has been removed.
+  Future<bool> _removeDeletedJellyfinQueueItem(PlaybackStateProvider playbackState) async {
+    if (widget.metadata.backend != MediaBackend.jellyfin ||
+        !widget.canNavigateMediaItems ||
+        !playbackState.isLocalQueue) {
+      return false;
+    }
+
+    final next = await playbackState.getNextEpisode(widget.metadata.globalKey);
+    if (!playbackState.removeFromLocalQueue(widget.metadata)) return false;
+
+    if (next.status == QueueNavigationStatus.found && next.item != null) {
+      await _onQueueItemSelected(next.item!);
+    } else {
+      widget.onBack?.call();
+    }
+    return true;
   }
 
   Future<SubtitleDownloadApplyOutcome> _onSubtitleDownloaded({
