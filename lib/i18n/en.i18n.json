@@ -1600,6 +1600,7 @@
       "watchOn": "Watch on",
       "watchTrailer": "Watch trailer",
       "openOn": "Open on ${site}",
+      "noTrailerAvailable": "No trailer available",
       "trailerUnavailable": "Couldn't open the trailer on this device",
       "linkUnavailable": "Couldn't open this link on this device",
       "crew": "Crew",

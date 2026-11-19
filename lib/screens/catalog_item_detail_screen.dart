@@ -1,11 +1,14 @@
 import 'dart:async';
 
 import 'package:collection/collection.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:intl/intl.dart';
 import 'package:material_symbols_icons/symbols.dart';
 import 'package:provider/provider.dart';
+
+import 'explore_trailer_screen.dart';
 
 import '../focus/focusable_action_bar.dart';
 import '../focus/focusable_button.dart';
@@ -20,8 +23,12 @@ import '../media/ids.dart';
 import '../media/media_hub.dart';
 import '../media/media_item.dart';
 import '../media/media_item_merge.dart';
+import '../media/media_kind.dart';
 import '../media/media_rating.dart';
+import '../media/media_stream.dart';
+import '../media/media_version.dart';
 import '../media/primary_trailer.dart';
+import '../mpv/mpv.dart' show AudioTrack, SubtitleTrack;
 import '../models/catalog/catalog_cast_member.dart';
 import '../models/catalog/catalog_item.dart';
 import '../models/catalog/catalog_labels.dart';
@@ -32,7 +39,9 @@ import '../providers/seerr_account_provider.dart';
 import '../services/catalog/catalog_library_matcher.dart';
 import '../services/catalog/catalog_source.dart';
 import '../services/catalog/community_ratings.dart';
+import '../services/catalog/kinocheck_trailers.dart';
 import '../services/catalog/seerr_catalog_source.dart';
+import '../services/catalog/youtube_trailers.dart';
 import '../services/data_aggregation_service.dart';
 import '../utils/app_logger.dart';
 import '../utils/catalog_navigation_helper.dart';
@@ -115,6 +124,8 @@ class _CatalogItemDetailScreenState extends State<CatalogItemDetailScreen> {
   /// play a trailer when the YouTube app is missing.
   MediaItem? _libraryTrailer;
   bool _lookingUpLibraryTrailer = false;
+  Future<void>? _libraryTrailerLookup;
+  bool _openingTrailer = false;
   final Set<String> _trailerCheckedCopies = {};
 
   /// tvOS only: the YouTube app is installed, so a YouTube trailer can be
@@ -248,7 +259,7 @@ class _CatalogItemDetailScreenState extends State<CatalogItemDetailScreen> {
         ),
     ];
     setState(() => _matches = merged);
-    unawaited(_resolveLibraryTrailer());
+    if (!_lookingUpLibraryTrailer) _libraryTrailerLookup = _resolveLibraryTrailer();
     // A merge re-sorts, and SettingsGroup shapes its cards by list index, so
     // the tile holding the focused node can be rebuilt from scratch and drop
     // it. Reclaim it rather than dumping a dpad user on another copy.
@@ -399,7 +410,15 @@ class _CatalogItemDetailScreenState extends State<CatalogItemDetailScreen> {
     return uri != null && uri.hasScheme ? uri : null;
   }
 
-  bool get _hasTrailer => _libraryTrailer != null || _externalTrailerUri != null;
+  bool get _canLookUpKinoCheckTrailer =>
+      defaultTargetPlatform == TargetPlatform.windows && KinoCheckTrailers.canLookUp(_item);
+
+  bool get _canSearchYouTubeTrailer =>
+      defaultTargetPlatform == TargetPlatform.windows &&
+      (_item.kind == MediaKind.movie || _item.kind == MediaKind.show) &&
+      _item.title.trim().isNotEmpty;
+
+  bool get _hasTrailer => _canSearchYouTubeTrailer || _libraryTrailer != null || _externalTrailerUri != null;
 
   /// The Seerr source when the signed-in user may request this kind. Read
   /// live rather than captured in initState: the account provider adopts
@@ -683,16 +702,153 @@ class _CatalogItemDetailScreenState extends State<CatalogItemDetailScreen> {
     if (mounted) showErrorSnackBar(context, t.explore.detail.linkUnavailable);
   }
 
-  /// A library copy's trailer plays in the player; otherwise the provider's
-  /// link goes to another app, and a refusal says so instead of doing nothing.
+  Future<MediaItem?> _libraryTrailerWithAudio(PlexMediaItem trailer) async {
+    if (trailerAudioInLanguage(trailer, 'de') != null) return trailer;
+    final manager = context.read<MultiServerProvider>().serverManager;
+    final serverId = serverIdOrNull(trailer.serverId);
+    final client = serverId == null ? null : manager.getClient(serverId);
+    if (client == null) return trailer;
+    try {
+      return await client.fetchItem(trailer.id).timeout(const Duration(seconds: 2)) ?? trailer;
+    } catch (error) {
+      appLogger.d('Explore trailer audio metadata lookup failed', error: error);
+      return trailer;
+    }
+  }
+
+  bool get _trailerRouteIsCurrent => mounted && ModalRoute.of(context)?.isCurrent != false;
+
   Future<void> _playTrailer() async {
+    if (_openingTrailer) return;
+    _openingTrailer = true;
+    try {
+      if (_canSearchYouTubeTrailer) {
+        await _libraryTrailerLookup?.timeout(const Duration(seconds: 2), onTimeout: () {});
+        if (!_trailerRouteIsCurrent) return;
+        final libraryTrailer = _libraryTrailer;
+        final audioDetails = libraryTrailer is PlexMediaItem ? await _libraryTrailerWithAudio(libraryTrailer) : null;
+        if (!_trailerRouteIsCurrent) return;
+        if (trailerAudioInLanguage(audioDetails, 'de') case final german?) {
+          await _playLibraryTrailer(libraryTrailer!, german, 'de');
+          return;
+        }
+        final attempted = <Uri>{};
+        final english = trailerAudioInLanguage(audioDetails, 'en') ?? trailerAudioInLanguage(libraryTrailer, 'en');
+        if (await _playOnlineTrailerSequence(attempted, includeEnglish: english == null)) return;
+        if (!_trailerRouteIsCurrent) return;
+        if (english != null) {
+          await _playLibraryTrailer(libraryTrailer!, english, 'en');
+          return;
+        }
+        await _playExistingTrailer(attempted: attempted);
+        return;
+      }
+      await _playExistingTrailer();
+    } finally {
+      _openingTrailer = false;
+    }
+  }
+
+  Future<bool> _playOnlineTrailerSequence(Set<Uri> attempted, {required bool includeEnglish}) async {
+    final candidates = StreamIterator(_onlineTrailerCandidates(attempted, includeEnglish: includeEnglish));
+    try {
+      if (!await candidates.moveNext() || !_trailerRouteIsCurrent) return false;
+      return await _showTrailerInApp(
+        candidates.current,
+        nextTrailer: () async => await candidates.moveNext() ? candidates.current : null,
+      );
+    } finally {
+      unawaited(candidates.cancel());
+    }
+  }
+
+  Stream<Uri> _onlineTrailerCandidates(Set<Uri> attempted, {required bool includeEnglish}) async* {
+    for (final language in ['de', if (includeEnglish) 'en']) {
+      final kinoCheck = _canLookUpKinoCheckTrailer
+          ? await KinoCheckTrailers.findTrailer(_item, language: language)
+          : null;
+      if (!mounted) return;
+      if (kinoCheck != null && attempted.add(kinoCheck)) yield kinoCheck;
+
+      final originalTitle = _item.originalTitle?.trim();
+      final searchOriginal = language == 'en' && originalTitle != null && originalTitle.isNotEmpty;
+      for (final searchWithGermanWording in [false, if (language == 'de') true]) {
+        if (!mounted) return;
+        final trailers = await searchYouTubeTrailers(
+          searchOriginal ? originalTitle : _item.title,
+          alternateTitle: searchOriginal ? _item.title : originalTitle,
+          searchWithGermanWording: searchWithGermanWording,
+          releaseYear: _item.year,
+          language: language,
+          excluded: attempted,
+        );
+        for (final trailer in trailers) {
+          if (attempted.add(trailer)) yield trailer;
+        }
+      }
+    }
+    final fallbackUri = includeEnglish && _libraryTrailer == null ? _externalTrailerUri : null;
+    if (fallbackUri case final uri?) {
+      if (uri.scheme == 'https' && attempted.add(uri)) yield uri;
+    }
+  }
+
+  Future<void> _playLibraryTrailer(
+    MediaItem trailer,
+    ({MediaVersion version, MediaStream track}) audio,
+    String language,
+  ) async {
+    final (:version, :track) = audio;
+    await navigateToVideoPlayer(
+      context,
+      metadata: trailer,
+      selectedMediaSourceId: version.id.isEmpty ? null : version.id,
+      preferredSubtitleTrack: SubtitleTrack.off,
+      preferredAudioTrack: AudioTrack(
+        id: track.id,
+        title: track.title,
+        language: language,
+        codec: track.codec,
+        channels: track.channels,
+      ),
+      isLaunchCurrent: () => mounted,
+    );
+  }
+
+  Future<bool> _showTrailerInApp(Uri uri, {Future<Uri?> Function()? nextTrailer}) async {
+    final result = await Navigator.of(context).push<bool>(
+      MaterialPageRoute(
+        builder: (_) => ExploreTrailerScreen(title: _item.title, url: uri, nextTrailer: nextTrailer),
+      ),
+    );
+    return result != false;
+  }
+
+  /// Plays library extras in the native player, or opens a provider trailer.
+  Future<void> _playExistingTrailer({Set<Uri> attempted = const {}}) async {
     if (_libraryTrailer case final trailer?) {
-      await navigateToVideoPlayer(context, metadata: trailer, isLaunchCurrent: () => mounted);
+      await navigateToVideoPlayer(
+        context,
+        metadata: trailer,
+        preferredSubtitleTrack: SubtitleTrack.off,
+        isLaunchCurrent: () => mounted,
+      );
       return;
     }
     final uri = _externalTrailerUri;
-    if (uri == null || await openExternalUrl(uri)) return;
-    if (mounted) showErrorSnackBar(context, t.explore.detail.trailerUnavailable);
+    if (uri != null && !attempted.contains(uri)) {
+      if (defaultTargetPlatform == TargetPlatform.windows && uri.scheme == 'https') {
+        if (await _showTrailerInApp(uri)) return;
+      } else if (await openExternalUrl(uri)) {
+        return;
+      }
+    }
+    if (mounted) {
+      showErrorSnackBar(
+        context,
+        _canSearchYouTubeTrailer ? t.explore.detail.noTrailerAvailable : t.explore.detail.trailerUnavailable,
+      );
+    }
   }
 
   bool? get _isOnWatchlist => _watchlistSource?.isOnWatchlist(_item.kind, _item.ids);

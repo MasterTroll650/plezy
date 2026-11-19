@@ -3045,6 +3045,7 @@ class _Translations$explore$detail$de extends Translations$explore$detail$en {
 	@override String get watchOn => 'Ansehen auf';
 	@override String get watchTrailer => 'Trailer ansehen';
 	@override String openOn({required Object site}) => 'Auf ${site} öffnen';
+	@override String get noTrailerAvailable => 'Kein Trailer verfügbar';
 	@override String get trailerUnavailable => 'Der Trailer konnte auf diesem Gerät nicht geöffnet werden';
 	@override String get linkUnavailable => 'Der Link konnte auf diesem Gerät nicht geöffnet werden';
 	@override String get crew => 'Crew';
@@ -4841,6 +4842,7 @@ extension on TranslationsDe {
 			'explore.detail.watchOn' => 'Ansehen auf',
 			'explore.detail.watchTrailer' => 'Trailer ansehen',
 			'explore.detail.openOn' => ({required Object site}) => 'Auf ${site} öffnen',
+			'explore.detail.noTrailerAvailable' => 'Kein Trailer verfügbar',
 			'explore.detail.trailerUnavailable' => 'Der Trailer konnte auf diesem Gerät nicht geöffnet werden',
 			'explore.detail.linkUnavailable' => 'Der Link konnte auf diesem Gerät nicht geöffnet werden',
 			'explore.detail.crew' => 'Crew',
@@ -4937,9 +4939,9 @@ extension on TranslationsDe {
 			'liveTv.recordSettings.anyChannel' => 'Auf jedem Sender aufnehmen',
 			'liveTv.recordSettings.anyTime' => 'Zu jeder Zeit aufnehmen',
 			'liveTv.recordSettings.skipInLibrary' => 'Episoden überspringen, die schon in der Bibliothek sind',
-			'liveTv.recordSettings.keepUpTo' => 'Zu behaltende Episoden',
 			_ => null,
 		} ?? switch (path) {
+			'liveTv.recordSettings.keepUpTo' => 'Zu behaltende Episoden',
 			'liveTv.recordSettings.keepUpToHint' => '0 behält alle Episoden',
 			'liveTv.startingInMinutes' => ({required Object minutes}) => 'Beginnt in ${minutes} Min.',
 			'liveTv.dayAtTime' => ({required Object day, required Object time}) => '${day} um ${time}',
@@ -5451,9 +5453,9 @@ extension on TranslationsDe {
 			'performanceOverlay.decoderQualcommHw' => 'Qualcomm HW',
 			'performanceOverlay.decoderMediatekHw' => 'MediaTek HW',
 			'performanceOverlay.decoderExynosHw' => 'Exynos HW',
-			'performanceOverlay.decoderSoftware' => 'Software',
 			_ => null,
 		} ?? switch (path) {
+			'performanceOverlay.decoderSoftware' => 'Software',
 			'performanceOverlay.decoderHardware' => 'Hardware',
 			'performanceOverlay.tunnelingActive' => 'Aktiv',
 			'performanceOverlay.dvRpuFailed' => ({required Object converted, required Object failures}) => '${converted} (${failures} fehlgeschlagen)',

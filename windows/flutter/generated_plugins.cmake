@@ -10,6 +10,7 @@ list(APPEND FLUTTER_PLUGIN_LIST
   sentry_flutter
   universal_gamepad
   url_launcher_windows
+  webview_flutter_windows
   window_manager
 )
 

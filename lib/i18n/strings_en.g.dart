@@ -7393,6 +7393,9 @@ class Translations$explore$detail$en {
 	/// en: 'Open on ${site}'
 	String openOn({required Object site}) => 'Open on ${site}';
 
+	/// en: 'No trailer available'
+	String get noTrailerAvailable => 'No trailer available';
+
 	/// en: 'Couldn't open the trailer on this device'
 	String get trailerUnavailable => 'Couldn\'t open the trailer on this device';
 
@@ -9569,6 +9572,7 @@ extension on Translations {
 			'explore.detail.watchOn' => 'Watch on',
 			'explore.detail.watchTrailer' => 'Watch trailer',
 			'explore.detail.openOn' => ({required Object site}) => 'Open on ${site}',
+			'explore.detail.noTrailerAvailable' => 'No trailer available',
 			'explore.detail.trailerUnavailable' => 'Couldn\'t open the trailer on this device',
 			'explore.detail.linkUnavailable' => 'Couldn\'t open this link on this device',
 			'explore.detail.crew' => 'Crew',
@@ -9658,9 +9662,9 @@ extension on Translations {
 			'liveTv.guideReloadRequested' => 'Guide refresh requested',
 			'liveTv.guideReloadFailed' => 'Couldn\'t refresh the guide',
 			'liveTv.rulesProcessRequested' => 'Rule re-evaluation requested',
-			'liveTv.rulesProcessFailed' => 'Couldn\'t re-evaluate recording rules',
 			_ => null,
 		} ?? switch (path) {
+			'liveTv.rulesProcessFailed' => 'Couldn\'t re-evaluate recording rules',
 			'liveTv.recordShow' => 'Record show',
 			'liveTv.recordSettings.startEarly' => 'Start early (seconds)',
 			'liveTv.recordSettings.endLate' => 'End late (seconds)',
@@ -10172,9 +10176,9 @@ extension on Translations {
 			'performanceOverlay.cacheLimit' => 'Cache Limit',
 			'performanceOverlay.speed' => 'Speed',
 			'performanceOverlay.player' => 'Player',
-			'performanceOverlay.playMethod' => 'Play Method',
 			_ => null,
 		} ?? switch (path) {
+			'performanceOverlay.playMethod' => 'Play Method',
 			'performanceOverlay.memory' => 'Memory',
 			'performanceOverlay.uiFps' => 'UI FPS',
 			'performanceOverlay.fps' => 'FPS',

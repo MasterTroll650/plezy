@@ -99,6 +99,7 @@ dependencies:
   openwatchparty: ^1.1.0
   # The connector passed to openwatchparty, which logs relay connect failures.
   web_socket: ^1.0.1
+  webview_flutter_windows: 1.3.1
 
 dev_dependencies:
   archive: ^4.0.9

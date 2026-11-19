@@ -75,3 +75,9 @@ maestro/**/*.png
 
 server/deploy.sh
 server/Caddyfile
+
+# Local Windows release packages
+/Plezy-Windows-x64*/
+/Plezy-Windows-x64*.zip
+/plezy-*-windows-x64.zip
+/plezy-*-windows-x64/

@@ -1600,6 +1600,7 @@
       "watchOn": "Ansehen auf",
       "watchTrailer": "Trailer ansehen",
       "openOn": "Auf ${site} öffnen",
+      "noTrailerAvailable": "Kein Trailer verfügbar",
       "trailerUnavailable": "Der Trailer konnte auf diesem Gerät nicht geöffnet werden",
       "linkUnavailable": "Der Link konnte auf diesem Gerät nicht geöffnet werden",
       "crew": "Crew",

@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'dart:convert';
 
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:intl/date_symbol_data_local.dart';
@@ -16,6 +17,8 @@ import 'package:plezy/media/media_server_client.dart';
 import 'package:plezy/media/media_rating.dart';
 import 'package:plezy/media/media_item.dart';
 import 'package:plezy/media/media_version.dart';
+import 'package:plezy/media/media_part.dart';
+import 'package:plezy/media/media_stream.dart';
 import 'package:plezy/models/catalog/catalog_cast_member.dart';
 import 'package:plezy/models/catalog/catalog_item.dart';
 import 'package:plezy/models/catalog/catalog_metadata.dart';
@@ -24,6 +27,7 @@ import 'package:plezy/providers/catalog_sources_provider.dart';
 import 'package:plezy/providers/multi_server_provider.dart';
 import 'package:plezy/providers/seerr_account_provider.dart';
 import 'package:plezy/screens/catalog_item_detail_screen.dart';
+import 'package:plezy/screens/explore_trailer_screen.dart';
 import 'package:plezy/services/catalog/catalog_source.dart';
 import 'package:plezy/services/catalog/catalog_library_matcher.dart';
 import 'package:plezy/services/catalog/seerr_catalog_source.dart';
@@ -1128,6 +1132,183 @@ void main() {
 
     expect(find.text(t.explore.detail.trailerUnavailable), findsOneWidget);
   });
+
+  for (final (language, existingTrailer, youtubeHasShortResult, expectedVideo) in [
+    ('de', null, false, 'QDd3GilVvAU'),
+    ('fr', null, false, null),
+    ('it', null, false, 'lXh2rNl2wdQ'),
+    ('es', null, false, '_8EKVLmNoS8'),
+    ('en', null, true, 'kbJZ1LLG1PY'),
+    ('en', 'https://www.youtube.com/watch?v=dQw4w9WgXcQ', false, 'dQw4w9WgXcQ'),
+  ]) {
+    testWidgets(
+      'Windows Explore trailer with KinoCheck $language, YouTube $youtubeHasShortResult and fallback $existingTrailer',
+      (tester) async {
+        debugDefaultTargetPlatformOverride = TargetPlatform.windows;
+        addTearDown(() => debugDefaultTargetPlatformOverride = null);
+
+        const channel = MethodChannel('plugins.flutter.io/url_launcher');
+        final messenger = TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger;
+        const webviewChannel = MethodChannel('io.jns.webview.win');
+        messenger.setMockMethodCallHandler(webviewChannel, (_) async => null);
+        addTearDown(() => messenger.setMockMethodCallHandler(webviewChannel, null));
+        final launched = <String>[];
+        messenger.setMockMethodCallHandler(channel, (call) async {
+          launched.add((call.arguments as Map)['url'] as String);
+          return true;
+        });
+        addTearDown(() => messenger.setMockMethodCallHandler(channel, null));
+
+        final item = CatalogItem(
+          source: CatalogSourceId.plex,
+          kind: MediaKind.movie,
+          title: 'Trailer Movie (2026)',
+          ids: const CatalogItemIds(tmdb: 299534),
+          trailerUrl: existingTrailer,
+        );
+        final englishPlexTrailer = (testMediaItem(id: 'trailer-1', serverId: 'server-1') as PlexMediaItem).copyWith(
+          subtype: 'trailer',
+          mediaVersions: const [
+            MediaVersion(
+              id: 'version-1',
+              parts: [
+                MediaPart(
+                  id: 'part-1',
+                  streams: [MediaStream(id: 'audio-1', kind: MediaStreamKind.audio, languageCode: 'eng')],
+                ),
+              ],
+            ),
+          ],
+        );
+        final requests = <Uri>[];
+        await http.runWithClient(
+          () async {
+            await _pumpDetail(
+              tester,
+              _FakeCatalogSource(detail: CatalogDetail(item: item)),
+              item: item,
+              matches: youtubeHasShortResult ? [_libraryCopy(id: 'copy-1', libraryTitle: 'Movies')] : [],
+              clients: youtubeHasShortResult
+                  ? [
+                      _ExtrasClient([englishPlexTrailer]),
+                    ]
+                  : [],
+            );
+            expect(requests, isEmpty);
+            await tester.tap(find.byTooltip(t.explore.detail.watchTrailer));
+            if (youtubeHasShortResult) {
+              await tester.pump();
+              await tester.pump(const Duration(milliseconds: 350));
+            }
+            await tester.pumpAndSettle();
+            Uri kinoCheck(String language) =>
+                Uri.parse('https://api.kinocheck.com/movies?tmdb_id=299534&language=$language&categories=Trailer');
+            Uri youtube(String language, String suffix) => Uri.https('www.youtube.com', '/results', {
+              'search_query': 'Trailer Movie (2026) $suffix',
+              'hl': language,
+              'gl': 'DE',
+            });
+            expect(requests, [
+              kinoCheck('de'),
+              if (language != 'de') youtube('de', 'trailer german'),
+              if (youtubeHasShortResult) youtube('de', 'trailer german'),
+              if (language != 'de' && !youtubeHasShortResult)
+                Uri.https('www.youtube.com', '/results', {
+                  'search_query': 'Trailer Movie trailer deutsch',
+                  'hl': 'de',
+                  'gl': 'DE',
+                }),
+              if (language != 'de' && language != 'es' && !youtubeHasShortResult) ...[
+                kinoCheck('en'),
+                youtube('en', 'official trailer english'),
+              ],
+            ]);
+            expect(launched, isEmpty);
+            if (expectedVideo == null) {
+              expect(find.byType(ExploreTrailerScreen), findsNothing);
+              expect(find.text(t.explore.detail.noTrailerAvailable), findsOneWidget);
+            } else {
+              final player = tester.widget<ExploreTrailerPlayer>(find.byType(ExploreTrailerPlayer));
+              expect(player.url.queryParameters['v'], expectedVideo);
+              if (youtubeHasShortResult || language == 'es') {
+                final originalRoute = ModalRoute.of(tester.element(find.byType(ExploreTrailerScreen)));
+                player.onFailure();
+                await tester.pumpAndSettle();
+                final backup = tester.widget<ExploreTrailerPlayer>(find.byType(ExploreTrailerPlayer));
+                expect(ModalRoute.of(tester.element(find.byType(ExploreTrailerScreen))), same(originalRoute));
+                expect(backup.url.queryParameters['v'], youtubeHasShortResult ? '2HrsMGtqo4I' : 'lXh2rNl2wdQ');
+              }
+            }
+          },
+          () => MockClient((request) async {
+            requests.add(request.url);
+            if (request.url.host == 'www.youtube.com') {
+              final isEnglishSearch = request.url.queryParameters['hl'] == 'en';
+              final isAlternateGermanSearch = request.url.queryParameters['search_query']!.endsWith('trailer deutsch');
+              if (youtubeHasShortResult && requests.where((url) => url == request.url).length == 1) {
+                return http.Response('<html>Temporary response without results</html>', 200);
+              }
+              Map<String, Object> result(String id, String duration, String title) => {
+                'videoRenderer': {
+                  'videoId': id,
+                  'title': {
+                    'runs': [
+                      {'text': title},
+                    ],
+                  },
+                  'lengthText': {'simpleText': duration},
+                },
+              };
+              final data = jsonEncode({
+                'contents': {
+                  'twoColumnSearchResultsRenderer': {
+                    'primaryContents': {
+                      'sectionListRenderer': {
+                        'contents': [
+                          {
+                            'itemSectionRenderer': {
+                              'contents': [
+                                result('QDd3GilVvAU', '4:01', 'TRAILER MOVIE (2026) Trailer Deutsch'),
+                                result('G4V2VTN40DE', '1:56', 'Trailer Moviehouse Trailer Deutsch'),
+                                result('wksy9C78vLw', '1:05', 'Trailer Movie: Sydney (Offizieller Trailer)'),
+                                result('BiRDG4MXrDg', '1:12', 'Trailer Movie German Concept Trailer'),
+                                result('ydF-oHdWIHc', '1:51', 'Trailer Movie (2001) Trailer Deutsch'),
+                                if (isAlternateGermanSearch && language == 'es')
+                                  result('_8EKVLmNoS8', '2:18', 'Trailer Movie (2026) Trailer Deutsch'),
+                                if (isEnglishSearch && (language == 'it' || language == 'es'))
+                                  result('lXh2rNl2wdQ', '2:44', 'Trailer Movie (2026) Official Trailer'),
+                                if (!isEnglishSearch && youtubeHasShortResult) ...[
+                                  result('kbJZ1LLG1PY', '4:00', 'TRAILER: MOVIE (2026) Trailer Deutsch'),
+                                  result('2HrsMGtqo4I', '2:04', 'Trailer Movie Trailer Deutsch'),
+                                ],
+                              ],
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  },
+                },
+              });
+              return http.Response('<script>var ytInitialData = $data;</script>', 200);
+            }
+            return http.Response(
+              jsonEncode({
+                'trailer': {
+                  'language': request.url.queryParameters['language'] == 'en' ? '' : language,
+                  'categories': ['Trailer'],
+                  'youtube_video_id': 'QDd3GilVvAU',
+                },
+              }),
+              200,
+            );
+          }),
+        );
+
+        debugDefaultTargetPlatformOverride = null;
+      },
+    );
+  }
 
   group('tvOS runner', () {
     const handoffChannel = MethodChannel('com.plezy/external_player');
