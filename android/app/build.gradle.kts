@@ -322,8 +322,12 @@ android {
 
     if (System.getenv("AMAZON") != null) {
       versionCode = (flutter.versionCode ?: 0) + 3000
-      ndk {
-        abiFilters += listOf("armeabi-v7a", "arm64-v8a")
+      // Amazon Store APKs carry both ARM ABIs. Flutter's split APK build
+      // already configures ABI filters and Gradle rejects combining the two.
+      if ((findProperty("split-per-abi") as String?) != "true") {
+        ndk {
+          abiFilters += listOf("armeabi-v7a", "arm64-v8a")
+        }
       }
     }
   }
@@ -356,8 +360,9 @@ android {
       val keystorePropertiesFile = rootProject.file("key.properties")
       if (keystorePropertiesFile.exists()) {
         signingConfig = signingConfigs.getByName("release")
+      } else if (System.getenv("PLEZY_LOCAL_ANDROID_BUILD") == "1") {
+        signingConfig = signingConfigs.getByName("debug")
       }
-      // If key.properties doesn't exist, it will use debug signing for CI builds
       ndk {
         debugSymbolLevel = "FULL"
       }
