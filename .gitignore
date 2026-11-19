@@ -76,3 +76,16 @@ maestro/**/*.png
 
 server/deploy.sh
 server/Caddyfile
+
+# Local release packages and Fire TV address
+/Plezy-Windows-x64*/
+/Plezy-Windows-x64*.zip
+/plezy-*-windows-x64.zip
+/plezy-*-windows-x64/
+/Plezy-FireTV-*/
+/Plezy-AndroidTV-x64-*/
+/.plezy-package-*
+/.plezy-firetv-serial
+/.plezy-java-home
+/android/.kotlin/
+/android/build/
